@@ -1,0 +1,54 @@
+[
+  {
+    "Q": "What are eligible project costs?",
+    "A": "Eligible project costs are those costs related directly to establishing and improving the Tax Incremental District (TID), including:"
+  },
+  {
+    "Q": "Are project costs for an Environmental Remediation (ER) type TID limited to costs for remediating the environmental pollution?",
+    "A": "No. The same list of eligible costs applies to an ER TID created after November 29, 2017, and other TID types created under sec. 66.1105, Wis. Stats.  Review sec.66.1105(2)(f)1., Wis. Stats. for more information."
+  },
+  {
+    "Q": "Do eligible costs include capitalized interest, other costs of issuing debt, and refinancing temporary debt for the Tax Incremental District (TID)?",
+    "A": "Yes. These are eligible financing costs authorized in sec.66.1105(2)(f)1.b., Wis. Stats."
+  },
+  {
+    "Q": "Who determines if project costs are eligible?",
+    "A": "It is the municipality's responsibility to determine if a project cost is eligible under state law (sec.66.1105(2)(f)1. & 2., Wis. Stats.). The municipality should consult its attorney for assistance on whether a specific cost is eligible. The Wisconsin Department of Revenue does not review project costs or determine cost eligibility."
+  },
+  {
+    "Q": "Can a municipality reduce the costs of one project in a plan and use that amount for another project not in the plan?",
+    "A": "No. However, the municipality may shift TIF funds to a new project if the municipality completes a project plan amendment to include the additional project."
+  },
+  {
+    "Q": "Can a municipality add projects without adding territory?",
+    "A": "Yes. This is possible if the municipality completes a project plan amendment to add projects. Review the TIFProject Plan Amendmentsweb page."
+  },
+  {
+    "Q": "For mixed-use TIDs, are there restrictions on the project costs' percentage?",
+    "A": "No. The costs for each area do not need to match the land type percentages. For example, a mixed-use TID may contain 90% ​of the project costs for industrial projects and 10% for commercial projects even though 10% of the land is industrial, and 90% is commercial."
+  },
+  {
+    "Q": "What are non-project costs?",
+    "A": "Non-project costs are expenses that are not eligible to be paid with TIF funds or public works projects that only partly benefit the TID. A municipality cannot use tax increments to pay these costs."
+  },
+  {
+    "Q": "Can a municipality include projects within a half-mile radius of the TID?",
+    "A": "Yes. A municipality may include projects outside the TID but within a half-mile radius if the projects are documented in the approved project plan. Only eligible costs within the half-mile radius can be paid for with TIF funds."
+  },
+  {
+    "Q": "How is the half-mile radius determined? Is it measured from the TID's center or the outer boundary?",
+    "A": "The half-mile radius is measured from the TID's outer boundary."
+  },
+  {
+    "Q": "Can the municipality include projects within the TID's half-mile radius but outside the municipal boundary?",
+    "A": "No, projects outside the TID must be within the municipal boundary (sec.66.1105(2)(f)1.n., Wis. Stats.)."
+  },
+  {
+    "Q": "Is a property tax refund an eligible TID project cost?",
+    "A": "No. A property tax refund is not an eligible TID project cost and is not included as an approved cost in the project plan."
+  },
+  {
+    "Q": "Does the municipality need to amend the project plan if the costs change, but the projects don't change?",
+    "A": "No. Usually the project costs in the plan are estimates and may change over time due to inflation, supply, or other factors."
+  }
+]

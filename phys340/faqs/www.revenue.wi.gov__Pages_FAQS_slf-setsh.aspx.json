@@ -1,0 +1,46 @@
+[
+  {
+    "Q": "What is the Treasurer's Settlement Sheet?",
+    "A": "The Wisconsin Department of Revenue (DOR) provides the Treasurer's Settlement Sheet (Form PC-501) for counties to report the February settlements. DOR uses the completed form to verify tax collections compared to the taxes levied in the municipal records. DOR also uses the form to identify and resolve discrepancies. The Treasurer's Settlement Sheet should reconcile with the Statement of Taxes (SOT)."
+  },
+  {
+    "Q": "How do I submit the Treasurer's Settlement Sheet?",
+    "A": "You must electronically file (e-file) the Treasurer's Settlement Sheet with DOR. There are two methods available to e-file this form:"
+  },
+  {
+    "Q": "Do I need a PIN number or password to use the File Transfer method?",
+    "A": "No. You are not required to use a PIN number or password, or pre-register."
+  },
+  {
+    "Q": "Do I need a PIN number or password to use the E-file form?",
+    "A": "This form is located inMy DOR Government Account. You must be authorized to file. For more information, review ourOnline Filing Help – Using My DOR Government Account."
+  },
+  {
+    "Q": "Will my data be encrypted or otherwise protected when it's transmitted over the Internet?",
+    "A": "Yes. Your data is protected during transmission. The file posts through HTTPS (Hypertext Transfer Protocol over SSL) to a web server and the data is protected with SSL (Secure Sockets Layer) 128-bit encryption. This encrypted protocol is the same standard used for Internet financial transactions."
+  },
+  {
+    "Q": "Will I receive a confirmation receipt after I submit the Treasurer's Settlement Sheet?",
+    "A": "File transfer method"
+  },
+  {
+    "Q": "What information do I need to file the Treasurer's Settlement Sheet?",
+    "A": "You need a complete tax roll, where:"
+  },
+  {
+    "Q": "What if the Treasurer's Settlement Sheet and the Statement of Taxes (SOT) do not reconcile?",
+    "A": "The Treasurer's Settlement Sheet and the SOT should reconcile.If they do not, you must:"
+  },
+  {
+    "Q": "How often do Managed Forest (MFL) rates change and how are we notified?",
+    "A": "Rates can change every five years. The last rate update occurred in 2023; prior rates change in 2018. The next rate update will be 2028. DOR updates the form and instructions, emails municipalities with the new rates, and discusses the changes in training opportunities."
+  },
+  {
+    "Q": "Can I amend the Treasurer's Settlement Sheet?",
+    "A": "Yes. You may amend the Treasurer's Settlement by using either the file transfer or e-file method. If a municipality has a duplicate file transfer, DOR recognizes it as amended."
+  },
+  {
+    "Q": "Why aren't personal property roll taxes reported on the Treasurer's Settlement?",
+    "A": "Starting January 1, 2024, all locally assessed and manufacturing personal property became exemptunder 2023 Wisconsin Act 12. The exempt personal property is now an aid payment your municipality receives the first Monday, each May."
+  }
+]

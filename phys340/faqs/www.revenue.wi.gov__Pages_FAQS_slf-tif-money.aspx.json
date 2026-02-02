@@ -1,0 +1,58 @@
+[
+  {
+    "Q": "What is an expenditure?",
+    "A": ""
+  },
+  {
+    "Q": "What is the expenditure period?",
+    "A": "It is the maximum time period a TID can incur expenses related to the project plan. Generally, it is five years shorter than the maximum life. A municipality cannot take on any new projects after the end of the expenditure period. An extension does not change the expenditure period."
+  },
+  {
+    "Q": "What date is used to measure the start of the expenditure period?",
+    "A": "The date the local legislative body adopts the creation resolution is the start of the expenditure period."
+  },
+  {
+    "Q": "Can \"new\" project costs be incurred after the expenditure period?",
+    "A": "No. Existing projects may be finished but no additional improvements can be started during the last five years of the TID's maximum life."
+  },
+  {
+    "Q": "Can payments be made after the expenditure period?",
+    "A": "Yes. Payments for project cost debt service, repayment of advances or other liabilities and approved allocations to other TIDs are allowed under state law (sec.66.1105(6)(c), Wis. Stats.). Costs for professional services, administration, and DOR fees required to maintain the TID are also allowed."
+  },
+  {
+    "Q": "Can a municipality request an extension to a TID's expenditure period?",
+    "A": "No. State law does not allow extensions to a TID's expenditure period. A municipality must incur project expenditures before the expenditure period ends."
+  },
+  {
+    "Q": "Are there any restrictions on the length of maturity for TID debt?",
+    "A": "No. The same restrictions for other municipal debt apply to TID debt and would likely not mature beyond the TID's maximum life."
+  },
+  {
+    "Q": "Can a municipality transfer money from another fund into a TID fund and repay itself later?",
+    "A": "Yes. It can also charge a reasonable interest cost for advances to a TID fund if made after the TID is created."
+  },
+  {
+    "Q": "If a municipality incurs expenses before it creates a Tax Incremental District (TID), can these expenses be recovered?",
+    "A": "If a municipality incurs expenses before it creates a TID, the municipality can only recover expenses directly related to planning the district. The municipality cannot incur other expenses until after the municipality adopts the creation resolution approving the project plan. (sec.66.1105(6)(am)3., Wis. Stats.)"
+  },
+  {
+    "Q": "What expenses can be considered \"planning\" expenses?",
+    "A": "State law does not define planning expenses; however, the consulting, legal, engineering, architectural or administrative costs required to develop and approve the project plan may qualify. The municipality should consult its attorney for assistance to determine if a specific cost is considered a planning expense."
+  },
+  {
+    "Q": "If a municipality purchased property before it creates a TID and sells the property after the TID is approved, can the property purchase be considered a TID expense?",
+    "A": "No. The property purchase is not an eligible TID expense. The purchase occurred before the TID was approved and is not a planning expense."
+  },
+  {
+    "Q": "If a municipality purchased property before it creates a TID and sells the land after the TID is approved, can the funds from the sale be returned to the municipality's general fund?",
+    "A": "The portion of profits attributed to the TID are \"other revenues\" under s​ec.66.1105(2)(f)1., Wis.  Stats., and must be used to offset project costs. The remainder may be placed in the municipality’s general fund. The municipality should contact its attorney to review how to apply this law to the specific situation."
+  },
+  {
+    "Q": "Can a municipality buy and improve property with TIF funds and place revenue from the improved property's sale into the general fund?",
+    "A": "No. A municipality cannot make a profit with TIF. It must use revenue from the sale of property purchased and improved with TIF funds to offset all other TID project costs."
+  },
+  {
+    "Q": "Can a municipality use TIF funds to reduce special assessments to property owners after the improvements are installed?",
+    "A": "No. Reducing special assessments is not a TID eligible expense, under state law (sec.66.1105(2)(f), Wis. Stats.). However, a municipality may combine a special assessment and TIF to pay for a particular project. That portion paid for with a special assessment is a non-project cost for the TID."
+  }
+]

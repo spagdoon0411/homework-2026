@@ -1,0 +1,50 @@
+[
+  {
+    "Q": "What is the difference between a value increment and a tax increment?",
+    "A": "Value increment –difference between the Tax Incremental District's (TID's) base value and current value. It is the property value that generates the tax increment."
+  },
+  {
+    "Q": "Who certifies the value increment annually?",
+    "A": "The Wisconsin Department of Revenue (DOR) certifies the annual value increment by August 15 each year. DOR certifies the increment only if the municipality pays a $150 administrative fee for each active TID by April 15. If the fee is not paid, DOR will not certify the municipality's increment for that year."
+  },
+  {
+    "Q": "When does the municipality receive its first tax increment on a new creation?",
+    "A": "The date the municipality adopts the creation resolution determines when it will receive its first increment. TheTID Creation Timeframestable explains the timing of the first tax increment."
+  },
+  {
+    "Q": "Does residential development in a TID produce value increment?",
+    "A": "Yes. All taxable property that increases a TID's value becomes part of the increment."
+  },
+  {
+    "Q": "If personal property is located within a TID, is the personal property value included in the TID base value? In the TID current value?",
+    "A": "2023 Act 12 exempted personal property from taxation, effective January 1, 2024. Starting in 2024, a TID’s current year value does not include personal property."
+  },
+  {
+    "Q": "If a municipality received enough increment to pay the debt incurred for the district, can the excess increment be used for additional projects?",
+    "A": "Yes. A municipality may use excess increment for additional projects if the expenditure period has not expired; however, only projects in the approved plan may be paid with TIF funds. If the project is not in the approved plan, the municipality must complete a project plan amendment and email the required documents to tif@wisconsin.gov."
+  },
+  {
+    "Q": "If a TID terminates after April 15, is an increment still added to the tax levies in December?",
+    "A": "Yes. If the municipality terminates a TID after April 15, DOR will certify a value increment for that year. The tax increment for that year must be levied and collected. See theTID Termination Timeframestable for more information."
+  },
+  {
+    "Q": "Should a municipality collect the entire final tax increment in the TID's last year if it is not all needed?",
+    "A": "Yes. A municipality must collect the entire final tax increment to maintain equal taxation. State law (sec66.1105(6)(c), Wis. Stats.), requires the municipality to return any surplus to the TID's overlying taxing jurisdictions."
+  },
+  {
+    "Q": "Can a municipality choose not to levy the increment on the tax roll?",
+    "A": "No. Wisconsin's constitution has a uniformity clause, which requires uniform property taxation. By not levying the increment, the taxpayers in that municipality would be taxed at a different rate (for school, technical college, or county) than the other taxpayers."
+  },
+  {
+    "Q": "How is the tax increment calculated using the tax rate?",
+    "A": "Step a) First, a municipality must determine the tax rate per $1,000 of property value."
+  },
+  {
+    "Q": "How does the Wisconsin Department of Revenue (DOR) notify a municipality of its increment value?",
+    "A": "Each year (on August 15 and October 1), DOR posts TIF reports that list each TID's value increment to our website."
+  },
+  {
+    "Q": "How long are DOR reports available?",
+    "A": "DOR maintains statewide TID reports for 7 years. All available reports are posted on our website. It is the municipality's responsibility to save information on its TIDs."
+  }
+]

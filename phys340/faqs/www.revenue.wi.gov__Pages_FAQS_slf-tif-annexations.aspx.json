@@ -1,0 +1,26 @@
+[
+  {
+    "Q": "Can the municipality create a Tax Incremental District (TID) that includes annexed parcels before approving the annexation?",
+    "A": "No. The municipality annexing the property must approve the annexation ordinancebeforethe municipality can adopt the TID creation resolution."
+  },
+  {
+    "Q": "What additional documents does a municipality have to provide to the Wisconsin Department of Revenue if a TID creation or territory amendment includes annexed parcels?",
+    "A": "When parcels annexed after January 1 of the TID creation or amendment year are included in the TID, the municipality must provide:"
+  },
+  {
+    "Q": "Which parcel numbers should be shown (town or city/village) on the TID map? The town parcel numbers or the city/village parcel numbers?",
+    "A": "When a TID includes parcels annexed after January 1 of the creation or amendment year, show the town parcel numbers. The parcel numbers on the map must match the value forms and the assessment roll."
+  },
+  {
+    "Q": "If annexed property is included in a TID and a court later reverses the annexation, how is the TID affected?",
+    "A": "If a court order reverses the annexation, the municipality must complete a territory amendment to remove any annexed property from the TID."
+  },
+  {
+    "Q": "If a town is annexed by a city before a TID created by the town under a cooperative agreement reaches its maximum life, can the city continue to collect the increments to pay for the town projects?",
+    "A": "Yes. Under state law (sec.66.1105(16)(c), Wis. Stats.), when a town TID created under a cooperative agreement with a city (or village) is annexed by that city (or village), the city (or village) administers the TID as if it were created by that city (or village)."
+  },
+  {
+    "Q": "Where can I find annexation ordinances for a specific municipality?",
+    "A": "The Wisconsin Department of Administration (DOA) approves and publishes annexation ordinances statewide. To view the list, visit the DOAMunicipal Data System-Ordinances."
+  }
+]

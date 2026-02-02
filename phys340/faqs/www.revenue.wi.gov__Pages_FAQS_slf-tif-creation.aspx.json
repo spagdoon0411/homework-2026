@@ -1,0 +1,86 @@
+[
+  {
+    "Q": "What entities can create a Tax Incremental District (TID)?",
+    "A": "Cities, villages and towns can create TIDs. For detailed information on creating a TID, review our publications:"
+  },
+  {
+    "Q": "Can a municipality create one TID in more than one county, or are two separate TIDs required?",
+    "A": "One TID can exist in more than one county. Complete and email a separateBase Value Workbookfor each county to tif@wisconsin.gov."
+  },
+  {
+    "Q": "Can a TID be in more than one school district?",
+    "A": "Yes. List each school district and identify the parcels for each district on all the required base value forms."
+  },
+  {
+    "Q": "Can a city, village, or town create a joint TID?",
+    "A": "Yes. Two or more municipalities may enter into an intergovernmental cooperative agreement to jointly create amultijurisdictional TID, under state law (sec.66.1105(18), Wis. Stats.)."
+  },
+  {
+    "Q": "How long does it take to create a new TID?",
+    "A": "Generally, the process requires a minimum of two months at the local level. The time required depends on how often the municipality meets and how long it takes to develop the project plan and boundaries."
+  },
+  {
+    "Q": "What documents are required to create a municipal TID?",
+    "A": "All required TID creation documents are listed in the Due date/process section of theTIF Municipal Creationweb page and must be emailed to tif@wisconsin.gov by October 31 of the creation year."
+  },
+  {
+    "Q": "When is the TID creation deadline?",
+    "A": "The local legislative body must adopt the creation resolution by September  30 and email the required documents to tif@wisconsin.gov by October 31 of the creation year. DOR emails a base value certification letter by March of the following year. The municipality receives its first tax increment dollars the year after the certification."
+  },
+  {
+    "Q": "Does the Planning Commission have to hold a public hearing?",
+    "A": "Yes. If the municipality does not have a Planning Commission, it must create one following sec.62.23, Wis. Stats., or designate another authority to act in that capacity (ex: Community Development Authority (CDA) or Redevelopment Authority)."
+  },
+  {
+    "Q": "If the Planning Commission is only an advisory board to the municipality and does not have authority to pass resolutions, what should the Planning Commission provide?",
+    "A": "Provide a copy of the Planning Commission meeting minutes, documenting approval to both:"
+  },
+  {
+    "Q": "If the Planning Commission denies a municipality's proposal to create a new TID, can the local legislative body overrule the Planning Commission and approve the TID?",
+    "A": "No. The Planning Commission must adopt a project plan for a proposed TID before the local legislative body can approve the TID."
+  },
+  {
+    "Q": "Do we need to adjust the maps in the project plan if the municipality approves different boundaries than those recommended by the Planning Commission?",
+    "A": "Yes. The maps in the final project plan must reflect the boundaries approved by the municipality and the Joint Review Board."
+  },
+  {
+    "Q": "Are there requirements for resolution wording?",
+    "A": "Yes. See theResolution Checklistfor the requirements for each resolution (Planning Commission, local legislative body and Joint Review Board)."
+  },
+  {
+    "Q": "Is a two-thirds majority required to pass each of the resolutions to create a TID (Planning Commission, local legislative body and Joint Review Board)?",
+    "A": "No, a two-thirds majority is not required. Each resolution must be passed by a simple majority of members."
+  },
+  {
+    "Q": "Can the municipality hold one public hearing when several TIDs are being created at the same time?",
+    "A": "Yes. However, the public hearing notice must list each creation separately and the municipality must adopt a separate resolution for each TID."
+  },
+  {
+    "Q": "Can a property owner exclude their property from a TID?",
+    "A": "A property owner can request municipal officials exclude their property from a TID during the creation process. However, the municipality is not required to exclude that property."
+  },
+  {
+    "Q": "What year is used for the value of parcels in a TID?",
+    "A": "For a creation resolution adopted between October 1, 2024, and September 30, 2025, use the assessment as of January 1, 2025. Use the assessed values as of the final adjournment by that year's Board of Review (BOR). Do not complete theBase Value Workbookuntil after the BOR."
+  },
+  {
+    "Q": "Is personal property included in a TID's base value?",
+    "A": "No, effective January 1, 2024, personal property is tax exempt. TIDs created in 2024 or after do not include personal property in the TID’s base value."
+  },
+  {
+    "Q": "What are the TID types?",
+    "A": "When a municipality creates a TID, it must declare a type in the resolution based on the type of property in the TID at the time of creation. See theTax Incremental Finance (TIF) Manual, Section 1.5 Glossary, for definitions of each type."
+  },
+  {
+    "Q": "How does a municipality calculate the percentage of property to determine the TID type?",
+    "A": "When creating a municipal TID (under sec.66.1105, Wis. Stats.), at least 50% of all TID property must be one of the following types:"
+  },
+  {
+    "Q": "Where do I find specific information on the different TID types?",
+    "A": "See theTID Criteria Matrixfor TID life, standard extension, overlap option and expenditure period for each TID type."
+  },
+  {
+    "Q": "What determines the TID's maximum life?",
+    "A": "The TID's maximum life is based on the creation date and the TID type. The creation date is the date the local legislative body adopted the creation resolution. The TID type is declared in the resolution. See theTID Criteria Matrix."
+  }
+]

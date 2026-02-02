@@ -1,0 +1,54 @@
+[
+  {
+    "Q": "When does a municipality terminate a Tax Incremental District (TID)?",
+    "A": "The municipality must adopt a termination resolution when one of the following occurs:"
+  },
+  {
+    "Q": "What should the municipality provide to the Wisconsin Department of Revenue (DOR) when a TID terminates?",
+    "A": "Within 60 days of adopting the termination resolution or by April 15, whichever is earlier:"
+  },
+  {
+    "Q": "When filling out the Final TID Accounting Submission Date Agreement (Form PE-223), how does the municipal clerk determine the Final Accounting Submission date?",
+    "A": "The Final Accounting Submission Date is the date when the municipality agrees to file the TID Final Accounting Report (PE-110). Before submitting this report, the municipality's Certified Public Accountant must complete the final audit. Contact the municipal auditor to determine when the final audit will be completed. Then complete the Final Accounting Submission Date. This due date must be within a year of the TID termination resolution."
+  },
+  {
+    "Q": "What is the last year a municipality receives an increment for a terminated TID?",
+    "A": "The date the municipality adopts the termination resolution determines the last year it receives an increment for that TID. For more details see theTID Termination Timeframestable."
+  },
+  {
+    "Q": "If a municipality adopts a TID termination resolution, does the municipality need to pay DOR an administrative fee?",
+    "A": "The answer depends on the date the local legislative body adopts the termination resolution:"
+  },
+  {
+    "Q": "Can a municipality terminate an existing TID and then create another TID in the same year?",
+    "A": "Yes. If the municipality is over the 12% value limit, the local legislative body must adopt the termination resolutionbeforeadopting the creation resolution for another TID. The municipality must remain below the 12% value limit after terminating a TID, to create another TID."
+  },
+  {
+    "Q": "When a municipality terminates a TID, what happens if there are still debts?",
+    "A": "The municipality is responsible for any remaining debt."
+  },
+  {
+    "Q": "How does the municipality divide excess funds among the overlying taxing jurisdictions?",
+    "A": "According to state law (sec.66.1105(6)(c), Wis. Stats.), the municipality must return excess funds based on each taxing jurisdiction's portion of the total tax rate. DOR recommends basing the distribution on the most recent tax levy proportions without the tax increment. Column A of the Tax Increment Worksheet (PC-202) may be used for this calculation. Contactlgs@wisconsin.govfor further assistance."
+  },
+  {
+    "Q": "How long does the municipality have to return the excess funds?",
+    "A": "State law does not provide a specific deadline for distributing excess funds to other taxing jurisdictions. However, the TID's final audit must be completed within one year of the termination resolution. DOR recommends distributing the excess funds when the final audit is completed."
+  },
+  {
+    "Q": "What if a municipality terminated a TID and has some outstanding expenses to pay before disbursing any extra funds to the other overlying tax jurisdictions?",
+    "A": "It is the municipality's responsibility to determine proper administration in this situation. For example, a municipality may set up a temporary escrow account to cover the final expenses. This allows the municipality to complete its final audit."
+  },
+  {
+    "Q": "If a municipality adopts a TID termination resolution and notified DOR, can it rescind the termination resolution so it can adopt an affordable housing resolution?",
+    "A": "The answer depends on whether the termination deadline has passed and whether the TID has reached its maximum life. Municipalities must certify a TID as active or inactive by April 15 under state law (sec.66.1105(6)(ae)Wis. Stats.). Both the termination and rescission must be in the same year based on this deadline. See theTID Termination Timeframestable."
+  },
+  {
+    "Q": "What happens to the TID's personal property aid and exempt computer aid when the TID terminates?",
+    "A": "Effective with the 2022 payments, based on2021 Act 61, when a TID receiving these aid payments terminates, DOR transfers the payments to the overlying jurisdictions (ex: municipality, county, school district, technical college)."
+  },
+  {
+    "Q": "When does a municipality receive the one-time levy limit adjustment? How is this calculated?",
+    "A": "In the year after the TID's termination year (seeTID Termination Timeframes), a municipality may use a one-time levy limit increase. The levy limit adjustment appears on the Levy Limit Worksheet the same year as the TID's termination year. For example, for a TID with a 2025 termination year, the 2025 Levy Limit Worksheet for taxes payable in 2026 reflects the increase."
+  }
+]

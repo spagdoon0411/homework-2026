@@ -1,0 +1,98 @@
+[
+  {
+    "Q": "Can parcels be added to the Tax Incremental District (TID) after the hearing notices are published?",
+    "A": "Yes. The purpose of the public hearing is to receive/give input on theproposedboundaries of the district.  A municipality may add or remove parcels based on the hearing.  The hearing notice does not have to mention the proposed boundaries; however, including a general description of the area is helpful."
+  },
+  {
+    "Q": "How much detail is needed in the boundary description provided to the Wisconsin Department of Revenue (DOR)?",
+    "A": "A metes and bounds (legal boundary) description corresponding to the outer TID boundary is required. The boundary description must match the provided map."
+  },
+  {
+    "Q": "Why is a boundary description required in addition to the map?",
+    "A": "State law (sec.66.1105(4)(gm)1., Wis. Stats.), requires the local legislative body to describe the TID boundaries. A metes and bounds description is necessary because parcel numbers and parcel boundaries may change over the TID's life."
+  },
+  {
+    "Q": "How much detail is needed in the TID map provided to DOR?",
+    "A": "Map must be legible and:"
+  },
+  {
+    "Q": "Who is responsible for valuing and classifying a TID's land and buildings?",
+    "A": "The local assessor and DOR manufacturing assessor are responsible for valuing the improvements and land based on state law and the Wisconsin Property Assessment Manual."
+  },
+  {
+    "Q": "A TID must contain contiguous properties; however, can a municipality omit parcels from the TID's center?",
+    "A": "Yes. A municipality may omit parcels, as long as the TID boundaries remain contiguous. The TID map must clearly show the parcels are not part of the TID.  The legal description must be consistent with the map and describe the excluded area.​"
+  },
+  {
+    "Q": "When two parcels are diagonal (kitty corner) from each other, is this contiguous?",
+    "A": "Yes. Two parcels that are diagonal to each other are considered contiguous and can be included in the same TID. They may or may not have a road or railroad between them."
+  },
+  {
+    "Q": "If the TID crosses a highway, river or railroad track, is this contiguous?",
+    "A": "Yes. This is contiguous if the highway, river or railroad tracks are continuously bounded on either side or both sides by TID parcels."
+  },
+  {
+    "Q": "What is the difference between railroad tracks and a railroad right-of-way?",
+    "A": "There is no difference. Railroad tracks cannot create contiguity in a TID. The railroad tracks must be bounded on either side or both sides by TID parcels."
+  },
+  {
+    "Q": "How do we handle a road or railroad with a parcel number when completing the Base Value Workbook?",
+    "A": "DOR treats roads and railroads the same way. If the road or railroad parcel iscompletelywithin the TID boundary, list the parcel number on the map and the value forms. If the road or railroad parcel is partially in the TID boundary, identify the road or railroad on the map and do not list the parcel number on the value forms."
+  },
+  {
+    "Q": "Can a parcel (exempt or non-exempt) be partly in a TID?",
+    "A": "No. Under state law (sec.66.1105(2)(k), Wis. Stats.), only whole parcels can be in a TID. Roads and railroads are an exception. Roads/railroads can only be included in a TID where they are bounded by TID parcels, whether they have a parcel number or not."
+  },
+  {
+    "Q": "Can a municipality combine two parcels if one parcel is in the TID and the other parcel is outside the TID?",
+    "A": "Yes. To do this, a municipality must complete one of the following amendments:"
+  },
+  {
+    "Q": "If property owned by a utility company is included in a TID, is the property exempt?",
+    "A": "Location of a property in a TID does not determine taxability. Generally, utility property is not subject to local taxation and pays a state tax. Contact DOR'sManufacturing and Utility Bureaufor more information. Tax exempt property in a TID does not add to the base value and does not contribute to the value increment."
+  },
+  {
+    "Q": "How should a municipality indicate that wetlands are excluded from the TID?",
+    "A": "The municipality may describe the boundaries around the wetland, or state that all wetlands are excluded at the end of the TID boundary's legal description."
+  },
+  {
+    "Q": "Can wetlands be used to make a TID contiguous?",
+    "A": "Wetlands identified on a map under sec.23.32, Wis. Stats., must be excluded from a TID. When an entire parcel meets this definition of wetlands, it cannot be included in the TID."
+  },
+  {
+    "Q": "What are \"lands proposed for newly platted residential use?\"",
+    "A": "State law does not define the phrase \"lands proposed for newly platted residential use.\" A \"plat\" is a map of a subdivision. \"Newly platted\" refers to land that has not been previously subdivided or is currently subject to a replat as defined in sec.236.02(11), Wis. Stats. \"Residential\" commonly means relating to a place where people live."
+  },
+  {
+    "Q": "What TID types can include costs for lands proposed for newly platted residential property?",
+    "A": "Only TIDs declared as mixed-use type can incur project costs for lands proposed for newly platted residential property; the property may not exceed 35 percent by area of the TID."
+  },
+  {
+    "Q": "How is a road/highway included in the calculation determining the 35% residential use in mixed-use TIDs?",
+    "A": "Include road/highway acreage in the total TID acreage but not the residential acreage. Divide the newly platted residential acreage, not including roads, by the total TID acreage to determine the newly platted residential percentage."
+  },
+  {
+    "Q": "In a mixed-use TID, does the housing density calculation include roads and parks?",
+    "A": "No. The housing density is based on all real property in the area designated asresidential. This does not include roads or greenspace, but does include all housing whether subject to property tax or exempt."
+  },
+  {
+    "Q": "For the 35% limit on lands proposed for newly platted residential use, is an assisted living building considered a residential use? Is multi-family housing?",
+    "A": "Yes. Both an assisted living building and multi-family housing are considered residential use because the buildings are used for living purposes. The property still needs to be newly platted as part of the TID project plan to be subject to the 35% limit. This assumes that current or future zoning permits the assisted living or multi-family building."
+  },
+  {
+    "Q": "Can a TID's boundaries be set based on something that will happen in the future?",
+    "A": "No. The boundaries are determined based on the parcels when the TID is created. Territory amendments are possible to address parcel splits or annexations."
+  },
+  {
+    "Q": "Do projects within a TID have to follow local zoning?",
+    "A": "Yes. TIF law does not change municipal zoning rules."
+  },
+  {
+    "Q": "For mixed-use TIDs, does the land need to be zoned correctly before adopting the creation resolution?",
+    "A": "No. The municipality does not need to complete zoning before it adopts the creation resolution. At least 50% of the land must besuitable(not necessarily zoned) for at least two of the following types: industrial, commercial or residential. There are no restrictions on the percentage between the types."
+  },
+  {
+    "Q": "In an industrial TID, do all the parcels need to be zoned industrial?",
+    "A": "No. To qualify as an industrial TID, at least 50% (by area) must be zoned industrial. Under state law (sec.66.1105(4)(gm)5., Wis. Stats.), the parcels that are zoned industrial when the TID is created (municipal resolution adoption date) must remain zoned industrial for the life of the TID."
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "Q": "How is the conversion  charge calculated?",
+    "A": "The number of acres converted is multiplied by a value-per-acre for each converted acre. That value-per-acre is a two-part calculation."
+  },
+  {
+    "Q": "If a parcel  is split, how is the size calculated when determining which conversion charge to  apply?",
+    "A": "The agricultural land conversion charge is based on change of use, not classification. When a property formerly classified as agricultural is subdivided into lots and reclassified as residential, but still in agricultural use, a conversion charge is not issued until the use actually changes."
+  },
+  {
+    "Q": "Who issues  the conversion charge?",
+    "A": "The county treasurer administers the conversion charge, based on what the local assessor reports as a change in land use. The assessor must identify the person who made the change and the number of acres previously assessed as agricultural that changed use. The treasurer issues a conversion charge to the person who changed the use."
+  },
+  {
+    "Q": "When are the values used in the conversion charge calculation available?",
+    "A": "The conversion charges are posted to DOR's website in February each year, and used to calculate the conversion charge for land use changes that occurred in the prior year. Even though estimates can be calculated, conversion charges are not issued until the change in use is reflected on the current year assessment roll and the property owner has the opportunity to appeal the classification change at the Board of Review (BOR)."
+  },
+  {
+    "Q": "Are there exceptions to a conversion charge?",
+    "A": "Yes. If the assessor determines the land should be classified and assessed  as undeveloped land\u00a0(sec.70.32(2)(a)5), agricultural forest (sec.70.32(2)(a)5m), productive  forest (sec.70.32(2)(a)6), or other (sec.70.32(2)(a)7), the owner is not  subject to a conversion charge. Also, there is no conversion charge if the  charge per acre is less than $25."
+  },
+  {
+    "Q": "If land converts to undeveloped land (class 5), agricultural forest (class 5m), productive forest (class 6) or other (class 7) for one year, and then converts to residential (class 1), is it then liable for a conversion charge?",
+    "A": "No. If a conversion is to undeveloped land, agricultural forest, productive forest, or \"other,\" there is no conversion charge. Future conversions are not relevant."
+  },
+  {
+    "Q": "What is the definition of \"other\" as a category on the roll?",
+    "A": "State law (sec.70.32(2)(c)1m, Wis. Stats.), defines \"other\" as the \"buildings and improvements; including any residence for the farm  operator's spouse, children, parents, or grandparents; and the land necessary  for the location and convenience of those buildings and improvements.\" The  residences of eligible relatives should have been part of a parcel the  farm operator actually farmed before the change (statutes refer to 'the farm  operator,' not 'a farm operator'). DOR interprets  this to include the residence of the retired landowners if they were farm  operators. It is not necessary\u00a0for the persons residing in the house to \u00a0work on the farm."
+  },
+  {
+    "Q": "Does \"other\" include a residential home built on five acres split off a tilled 40-acre parcel as a separate parcel if the ownership changed to the farm operator's children, parents, or grandparents before the change in use took place?",
+    "A": "Yes. This is considered \"other\" as long as the new parcel was  part of the acreage previously classified as agricultural."
+  },
+  {
+    "Q": "Does the assessor have to reclassify all residential parcels belonging to children, parents, or grandparents of farm operators to \"other\"?",
+    "A": "No. The primary intent of the \"other\" classification is to allow for residential homes of certain farm operator relatives to be built without incurring a conversion charge. The existing homes, whether classified as residential or \"other,\" are not subject to the conversion charge, and are valued at market value. If a property owner makes the request,  the assessor may reclassify those properties as \"other.\" However, we suggest the assessor explain there would be no impact to the market value analysis."
+  },
+  {
+    "Q": "An existing farm operation with the majority of its land classified agricultural tears some buildings down, adds some additional buildings, and changes the total area used for the site. Does a conversion charge apply?",
+    "A": "No. The assessor should review what acreage was classified as agricultural and \"other.\" If additional acreage should now be classified as \"other,\" the assessor should make the adjustment; however, no conversion charge is due if the new classification is \"other,\" because of the conversion charge exception for changes into this class."
+  },
+  {
+    "Q": "A parcel was classified as nine acres agricultural and one acre of land and buildings classified as \"other\" on the January 1, 2023 assessment roll. The parcel had new construction during 2023. Three additional agricultural acres were converted to site acres, and the improvement's highest and best use changed to residential. The assessor did not discover the changes until after the 2024 assessment was completed. The 2024 taxes reflected the value of only the original \"other\" site and improvements from 2023. For the January 1, 2025 assessment, the parcel was re-classified as residential, with a significantly higher improvement value. Does a conversion charge apply?",
+    "A": "Yes. When a new construction assessment is missed on a parcel with an existing improvement assessment, the assessor can add the assessed value of the new construction to the following year's assessment roll as omitted property. The improvements must be obvious, tangible, defendable, and measurable. The new improvement value should be entered in a special section of the assessment roll for omitted property. Since the change in use from agricultural to residential is first reflected on the 2025 assessment roll, it is recommended that the conversion charge be issued after BOR, allowing the property owner an opportunity to challenge the change in classification reflected on the roll. The conversion charge amount should be based on the year the actual change took place, in this case 2024 (which should have been when the residential classification was placed on the roll)."
+  },
+  {
+    "Q": "What should an assessor do when discovering land was misclassified?",
+    "A": "The agricultural land conversion charge is based on land used as agricultural, that has a change in use. In this instance, the use did not change (though the classification will). No conversion charge is due."
+  },
+  {
+    "Q": "If the property was classified agricultural on January 1 and entered in the Managed Forest Law (MFL) program during that year (becoming exempt on the assessment roll), is a conversion charge due?",
+    "A": "The assessor must determine the proper classification for the acreage if the land were still on the roll. If the classification would be undeveloped land, productive forest, or \"other,\" no conversion charge is due, even though the use changed from the agricultural classification. There may also be instances where some of the acreage remains in agricultural use, and no conversion charge is due."
+  },
+  {
+    "Q": "What if I disagree with the property use's change in classification?",
+    "A": "You can appeal the assessor's classification regarding agricultural use and changes in use affecting the conversion charge by appealing to that year's BOR."
+  },
+  {
+    "Q": "When is the conversion charge due?",
+    "A": "It is due no later than 30 days after the county assessor issues the conversion charge."
+  },
+  {
+    "Q": "If a change in use takes place, and a conversion charge is  due, but no conversion charge is issued, can a county treasurer issue the conversion  charge in the following years?",
+    "A": "Yes. If the property was classified as agricultural, and the use and classification changed to a use where a conversion charge is due, under state law, there is no time limit in issuing a conversion charge to the owner at the time of the change."
+  },
+  {
+    "Q": "Who owes the conversion charge?",
+    "A": "The person who owned the property when the conversion (change in use) took place must pay the conversion charge."
+  },
+  {
+    "Q": "How are buyers being made aware of the potential conversion charge?",
+    "A": "Under state law (sec.74.485(7), Wis. Stats.), the owner of land assessed  as agricultural must notify the buyer of the following:"
+  },
+  {
+    "Q": "What if the conversion charge is not paid?",
+    "A": "If payment is not made within 30 days of issuance by the county treasurer, interest accumulates at 1% per month from the issuance date. The county can collect the unpaid conversion charge as a special charge against the land."
+  },
+  {
+    "Q": "Can the county subtract the administrative costs of  collection from the conversion charge amount returned to the taxation  districts?",
+    "A": "No. Under state law (sec.74.48(5), Wis. Stats.), \"A county that  collects a conversion charge...shall distribute 50 percent\u00a0of the amount...to the  taxation district.\" There are no provisions for subtracting collection  costs first."
+  },
+  {
+    "Q": "Does the county share the 1% per month added interest payment 50/50 with the municipality, or does the county keep that income?",
+    "A": "Any interest the county collects must be shared with the municipality."
+  },
+  {
+    "Q": "Once a conversion charge becomes a special charge on the tax bill, can a county add its 0.5% tax to the bill, like with \"other\" special charges?",
+    "A": "Yes. Under state law, the bill is collected as a special charge. That means  all provisions for collecting special charges apply, including fees and  interest."
+  },
+  {
+    "Q": "Do the overlying taxation jurisdictions share in the conversion charge?",
+    "A": "No. Under state law, the county and taxation district (town, village, city)  splits the conversion 50/50. The taxation district's portion is split between municipalities  in the event of an annexation (this should be coordinated by the gaining municipality)."
+  },
+  {
+    "Q": "Are exempt entities (ex: churches and benevolent associations) subject to the conversion charge?",
+    "A": "Yes. There is no provision under state law (sec.74.485, Wis. Stats.),  excusing an exempt entity from paying an agricultural land conversion charge if one is  due."
+  },
+  {
+    "Q": "Are governmental entities subject to the conversion  charge under state law (sec.74.485, Wis. Stats.)?",
+    "A": "Yes. Governmental entities are generally subject to this charge."
+  },
+  {
+    "Q": "Can a conversion charge be issued more than once on the same parcel of land?",
+    "A": "Yes. Under state law, this can happen when a conversion charge applies to a parcel, and does not set a limit on the number of conversion charges that can be issued over time. Each time the parcel is classified as agricultural, and the agricultural activity ends, a conversion charge is issued if the classification changes to anything other than undeveloped land, agricultural forest, or productive forest."
+  }
+]

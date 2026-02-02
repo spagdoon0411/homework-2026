@@ -1,0 +1,66 @@
+[
+  {
+    "Q": "What is an overlap?",
+    "A": "An overlap is when the boundary of one Tax Incremental District (TID) covers another existing TID's boundaries. For more information, review state law (sec.66.1105(10), Wis. Stats.)."
+  },
+  {
+    "Q": "Does an overlap change the boundary of the overlapped TID?",
+    "A": "No. The overlapped TID's boundaries are not affected by an overlap. The overlapped TID must still maintain whole parcels."
+  },
+  {
+    "Q": "How are TID values affected by overlapping?",
+    "A": "The newest overlapping TID includes the current value in its TID base and will receive future increment value."
+  },
+  {
+    "Q": "How is the overlapped TID's current value calculated?",
+    "A": "The current value of overlapped property, at the time it is overlapped, is the frozen overlap value. DOR establishes the frozen overlap value for the overlapped TID."
+  },
+  {
+    "Q": "Where can the municipality view the TID's frozen overlap value?",
+    "A": "The municipality can view the value of the frozen overlap on theTID Statement of Changesreport."
+  },
+  {
+    "Q": "Can the municipality continue paying for projects in the overlapped parcels with increment from the existing TID?",
+    "A": "Yes. The municipality continues to receive tax increment funds for the overlapped TID to pay its project costs."
+  },
+  {
+    "Q": "Does the Wisconsin Department of Revenue (DOR) use the parcel overlap value in determining the 12% value limit?",
+    "A": "No. Under state law (sec.66.1105(10)(c), Wis. Stats.), DOR excludes this value from the new TID when determining compliance with the 12% limit. The parcel value is already included in the value increment for the existing TID."
+  },
+  {
+    "Q": "Are the parcels in the overlapped area coded to both the new and old TID number on the assessment/tax roll?",
+    "A": "No. On the assessment/tax roll, the overlapped (older) TID number is removed from the parcel and the overlapping (newer) TID number is added to the parcel. A parcel may only have one TID number on the assessment/tax roll."
+  },
+  {
+    "Q": "If the overlapping (newer) TID terminates and the overlapped (older) TID is still active, should the parcel coding be changed back to the overlapped TID?",
+    "A": "No, do not put the older TID back on the parcel. The overlapped TID receives a frozen overlap value until it terminates. Coding the older TID number to the overlapped parcels may cause an incorrect current value for the overlapped TID."
+  },
+  {
+    "Q": "Will the frozen overlap value of an overlapped TID be deleted if the overlapping TID is terminated?",
+    "A": "No. Once a frozen overlap value exists for an overlapped TID, the frozen overlap value is included in the current year TID value until the overlapped TID terminates. The frozen overlap value for the overlapped TID does not change even if the overlapping TID terminates."
+  },
+  {
+    "Q": "To subtract overlapped parcels, which TID does a municipality amend? The older TID or the newer TID?",
+    "A": "To subtract overlapped parcels, the municipality must subtract the parcels from the TID currently shown on the assessment/tax roll. Generally, the newer TID is on the assessment/tax roll."
+  },
+  {
+    "Q": "Is the overlapping TID always the newer TID?",
+    "A": "Generally, a newer TID overlaps an older TID. However, a municipality may add territory to an older TID that overlaps a newer TID."
+  },
+  {
+    "Q": "Will the frozen overlap value of an overlapped TID be reduced if overlapped parcels are subtracted from the overlapping TID?",
+    "A": "No. Once a frozen overlap value exists for an overlapped TID, the frozen overlap value is included in the current year TID value until the overlapped TID terminates. The frozen overlap value does not change even if the overlapped parcels are subtracted from the overlapping TID."
+  },
+  {
+    "Q": "If a new TID completely overlaps an existing TID, does the overlapped TID still exist?",
+    "A": "Yes. The overlapped TID remains active until the municipality adopts a termination resolution. Due to the frozen overlap value, the municipality may continue to receive tax increment."
+  },
+  {
+    "Q": "Can a distressed or severely distressed TID be overlapped by a newly created TID?",
+    "A": "No. A newly created TID or an active TID that is adding parcels may not overlap a distressed or severely distressed TID."
+  },
+  {
+    "Q": "Can an Environmental Remediation (ER) TID created under sec. 66.1105, Wis. Stats., overlap another TID created under the same section? Or another ER TID created under sec. 66.1106, Wis. Stats.?",
+    "A": "Yes. An ER TID created under sec. 66.1105, Wis. Stats., can overlap another TID created under the same section or an ER TID created under sec. 66.1106, Wis. Stats."
+  }
+]

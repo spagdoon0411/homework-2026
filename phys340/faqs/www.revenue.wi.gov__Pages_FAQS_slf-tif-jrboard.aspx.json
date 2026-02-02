@@ -1,0 +1,98 @@
+[
+  {
+    "Q": "What is the Joint Review Board?",
+    "A": "The Joint Review Board (JRB) oversees a Tax Incremental District (TID). The JRB consists of one representative from each taxation jurisdiction within the specific TID (school district, technical college, county, municipality) and one public member."
+  },
+  {
+    "Q": "When does the initial JRB meeting for a creation or amendment have to be held?",
+    "A": "The initial JRB meeting must be held within 14 days after the public hearing notice is published."
+  },
+  {
+    "Q": "Do the JRB meetings require a published notice?",
+    "A": "Yes. For all JRB meetings, the municipality with the TID must publish a notice in a local newspaper, at least five days before the meeting."
+  },
+  {
+    "Q": "If a municipality creates a TID in two counties, which county has a representative on the JRB?",
+    "A": "The county with the greatest value in the TID is represented on the JRB."
+  },
+  {
+    "Q": "If there are two lake districts in a TID, which one should have a representative on the JRB?",
+    "A": "Neither. Only the school, county, technical college and municipality can appoint JRB representatives. However, the municipality must notify all affected taxing jurisdictions of the public hearing, including the lake districts."
+  },
+  {
+    "Q": "If there is an elementary and union high school district, which one has a representative on the JRB?",
+    "A": "A representative from the elementary school and a representative from the union high school share one seat and each have one-half a vote."
+  },
+  {
+    "Q": "If a municipality amends a TID with additional territory that includes a new school district or county, should the new school district or county have a representative on the JRB?",
+    "A": "A territory amendment requires a new calculation to determine which of the school districts or counties in the TID has the majority of the land value. Whichever has the majority, has the voting representation on the JRB. The calculation to determine majority value is the existing base value plus the additional parcels' current value."
+  },
+  {
+    "Q": "When a TID is created, how are the JRB's chairperson and public member determined?",
+    "A": "The JRB members, by majority vote, choose the chairperson and public member. If the representative acting as chairperson resigns from the JRB, the members must elect a new chairperson by majority vote. If the public member resigns, the JRB must choose a new public member by majority vote."
+  },
+  {
+    "Q": "Does a Tax Incremental District (TID) creation need unanimous JRB approval?",
+    "A": "No. Only a majority approval vote is required."
+  },
+  {
+    "Q": "Is the majority vote based on all the JRB members or only the members who attend the meeting?",
+    "A": "A majority of all JRB members must approve the TID. Therefore, except for a multijurisdictional TID, at least three \"yes\" votes are required. Any member who cannot attend a meeting should appoint a delegate to attend and vote on their behalf. Any member who does not attend or send a delegate is considered a \"no\" vote."
+  },
+  {
+    "Q": "After the JRB adopts the resolution, how soon does the Wisconsin Department of Revenue (DOR) need to be notified?",
+    "A": "Under state law (sec.66.1105(5)(cm), Wis. Stats.), the municipal clerk must give DOR written notice within 60 days of adopting any amendment resolution. Although state law does not require this same notice for a creation resolution, municipalities should also notify DOR within 60 days."
+  },
+  {
+    "Q": "How often does the JRB need to meet after the TID is created?",
+    "A": "At a minimum, the JRB must meet annually to review the TID's annual report, performance and status. The JRB must also meet to consider any amendments to the TID."
+  },
+  {
+    "Q": "Does the JRB need to vote to select a chairperson and public member at each year's meeting or when amending a TID?",
+    "A": "No. Once the chairperson and public member are selected, no new vote is required. The chairperson and public member remain the same for the TID's life or until they are no longer on the board."
+  },
+  {
+    "Q": "How many JRB members need to attend the meeting for it to take place?",
+    "A": "At least one-half of the members must attend a meeting. When one-half or more of the members of a governmental body attend, a meeting is assumed to be for official purposes (sec.19.82(2), Wis. Stats.)."
+  },
+  {
+    "Q": "Are the JRB members required to attend meetings in person?",
+    "A": "Due to the complexity of TID project plans, meeting in person is considered best practice. However, JRB members may participate in meetings via telephone or video conference, if communication is two-way, so votes and comments can be heard by all attendees. JRB members may not vote by email. The municipality should consult its attorney to confirm JRB meetings and notices comply with open meetings law."
+  },
+  {
+    "Q": "Where should the JRB meetings be held?",
+    "A": "When creating or amending a TID, the municipality should hold the JRB meeting locally so the affected members of the public can easily attend. The municipality should consider allowing both in-person and virtual options for the same meeting. This allows the public to attend using the method they prefer."
+  },
+  {
+    "Q": "Can a municipality email correspondence to JRB members?",
+    "A": "Before January 1, 2025 -Under sec.66.1105(4)(e), Wis. Stats., the municipality is required to send, by first class mail, a copy of the public hearing notice for a TID creation or amendment to all JRB members."
+  },
+  {
+    "Q": "Since the JRB for any active TID is already established, does it still need to hold an organizational meeting when amending a TID?",
+    "A": "Yes. Under state law, (sec.66.1105(4m)(a), Wis. Stats.), the JRB must hold its first meeting to review the proposal within 14 days after the public hearing notice is published.  The organizational meeting provides the public an opportunity to learn about the amendment."
+  },
+  {
+    "Q": "When a municipality has a standing JRB but is creating a new TID, should it reappoint a chairperson and public member for the new TID?",
+    "A": "Yes. The taxing jurisdictions may or may not appoint the same representatives for the newly created TID. DOR considers it a best practice to appoint a chairperson and public member for the new TID. They may be the same chairperson and public member as previous TIDs, or the JRB members may select a different chairperson and public member."
+  },
+  {
+    "Q": "When a taxing jurisdiction replaces their representative, do other members of the JRB have to approve the change?",
+    "A": "No. Each taxing jurisdiction appoints a representative and can replace that representative when necessary without approval from the other JRB members."
+  },
+  {
+    "Q": "What are the criteria for selecting a public member?",
+    "A": "State law does not define any requirements for the public member. The JRB members, by majority vote, choose the public member at the JRB's first meeting. A public member can be appointed as the JRB chairperson."
+  },
+  {
+    "Q": "Can the public member be employed by the municipality or county?",
+    "A": "Yes. A public member may work for municipal, county, state or federal government."
+  },
+  {
+    "Q": "Does the public member need to live in the same municipality as the TID?",
+    "A": "No. State law does not require the public member to live in the same municipality as the proposed TID."
+  },
+  {
+    "Q": "What is the expected termination year? Why is the JRB required to determine this year?",
+    "A": "Starting with TIDs that have a 2025 base year, state law (sec.66.1105(4m)(b)2m., Wis. Stats.) requires the JRB establish the year it expects the TID to terminate. This year may be different than the TID's statutory maximum life determined by the TID type and when the municipality adopted the creation resolution. When the TID terminates, the TID's actual life compared to the JRB's expected life, based on the expected termination year, determines whether the municipality receives an additional levy adjustment."
+  }
+]

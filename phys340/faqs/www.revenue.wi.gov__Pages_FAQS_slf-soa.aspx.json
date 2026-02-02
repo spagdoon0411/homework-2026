@@ -1,0 +1,70 @@
+[
+  {
+    "Q": "What is the Statement of Assessment (SOA)?",
+    "A": "A municipal clerk or real property lister electronically files (e-files) the SOA with the Wisconsin Department of Revenue (DOR). Once the Board of Review (BOR) adjourns and adjustments are made on the assessment roll, the clerk or real property lister reports the locally assessed values to DOR. The SOA is an official listing of the statutory classification and assessed values of all properties within a given municipality (town, village, city), which include:"
+  },
+  {
+    "Q": "How do I submit the SOA?",
+    "A": "You must electronically file (e-file) the SOA with DOR. There are two methods available to e-file this form."
+  },
+  {
+    "Q": "Do I need a PIN number or password to use the File Transfer method?",
+    "A": "No. You are not required to use a PIN number or password, or pre-register."
+  },
+  {
+    "Q": "Do I need a PIN number or password to use the E-file form?",
+    "A": "Since the form is located inMy DOR Government Account(MyDORGov), you must be an authorized MyDORGov user. For more information, reviewOnline Filing Help – Using My DOR Government Account."
+  },
+  {
+    "Q": "Why is it important to submit a complete and accurate SOA?",
+    "A": "DOR uses data from the SOA to:"
+  },
+  {
+    "Q": "Why did the Wisconsin Department of Revenue (DOR) contact us about our Managed Forest Land (MFL) or Private Forest Crop (PFC) acreage?",
+    "A": "In March each year, the Wisconsin Department of Natural Resources (DNR) provides DOR with a file listing the MFL and PFC acres in each municipality. If DOR contacted you, it may be because the acreage you submitted on the SOA did not reflect the acreage provided by DNR, and you did not provide an explanation as to why the acreage did not match."
+  },
+  {
+    "Q": "How often do Managed Forest (MFL) rates change and how are we notified",
+    "A": "Rates can change every five years. The last rate update occurred in 2023; prior rates changed in 2018. The next rate update will be in 2028. DOR updates the form and instructions, emails municipalities with the new rates, and discusses the changes in training opportunities."
+  },
+  {
+    "Q": "Do I need to report an assessed value for a special district if it does not levy any tax?",
+    "A": "Yes. Since DOR is required to certify equalized values of legally formed town sanitary districts, public lake protection and rehab districts, and metropolitan sewer districts, the assessed value must be reported."
+  },
+  {
+    "Q": "Where do I report our correction of errors by assessors values on the SOA?",
+    "A": "Report sec. 70.43, corrections of errors on Line 23, Column C1 for real estate and Line 23, Column C2 for personal property. These values should be for prior years. If the correction of errors is reducing a value, the value you report will be a negative value. If you report a sec. 70.43 correction on the SOA, you must report the corresponding amount of net taxes or refund due in Sec. I of the SOT."
+  },
+  {
+    "Q": "Where do I report our omitted values on the SOA?",
+    "A": "Report sec. 70.44, omitted property from prior years, on Line 23, Column A for real estate and Line 23, Column B for personal property. If you report a sec. 70.44 omitted property value on the SOA, you must report the corresponding amount of net taxes due in Section H of the SOT.​"
+  },
+  {
+    "Q": "Where can I find my final SOA?",
+    "A": "DOR posts Final SOAs October through December each year. As we complete an SOA, DOR posts each final SOA (which includes manufacturing values) on our website at:revenue.wi.gov/Pages/Report/Home.aspx."
+  },
+  {
+    "Q": "I filed my SOA. Why isn't there a final SOA for  my municipality?",
+    "A": "DOR works on final SOAs in batches starting in mid-late October through December and posts Final SOAs after we complete each batch."
+  },
+  {
+    "Q": "I amended my SOA. Why don't I see the amended  values on the final SOA?",
+    "A": "Since other processes rely on an SOA's information, it is important for DOR to have the most accurate SOA. If you amended your SOA after we posted the final to our website, we will still process it. However, we will not post the Final SOA with the amended values. DOR will not calculate a new aggregate ratio. When you compile property tax bills, use the aggregate ratio found on​ the Final SOA and the updated values from the amended SOA."
+  },
+  {
+    "Q": "Are there additional resources for the SOA process?",
+    "A": "Yes. ReviewPublication PA-502, Assessment and Tax Roll Instructions for Clerks. This publication provides an overview of the SOA and other processes a clerk and/or treasurer may be responsible for throughout the year."
+  },
+  {
+    "Q": "After the BOR has adjourned, can I amend my SOA by adding a parcel or improvement not applied to the current tax roll?",
+    "A": "No. This would be considered omitted property. According to state law (sec. 70.44, Wis. Stats.) and Chapter 7 of the Wisconsin Property Assessment Manual, any property discovered omitted from the currently year after the BOR adjourns will be assessed and taxed in the next year as omitted. Report omitted property on Line 23 A (real estate) and Line 23 B (personal property) on the next year's SOA.​"
+  },
+  {
+    "Q": "Can I amend my SOA correcting a palpable error discovered after the BOR already adjourned? (sec. 74.33, Wis. Stats.)",
+    "A": "Under state law (sec. 70.73 (1m), Wis. Stats.), after the BOR adjourns, if a palpable error (sec. 74.33(1)) is discovered in the assessment roll, the clerk or treasurer must correct the assessment roll before calculating the property taxes and then notify the Wisconsin Department of Revenue (DOR) of the correction under sec. 70.57, Wis. Stats."
+  },
+  {
+    "Q": "What is the Records Disposition Authorization (RDA) for the Statement of Assessment (Form PA-521C)?",
+    "A": "The SOA's RDA is the date the form was submitted to DOR plus seven years."
+  }
+]

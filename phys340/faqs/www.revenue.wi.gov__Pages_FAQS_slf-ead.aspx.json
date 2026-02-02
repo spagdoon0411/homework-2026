@@ -1,0 +1,54 @@
+[
+  {
+    "Q": "What type of  assessment information do I need to store electronically?",
+    "A": "Required — you must electronically store all assessment data (ex: parcel attributes, sketches, and photographs)"
+  },
+  {
+    "Q": "What responsibility do assessors have to communicate this requirement to the municipality?",
+    "A": "Assessors must communicate with the governing body, in writing, that the  required assessment data will be stored in an electronic format. The assessor  must also inform the governing body where the data will be located."
+  },
+  {
+    "Q": "When the municipality  hires a new assessor, who is responsible for the cost of transferring the electronically  stored data to the municipality?",
+    "A": "Unless specified by contract, the municipality is responsible for all costs associated with the transfer of the electronically stored data to the municipality. This process should be included in the contract and/or work plan for every assessor.​"
+  },
+  {
+    "Q": "Who owns the assessment data?",
+    "A": "The municipality owns the assessment data regardless of the contract's terms or software license."
+  },
+  {
+    "Q": "When the  municipality hires a new assessor, when does the outgoing assessor need to transfer  the data to the municipality?",
+    "A": "The outgoing assessor must provide all the assessment data to the municipal  clerk within 30 days of vacating the Assessor's office or must provide it at  the Board of Review's (BOR) final adjournment, whichever is later."
+  },
+  {
+    "Q": "What assessment data does an outgoing assessor need to provide to the municipality?",
+    "A": "The outgoing assessor must provide the municipality with all assessment records (paper and electronic) in the assessor's custody. Even though an assessor must maintain electronic assessment data, the assessor must also provide the municipality with a paper copy of each property record card if requested. If paper records are converted to an electronic format, the assessor must return the original paper records to the municipality."
+  },
+  {
+    "Q": "What residential and agricultural data must be maintained electronically?",
+    "A": "The minimum residential and agricultural data required is the information identified on theProperty Record Card(PA-500) andAgricultural Work Card(PA-703) that corresponds with Volume 2 of the Wisconsin Property Assessment Manual (WPAM)."
+  },
+  {
+    "Q": "What commercial data must be maintained electronically?",
+    "A": "The minimum commercial data is the information identified on the residentialProperty Record Card(PA-500), including all data applied to determine the assessment."
+  },
+  {
+    "Q": "​What mobile home data must be maintained electronically?",
+    "A": "The minimum mobile home data must identify whether the mobile home is real property or subject to a parking permit fee, and must include the data used to determine the assessment."
+  },
+  {
+    "Q": "Are assessors and municipalities required to post assessment data on the Internet?",
+    "A": "No. Assessors and municipalities are encouraged, but not required, to share assessment data on the Internet, as permitted by state law."
+  },
+  {
+    "Q": "How does DOR use electronic assessment data?",
+    "A": "DOR uses assessment data for: development of equalized values; petitions for reassessment under sec.70.75, Wis. Stats.; appeals under sec.70.85, Wis. Stats.; performance audits; reviews of assessor practices."
+  },
+  {
+    "Q": "What happens if an assessor does not comply with the electronic assessment data requirement or fails to provide DOR with the required electronic assessment data?",
+    "A": "Failure to comply results in DOR reviewing the assessor's certification and could result in suspension or revocation of the certification."
+  },
+  {
+    "Q": "After all my property records are in an electronic format, do I still need to maintain a paper copy?",
+    "A": "If you can produce a paper copy of the current ​Property Record Card(PA-500) when requested, you are not required to update the paper copy. However, annually at the close of the BOR, you must produce a paper copy of the Property Record Card for each parcel before making any changes for the coming year."
+  }
+]

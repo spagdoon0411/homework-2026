@@ -1,0 +1,34 @@
+[
+  {
+    "Q": "Is municipal-owned property included in the Tax Incremental District (TID) base value?",
+    "A": "Since October 1, 2015, municipal-owned property is excluded from the base value, unless the purchase date is within one year before the municipality's TID creation resolution. In that case the property's assessed value before purchase is included in the base value."
+  },
+  {
+    "Q": "Which TID form do we use to enter the municipal-owned property?",
+    "A": "UseForm PE-619to enter the TID's municipal-owned parcel numbers and purchase date for each.  Enter a value when the purchase date was within one year before the municipality's adopted TID creation resolution date. Email this completed form to tif@wisconsin.gov with the other forms in theBase Value Workbook."
+  },
+  {
+    "Q": "Which TID form do we use to enter property owned by another municipality?",
+    "A": "On the Base Value Workbook:"
+  },
+  {
+    "Q": "Should municipal-owned property be valued according to its exempt classification or at its value before it was purchased by the municipality?",
+    "A": "The municipal purchase date determines which municipal-owned property value to use in the TID base value.  Compare the purchase date to the date of the TID creation resolution:"
+  },
+  {
+    "Q": "Does a territory addition amendment include the prior year value for municipal property purchased within a year prior to the municipal resolution?",
+    "A": "Yes. A territory addition amendment creates a new part of the TID. The same guidelines apply to both a TID's creation and a territory addition amendment."
+  },
+  {
+    "Q": "What if the municipality purchased property within one year before the TID creation but the property was exempt before the purchase? What amount is included in the TID base value?",
+    "A": "When the municipal-owned property was exempt before the purchase, no value for the property is included in the TID base. Enter the parcel with exempt classification and a value of zero onForm PE-619of theBase Value Workbook. It is helpful to provide an explanation why the property was previously exempt (ex: it was owned by the school district or a non-profit entity)."
+  },
+  {
+    "Q": "In a mixed-use TID, how is municipal-owned exempt property (park/cemetery) included in the calculation when determining the 35% newly-platted residential limitation?",
+    "A": "To determine the percentage, divide the TID's newly-platted residential property acreage by all real property acreage (including exempt property)."
+  },
+  {
+    "Q": "Can a municipality purchase property and then create a TID for that property?",
+    "A": "Yes. However, under state law (sec.66.1105(5)(e), Wis. Stats.), any property the municipality purchases within one year before the TID's creation must be treated as if the sale did not occur, unless the municipality can prove it acquired the property for a reason other than creating the TID."
+  }
+]

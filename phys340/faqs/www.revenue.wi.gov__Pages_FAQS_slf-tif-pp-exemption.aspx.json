@@ -1,0 +1,42 @@
+[
+  {
+    "Q": "How do I know if a Tax Incremental District (TID) is affected by2023 Act 12?",
+    "A": "Review the TID's creation and territory amendment documents to identify whether the TID's base value includes personal property accounts. If the base value includes personal property, review with the assessor to determine whether the personal property is exempted by 2023 Act 12."
+  },
+  {
+    "Q": "How should a municipality submit an adjustment request?",
+    "A": "Complete thePersonal Property Removal Workbookand email it to tif@wisconsin.gov."
+  },
+  {
+    "Q": "Why should a municipality submit an adjustment request?",
+    "A": "Personal property exempted under2023 Act 12will be removed from the TID's current year value beginning in 2024. Adjusting the TID's base value by removing the exempt personal property allows for the correct increment calculation. Starting in 2024, the TID's assessed value does not include personal property."
+  },
+  {
+    "Q": "What is the deadline to submit an adjustment request?",
+    "A": "October 31 each year is the deadline to submit a request for the following tax year."
+  },
+  {
+    "Q": "There was no personal property assessed in the TID for 2023. Does this mean there was no personal property included in the base value? Does the municipality still need to submit an adjustment request?",
+    "A": "Personal property included in the TID's base value may be different than the personal property currently assessed in the TID. Review the TID's creation and territory amendment documents to identify if the TID's base value includes personal property. You only need to submit an adjustment request if personal property was included in the TID's base value and it is exempt starting in 2024."
+  },
+  {
+    "Q": "Does the municipality have to submit a Personal Property Removal Workbook every year?",
+    "A": "No, submit onePersonal Property Removal Workbookfor each TID that includes personal property in the base. If your municipality already submitted a request, you do not need to resubmit."
+  },
+  {
+    "Q": "How do we complete the Personal Property Removal Workbook if the base value documents do not include all the information requested on the workbook, such as account numbers or addresses?",
+    "A": "When completing the \"PP – Base Values\" worksheet in thePersonal Property Removal Workbook, provide the available information from the TID's creation and territory amendment documents. If specific information is not available on creation or territory amendment documents, leave those columns blank. DOR must be able to match the accounts on the \"PP – Base Values\" worksheet to the TID's creation and territory amendment documents."
+  },
+  {
+    "Q": "A municipality created a TID in 2023. The 2023 values include personal property that will be exempt due to 2023 Act 12. Do we still need to submit an adjustment request or will DOR adjust these TIDs automatically?",
+    "A": "Since 2023 Act 12 is effective on January 1, 2024, DOR must include personal property values when establishing the base value for TIDs created in 2023. A municipality must complete and submit the Personal Property Adjustment Request for 2023 TID creations that include personal property exempt under 2023 Act 12."
+  },
+  {
+    "Q": "Does completing the adjustment request affect the amount of personal property aid the TID receives?",
+    "A": "No, a TID's personal property aid is determined by its 2023 personal property value. The TID personal property adjustment request only affects the TID's base value."
+  },
+  {
+    "Q": "Is a TID created in 2023 eligible for personal property aid?",
+    "A": "No, the aid applies to TIDs on the 2023 tax/assessment roll. A TID created in 2023 will be added to the tax/assessment roll in 2024.See TID Creation Timeframes."
+  }
+]

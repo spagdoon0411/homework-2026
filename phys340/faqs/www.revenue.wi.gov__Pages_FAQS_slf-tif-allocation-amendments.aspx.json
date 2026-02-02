@@ -1,0 +1,54 @@
+[
+  {
+    "Q": "What is an allocation amendment?",
+    "A": "An allocation amendment allows a TID with excess funds (the donor) to transfer funds to another TID (the recipient)."
+  },
+  {
+    "Q": "Which TID type can allocate to another?",
+    "A": "See theTID Allocation Amendment Types."
+  },
+  {
+    "Q": "Can a  municipality allocate increment between its Tax Incremental Districts (TIDs) with different overlying  taxing jurisdictions?",
+    "A": "No. State law (sec.66.1105(6)(f)1.a, Wis. Stats.) requires that both Donor and Recipient TIDs have the same overlying taxing jurisdictions."
+  },
+  {
+    "Q": "Which TID project plan should a municipality amend to allocate increment from one TID to another, the Donor TID or Recipient TID?",
+    "A": "A municipality must amend the Donor TID's project plan. For details on how to complete an allocation amendment, seeMunicipal TIF Project Plan and/or Allocation Amendments."
+  },
+  {
+    "Q": "If a municipality amends both TID 1 and TID 2 to share increment with TID 3, how many project plans are needed?",
+    "A": "If the municipality is amending TID 1 and TID 2 to become Donor TIDs, it must create two project plans. One for each Donor (1 and 2). The economic feasibility section of each project plan must show that the Donor TID has extra increment to share."
+  },
+  {
+    "Q": "Does the public hearing notice for an allocation amendment need to include the amount of the donation?",
+    "A": "Yes, the public hearing notice must include the estimated donation amount. The notice for any TID amendment must include the purpose and cost of the amendment. For assistance, see the sample notices on the TIFPublic Noticesweb page."
+  },
+  {
+    "Q": "After a municipality completes an allocation amendment, can the municipality decide not to allocate the funds?",
+    "A": "Yes. The municipality can (for whatever reason) choose not to allocate after completing the allocation amendment. There is no additional action required if this occurs."
+  },
+  {
+    "Q": "If a Donor TID paid off all its project costs, can it stay open solely to allocate to another TID?",
+    "A": "Yes. If the Donor TID has not reached its maximum life, after the Donor TID's allocation amendment resolution is approved, it can stay open for allocating to another TID."
+  },
+  {
+    "Q": "After a TID becomes a donor, can the municipality amend the donor TID's project plan to add new project costs?",
+    "A": "Yes. The municipality can amend its project plan to add new project costsifthe donor TID has not reached the end of its expenditure period."
+  },
+  {
+    "Q": "When can an allocation transfer take place?",
+    "A": "If funds are available from the Donor TID, the allocation transfer can occur after the municipal resolution is adopted and the JRB approves the allocation amendment."
+  },
+  {
+    "Q": "Can allocations be made after the expenditure period?",
+    "A": "Yes. After the Donor TID's expenditure period ends, the municipality can allocate funds until the Donor TID reaches its maximum life."
+  },
+  {
+    "Q": "Can a municipality amend a TID to be a donor after the end of the TID's expenditure period?",
+    "A": "Yes. The municipality can adopt an allocation amendment resolution after the donor TID's expenditure period ends. The municipality must adopt the amendment resolution before the donor or recipient TIDs reach their maximum life."
+  },
+  {
+    "Q": "What does project costs for \"low-cost housing\" mean for a mixed-use or industrial type recipient?",
+    "A": "Project plans for a mixed-use or industrial type TID must include costs to create, provide, or rehabilitate low-cost housing to become a recipient of increment funds from a donor TID."
+  }
+]

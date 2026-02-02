@@ -1,0 +1,42 @@
+[
+  {
+    "Q": "What is the Tax Increment Worksheet (TIW)?",
+    "A": "The Tax Increment Worksheet (PC-202) calculates property tax amounts for the Tax Incremental Districts (TIDs) within a municipality. The TIW uses the overlying taxing jurisdiction's apportioned tax levies and the value increment within each taxing jurisdiction to determine their share of the tax increment. The total tax increment is distributed to the municipality's TIDs."
+  },
+  {
+    "Q": "Who needs to file the TIW?",
+    "A": "Any town, village or city with one or more TIDs with a positive total value increment must complete the TIW each year. You must file this worksheet before you can file the Statement of Taxes (SOT)."
+  },
+  {
+    "Q": "How do I file the TIW?",
+    "A": "You must electronically file the TIW. This form is located inMy DOR Government Account. For more information, review ourOnline Filing Help – Using My DOR Government Account."
+  },
+  {
+    "Q": "What is the deadline to file the TIW?",
+    "A": "Each required municipality must e-file the TIW with the Wisconsin Department of Revenue (DOR) by the third Monday in December.Note:You must file the TIW before you complete the mill rate worksheet."
+  },
+  {
+    "Q": "Where do my values come from for filing the TIW?",
+    "A": "Most values on the TIW are auto-filled. The only value you need to report is the municipality's local levy, which is the sum of these lines from the Statement of Taxes (SOT):"
+  },
+  {
+    "Q": "What if an auto-filled apportioned levy is missing or incorrect?",
+    "A": "You must contact the taxing jurisdiction directly and notify DOR's Local Government Services Bureau. Taxing jurisdictions (except schools) report their apportioned levies to DOR. School districts provide their apportioned levies to the Wisconsin Department of Public Instruction (DPI), which is shared with DOR."
+  },
+  {
+    "Q": "Which levy amount from the TIW should I use to calculate property tax mill rates – Column A (Apportioned Levy) or Column E (Levy Amount)?",
+    "A": "Use Column E (Levy Amount) to calculate mill rates for property tax bills. This will ensure the total apportioned tax levies and the tax increment are collected. Column A (Apportioned Levy) amounts will be shown on your municipality's SOT. Column F's (Tax Increment) amount will appear on the SOT, Section C, Line 2."
+  },
+  {
+    "Q": "I found an error on my TIW; can I fix it?",
+    "A": "Yes. You can electronically amend Form PC-202 to correct your municipal levy entry, located on our website:https://www.revenue.wi.gov/Pages/OnlineServices/slfiling.aspxAfter you amend the TIW, you must also amend the SOT."
+  },
+  {
+    "Q": "What happens if I use the wrong levy from the TIW in my mill rate calculations?",
+    "A": "Always use TIW, Column E levies for your mill rate calculations.  If you use the apportioned levies (Column A), you will not collect the tax increment for your TIF districts and may need to reissue property tax bills."
+  },
+  {
+    "Q": "Do I need to provide a copy of the TIW to the county?",
+    "A": "You must provide your completed Tax Increment Worksheet to the county if the county is printing your tax bills.​"
+  }
+]

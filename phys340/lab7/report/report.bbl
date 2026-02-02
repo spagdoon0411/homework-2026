@@ -1,0 +1,51 @@
+\begin{thebibliography}{1}
+
+\bibitem{mich}
+Michigan State University~Physics Department.
+\newblock The compton effect, Spring 2013.
+\newblock Laboratory manual for PHY192 course.
+
+\bibitem{harris}
+Randy Harris.
+\newblock {\em Modern {Physics}}.
+\newblock Pearson, Harlow, 2014.
+
+\bibitem{knoll}
+Glenn~F. Knoll.
+\newblock Radiation spectroscopy with scintillators, 2010.
+\newblock MIT course reference excerpt.
+
+\bibitem{france}
+{LNE-LNHB} and {Leblond, S.}
+\newblock {Table de Radionucl{\'e}ides}: $^{137}$cs.
+\newblock \url{http://www.lnhb.fr/nuclides/Cs-137_tables.pdf}, 2023.
+\newblock Accessed: 2025. Data valid from 02/12/2021 to 18/07/2023. Recommended citation: X. Mougeot et al., Metrologia {\bf 62}, 029002 (2025), DOI: 10.1088/1681-7575/adb9de.
+
+\bibitem{mel}
+Adrian~C. Melissinos and Jim Napolitano.
+\newblock {\em Experiments in Modern Physics}.
+\newblock Academic Press, San Diego, 2nd edition, 2003.
+\newblock Chapter 8 cited.
+
+\bibitem{ucsb}
+Randolph~S. Peterson.
+\newblock {\em Experimental Gamma Ray Spectroscopy and Investigations of Environmental Radioactivity}.
+\newblock Spectrum Techniques, Oak Ridge, TN, 1996.
+\newblock Laboratory manual. Available at: \url{https://web.physics.ucsb.edu/~phys128/experiments/gamma/GammaSpectroscopy.pdf}.
+
+\bibitem{cs137}
+Leticia Pibida and David West.
+\newblock Measurements of scatter peaks in {137}cs and {60}co sources.
+\newblock {\em Journal of Research of the National Institute of Standards and Technology}, 123:123012, 2018.
+
+\bibitem{ra226}
+{Radiacode}.
+\newblock Radium-226, 2025.
+\newblock Accessed: 2025-12-07.
+
+\bibitem{zwiebach}
+Barton Zwiebach.
+\newblock Compton scattering, Spring 2016.
+\newblock Lecture video, Quantum Physics I (8.04), MIT OpenCourseWare.
+
+\end{thebibliography}

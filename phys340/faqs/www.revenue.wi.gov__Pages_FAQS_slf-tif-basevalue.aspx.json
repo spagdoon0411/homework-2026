@@ -1,0 +1,58 @@
+[
+  {
+    "Q": "When redetermining a base value, does the Wisconsin Department of Revenue (DOR) use the Tax Incremental District's (TID's) current equalized value or the TID's lowest historic value to set the new base value?",
+    "A": "DOR sets the new base value to the TID's equalized value as of the date of the municipality's redetermination resolution."
+  },
+  {
+    "Q": "What years should the municipality use to determine the equalized values two-year, 10% decline?",
+    "A": "Use the two most current years available based on when the municipality adopts the redetermination resolution."
+  },
+  {
+    "Q": "What steps must a municipality complete for a base value redetermination amendment?",
+    "A": "The municipality must:"
+  },
+  {
+    "Q": "The amended project plan requires selecting Option (3), (4) or (5) from sec.66.1105(5)(i), Wis. Stats. What impact do these three options have on the project plan?",
+    "A": "Option 3 -(sec.66.1105(5)(i)3.)"
+  },
+  {
+    "Q": "In Option (4), do the \"project costs which must be paid within 90% of the TID's remaining life,\" include debt service?",
+    "A": "Yes. The amended project plan must demonstrate the TID will have sufficient revenue to pay off debt andallproject costs within 90% of the TID's remaining life. After all project costs are paid, the TID must terminate."
+  },
+  {
+    "Q": "In Option (4), how is the TID's remaining life calculated?",
+    "A": "Example:"
+  },
+  {
+    "Q": "In Option (5), do \"expenditures\" include debt service?",
+    "A": "No. With this option, the municipality may only take on project costs within the first half of the TID's maximum life. Debt payments may continue through the TID's maximum life. Also, seeMunicipal Expenditures and Debt Common Question 1."
+  },
+  {
+    "Q": "What is the difference between \"all project costs\" in Option (4) and \"expenditures\" in Option (5)?",
+    "A": "State law (sec.66.1105, Wis. Stats.), does not provide a specific definition of expenditures; however, DOR considers an expenditure to include any eligible project cost at the point it is incurred. It does not include repayment of debt for an eligible project cost."
+  },
+  {
+    "Q": "If a municipality completes a base value redetermination amendment, how would the change affect the equalized value used for the apportionment of taxes?",
+    "A": "The municipality's equalized value, minus the TID increment value, is used for the apportionment of taxes. When the TID's base value is reduced through a redetermination amendment, it may increase the TID's increment value. An increased TID increment value could reduce the municipality's equalized value used for the apportionment of taxes."
+  },
+  {
+    "Q": "Can a municipality with an Environmental Remediation (ER) TID request a base value redetermination?",
+    "A": "Only an ER TID created after November 29, 2017, under sec.66.1105, Wis. Stats., is eligible for a redetermination if it meets the decrement criteria (TID's current year value is at least 10% below the base value for two consecutive years). An ER TID created under sec.66.1106, Wis. Stats., is not eligible."
+  },
+  {
+    "Q": "Can a municipality with a distressed (or severely distressed) TID request a base value redetermination?",
+    "A": "Yes. A distressed (or severely distressed) TID is eligible for a redetermination if it meets the decrement criteria (the TID's current year value is at least 10% below the base value for two consecutive years)."
+  },
+  {
+    "Q": "Can a municipality include new project costs with the base value redetermination amendment?",
+    "A": "Yes. The municipality must adopt a revised project plan as part of the base value redetermination amendment. The revised project plan may include new projects, but the plan must show the TID meets the decrement criteria and select Option (3), (4) or (5). The new costs must meet the requirements of the Option (3), (4) or (5) selected in the revised plan."
+  },
+  {
+    "Q": "When is the deadline to request a TID base value redetermination with DOR?",
+    "A": "The municipality must adopt a municipal resolution on or before September 30 of the amendment year and email the redetermination documents to DOR by October 31. DOR will certify the values the following year."
+  },
+  {
+    "Q": "Can a municipality request that the JRB adopt resolutions to extend a TID and complete a base value redetermination amendment for the same TID at the same time?",
+    "A": "Yes. If the TID meets the extension criteria (seeTID Extension Types) and the decrement criteria, the municipality may request the JRB approve both at the same time. An extension changes the amount of time allowed for options (4 or 5) from sec. 66.1105(5)(i), Wis. Stats., explained inquestion 4."
+  }
+]

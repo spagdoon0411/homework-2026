@@ -1,0 +1,32 @@
+\begin{thebibliography}{1}
+
+\bibitem{nist-al}
+John~H. Hubbell and S.~M. Seltzer.
+\newblock X-ray mass attenuation coefficients - aluminum (z=13).
+\newblock Online; accessed 12 November 2025, 1995.
+\newblock Available at \url{https://physics.nist.gov/PhysRefData/XrayMassCoef/ElemTab/z13.html}.
+
+\bibitem{nist-pb}
+John~H. Hubbell and S.~M. Seltzer.
+\newblock X-ray mass attenuation coefficients - lead (z=82).
+\newblock Online; accessed 12 November 2025, 1995.
+\newblock Available at \url{https://physics.nist.gov/PhysRefData/XrayMassCoef/ElemTab/z82.html}.
+
+\bibitem{nist-gen}
+John~H. Hubbell and S.~M. Seltzer.
+\newblock X-ray mass attenuation coefficients - section 2: Attenuation coefficient, cross section, methods.
+\newblock Online; accessed 12 November 2025, 1995.
+\newblock Available at \url{https://physics.nist.gov/PhysRefData/XrayMassCoef/chap2.html}.
+
+\bibitem{nudat}
+{National Nuclear Data Center}.
+\newblock Nudat: Nuclear data lookup from the national nuclear data center.
+\newblock \url{https://www.nndc.bnl.gov/nudat/}, 2025.
+\newblock Accessed: 2025-11-12.
+
+\bibitem{young}
+Hugh~D Young and Roger~A Freedman.
+\newblock {\em University {Physics}: with {Modern} {Physics}}.
+\newblock Harlow Pearson Education Limited, 15 edition, 2020.
+
+\end{thebibliography}

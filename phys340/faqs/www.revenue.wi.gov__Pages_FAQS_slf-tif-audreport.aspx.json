@@ -1,0 +1,98 @@
+[
+  {
+    "Q": "What audits and reports does a municipality with a Tax Incremental District (TID) need to complete?",
+    "A": "Under state law, a municipality must complete the following audits and reports:"
+  },
+  {
+    "Q": "Audits",
+    "A": "Municipality must complete three Certified Public Accountant (CPA) audits during the TID's life."
+  },
+  {
+    "Q": "TID Annual Report",
+    "A": "Municipalities with an active TID must e-file a TID Annual Report (Form PE-300) with DOR for each TID."
+  },
+  {
+    "Q": "Can the municipal audit take the place of the TID Annual Report?",
+    "A": "No. A municipality must e-file a TID Annual Report (Form PE-300) by July 1 with DOR."
+  },
+  {
+    "Q": "Does the first audit occur when the municipality reaches 30% of the capital expenditures or 30% of the total expenditures?",
+    "A": "The first audit should be completed after the municipality paid 30% of the expected total TID costs, based on the current project plan. The total costs include any eligible TID costs (ex: fees, financing or professional services)."
+  },
+  {
+    "Q": "If the municipality amends the project plan to add costs after reaching 30% of project expenditures and completed a first audit, does the municipality need to complete another first audit?",
+    "A": "Yes. If the municipality approved an amendment to increase the project costs and has not paid 30% of the amended project costs, the municipality must repeat the audit when reaching 30% of the amended project costs."
+  },
+  {
+    "Q": "If the municipality finished a TID's final audit, but continued to incur additional project costs, is the municipality required to complete another final audit?",
+    "A": "Yes. The final audit must cover all TID costs. A municipality must complete another final audit after all project costs are paid or it must arrange to cover future expenditures (ex: bond payments) from a source other than the TID fund."
+  },
+  {
+    "Q": "If a municipality terminates a TID before the end of the expenditure period when the second audit is required, can the municipality skip the second audit?",
+    "A": "Yes. However, the final audit is required and needs to explain the timing and why there is no  second audit. As an example, the second audit was not required because the TID terminated early and never reached 12 months after the end of the expenditure period."
+  },
+  {
+    "Q": "What determines the last reporting year for the TID Annual Report (Form PE-300)?",
+    "A": "The municipal termination resolution adoption date determines the last year a municipality must file the TID Annual Report. See theTID Termination Timeframestable for details."
+  },
+  {
+    "Q": "Our municipality terminated a TID before April 15 this year. Why is the Annual Report still required?",
+    "A": "Each year, the municipality must file the TID Annual Report with the prior year's revenues and expenditures. When the municipality terminates the TID by April 15 of the current year, it was still active in the prior tax year, so the municipality must file the Annual Report."
+  },
+  {
+    "Q": "What determines the first reporting year for the TID Annual Report?",
+    "A": "The municipal creation resolution adoption date determines the first year a municipality must file the TID Annual Report. See theTID Creation Timeframestable for details."
+  },
+  {
+    "Q": "When completing the TID Annual Report for the first time, how should a municipality account for expenses in the prior year when the Annual Report was not required?",
+    "A": "The municipality should work with an accountant or auditor to determine whether to include the expenses on the first Annual Report or keep them separate. The municipality must document these expenses and include them in the TID Final Accounting Report at the end of the TID's life."
+  },
+  {
+    "Q": "How does the municipality determine the amount of \"future costs\" and \"future revenue\" on the TID Annual Report?",
+    "A": "The municipality can use a recent cash flow statement and/or the most recent approved project plan to estimate these amounts."
+  },
+  {
+    "Q": "How does the municipality determine the \"Levy Increase Attributable to TID Net New Construction\" on the TID Annual Report?",
+    "A": "Section 6 of the TID Annual R​eport shows the TID new construction values (as reported by the assessor) and calculates the maximumpossiblelevy increase specific to TID net new construction."
+  },
+  {
+    "Q": "Can a municipality use TIF funds to pay a Certified Public Accountant (CPA) to complete the required audits and Annual Reports?",
+    "A": "Yes. Under state law, professional services are an allowable TID expenditure."
+  },
+  {
+    "Q": "Can a municipality use TIF funds to pay for Annual Report penalties?",
+    "A": "No. Under state law, penalty payments are not an allowable TID expenditure."
+  },
+  {
+    "Q": "Does the Joint Review Board (JRB) need to meet before the municipality e-files the TID Annual Report(s)?",
+    "A": "No. Under state law, the JRB must meet on July 1 or when the report becomes available. The law does not state whether the meeting must occur before or after e-filing the report with DOR."
+  },
+  {
+    "Q": "When a municipality schedules the JRB meeting, can the municipality email the TID Annual Report(s) to the JRB before the meeting?",
+    "A": "Yes. State law requires the municipality to provide the JRB copies of the report. However, state law does not require a municipality to provide the report before the meeting and does not require a specific distribution method."
+  },
+  {
+    "Q": "Does the JRB need to vote to approve or reject the annual reports, or does it just need to review the Annual Reports?",
+    "A": "State law only requires the JRB meet to review the reports. The JRB does not need to adopt a resolution approving or rejecting the reports."
+  },
+  {
+    "Q": "Does a municipality need to provide DOR with documentation stating the JRB met to review the TID Annual Report?",
+    "A": "No. The municipality should keep a record of the JRB meeting notice and minutes in its TID files."
+  },
+  {
+    "Q": "Can a municipality update its TID Annual Report after the report is submitted?",
+    "A": "Yes. After filing an original TID Annual R​eport, a municipality may amend the report inMy DOR Government Accountthrough November 1."
+  },
+  {
+    "Q": "When an error is found in a TID Annual Report after the amendment deadline of November 1, how should a municipality correct the report?",
+    "A": "After discovering an error in the TID Annual Report, a municipality should present the corrected report at the next JRB meeting and have revised numbers available for the public upon request. The original published report remains on DOR's website for seven years."
+  },
+  {
+    "Q": "If a municipality settles a claim on a property within a TID and issues a tax refund, how should the tax refund be reported on Form PE-300?",
+    "A": "Property tax refunds are not an eligible TID project cost. Do not include a property tax refund on the TID Annual Report (Form PE-300). Eligible TID project costs are defined in sec.66.1105(2)(f), Wis. Stats."
+  },
+  {
+    "Q": "Are TID statistical reports available?",
+    "A": "Yes. Review theDOR reportsweb page and select the category \"Tax Incremental Financing\" for information, including yearly data, active TIDs, value limit, and changes in TID values."
+  }
+]

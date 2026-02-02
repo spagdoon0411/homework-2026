@@ -1,0 +1,30 @@
+[
+  {
+    "Q": "Who is required to file a Financial Report?",
+    "A": "Each Wisconsin county and municipality is required to electronically file (e-file) a Financial Report with the Wisconsin Department of Revenue (DOR) showing prior year revenues and expenditures."
+  },
+  {
+    "Q": "When is the filing deadline for MFR?",
+    "A": "Municipalities and counties with a population:"
+  },
+  {
+    "Q": "How are municipalities and counties notified that the MFR form is available for filing?",
+    "A": "In early February, DOR notifies each county and municipality by email that the Municipal Financial Report Forms are available in MyDORGov. The email includes the following information:"
+  },
+  {
+    "Q": "Will I be charged a penalty if I file this report late?",
+    "A": "Yes. If you do not file this report by May 15, state law (sec. 86.303(5)) requires a late filing penalty that reduces your General Transportation Aid payments from the Wisconsin Department of Transportation (DOT). This penalty is calculated and imposed by the DOT."
+  },
+  {
+    "Q": "Can I amend the e-filed report?",
+    "A": "Yes. You can file an amended report inMy DOR Government Account. You may be required to provide additional information/documentation to support your amended return."
+  },
+  {
+    "Q": "Why are some values on the MFR auto-filled; can I change these values?",
+    "A": "Some auto-filled line values are transferred from other sources, other lines in the MFR form, or are carryover from the prior year. This makes it easier to complete the form, compare prior year data with the current year, and quickly identify large variances and possible errors."
+  },
+  {
+    "Q": "I'm having trouble with the Tax Roll Reconciliation page (Section B). What should I do?",
+    "A": "Review the Tax Roll Reconciliation Cash Basis Accounting instructions within thedetailed form instructions."
+  }
+]

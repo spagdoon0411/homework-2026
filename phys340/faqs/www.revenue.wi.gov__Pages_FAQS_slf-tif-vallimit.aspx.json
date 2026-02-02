@@ -1,0 +1,54 @@
+[
+  {
+    "Q": "What is the equalized value limit?",
+    "A": "The equalized value limit is the maximum property value a municipality can have within Tax Incremental Districts (TIDs). It is calculated by adding the equalized value of the new TID's taxable property as of January 1 (of the creation or amendment year) and the value increment of all existing TIDs (for that municipality). This value cannot exceed 12% of the municipality's total equalized value."
+  },
+  {
+    "Q": "What role do final equalized values (posted on August 15) have when calculating the 12% limit?",
+    "A": "The Wisconsin Department of Revenue (DOR) updates municipal equalized values annually on August 15. The municipal TID creation (or amendment) resolution adoption date determines which year's increment value and municipal value to use in the value limit calculation. If the local legislative body resolution is adopted:"
+  },
+  {
+    "Q": "If a Tax Incremental District (TID) has parcels in more than one county, is the value limit calculation separated by county?",
+    "A": "No. The entire TID's full value is included in the value limit calculation. Values from both counties for the TID base, TID increment and municipal equalized value are combined when calculating the 12% limit."
+  },
+  {
+    "Q": "When calculating the 12% limit for creating a TID or adding parcels to an existing TID, does the municipality include the increment for a terminated district?",
+    "A": "No. The municipality does not include the terminated TID's increment value when calculating the 12% limit, as long as the municipality adopted the termination resolution before the creation or territory resolution."
+  },
+  {
+    "Q": "Are overlapped parcel values included in the 12% limit calculation?",
+    "A": "No. Under state law (sec.66.1105(10)(c), Wis. Stats.), the value of overlapped parcels are not included in the 12% limit calculation. The overlapped parcel values are already included in the increment for the existing TID."
+  },
+  {
+    "Q": "Can a municipality create a new TID with a zero base value if the municipality's existing TIDs already exceed the 12% limit?",
+    "A": "No. Under state law (sec.66.1105(4)(gm)4.c., Wis. Stats.), a new TID or territory addition cannot be approved if the municipality already exceeds the 12% limit. A new TID cannot be created even if the new TID completely overlaps an existing TID."
+  },
+  {
+    "Q": "If a municipality is creating multiple TIDs in the same year, and all the TIDs are under 12% individually but collectively exceed the limit, can the TIDs be created?",
+    "A": "Yes. Each submission stands alone. As long as each TID (created/amended) in the same year meets the 12% limit individually, the TIDs can be created/amended. See state law (sec.66.1105(4)(gm)4.c., Wis. Stats.)."
+  },
+  {
+    "Q": "Does the 12% limit apply to territory amendments (adding/subtracting parcels), or does it only apply when a municipality is creating a new Tax Incremental District (TID)?",
+    "A": "The 12% limit applies to new TID creations (except designated Environmental Remediation (ER) TIDs) and TID amendments adding parcels. The value limit calculation is part of the required findings in the municipal resolution. The 12% value limit does not apply when a municipality is subtracting parcels from a TID."
+  },
+  {
+    "Q": "When a municipality amends an existing TID to add and subtract parcels, how does the 12% limit apply?",
+    "A": "If a municipality completes an amendment that adds and subtracts parcels at the same time, the base value of the added and the subtracted parcels are combined. The resulting value is used in the value limit calculation. Subtracted parcels use the value from the year they entered the TID. Added parcels use the value as of January 1 of the amendment year."
+  },
+  {
+    "Q": "Can a municipality amend a project plan to add projects when the municipality is over the 12% limit?",
+    "A": "Yes. A municipality can amend the project plan to add projects when the municipality is over the 12% limit. The 12% limit only applies when a TID is created or parcels are added."
+  },
+  {
+    "Q": "When a municipality amends a TID using simultaneous creation and subtraction, how does the 12% limit apply?",
+    "A": "Under state law (sec.66.1105(17), Wis. Stats.), a municipality may complete asimultaneous creation and subtractionamendment without including the 12% finding in the resolution. The municipality must submit the creation and subtraction amendment together and include a fair market value appraisal for each. The appraisals must show that the property value being removed in the subtraction amendment equals or exceeds the amount needed for the proposed TID to comply with the 12% limit."
+  },
+  {
+    "Q": "Does the 12% value limit apply to Town TIDs created under state law (sec.60.85, Wis. Stats.)?",
+    "A": "No. Under state law (sec.60.85(3)(h)5.d., Wis. Stats.), the limits are different. A town can only create a TID if it meets the 5% or 7% limit:"
+  },
+  {
+    "Q": "Does the 12% limit apply to Environmental Remediation (ER) TIDs created under state law (sec.66.1105, Wis. Stats.)?",
+    "A": "Yes. However, the municipality can designate one ER TID created under sec.66.1105, Wis. Stats., as excluded from the 12% limit."
+  }
+]

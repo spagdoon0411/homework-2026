@@ -1,0 +1,26 @@
+[
+  {
+    "Q": "What are county and municipal levy limits?",
+    "A": "Levy limits provide the maximum amount a town, village, city and county may implement as a property tax levy on parcels within their boundaries."
+  },
+  {
+    "Q": "What is the maximum amount a town, village, city or county can levy?",
+    "A": "Towns, villages, cities and counties use the Levy Limit Worksheet to determine the maximum allowable property tax levy they can implement without potentially receiving a penalty under state law (sec.66.0602, Wis. Stats.)."
+  },
+  {
+    "Q": "Where do I report the actual levy on the Levy Limit Worksheet?",
+    "A": "Your actual levy is not reported on the Levy Limit Worksheet. Municipalities should report their actual levy on the Statement of Taxes (SOT). Counties report their actual levy on the State and County Apportionment form (SCTA)."
+  },
+  {
+    "Q": "Do I need to complete the Levy Limit Worksheet if there are no adjustments to our allowable levy?",
+    "A": "Yes. Each county and municipality must submit a Levy Limit Worksheet to the Wisconsin Department of Revenue (DOR) by December 15 of each year. You should review your allowable levy limit before adjustments, shown in Section A, Line 8, to ensure your municipality's or county's property tax levy is less than or equal to the allowable levy limit. If there are no adjustments, you would enter $0 on all adjustment lines in Section D, and submit the auto-filled worksheet to DOR."
+  },
+  {
+    "Q": "What is our allowable levy limit?",
+    "A": "Use the Levy Limit Worksheet to calculate your maximum allowable levy for the current year. The starting number in this calculation is the previous year's actual levy from the Statement of Taxes for municipalities or the State and County Apportionment Form for counties (except if there was an excess levy in the previous year) plus the current year's personal property aid payment for code 2 and Act 12 personal property aid. The allowable adjustments from Section D of the Levy Limit Worksheet varies by municipality and county. The total adjustments reported in Section D of the Levy Limit Worksheet auto-fills in Section A, Line 9 and is added to Section A Line 8 to arrive at the total allowable levy in Section A, Line 10."
+  },
+  {
+    "Q": "What impact does personal property aid have on levy limits?",
+    "A": "Per Wis. Act 59, Code 2 personal property – locally assessed machinery, tools and patterns, can no longer be levied. Instead, the Wisconsin Department of Revenue will distribute a personal property aid payment under sec. 79.096, Wis. Stats. Effective for December 2018 tax levies, the allowable levy limit is reduced by this personal property aid. The reduction in the levy limit is replaced by the personal property aid payment issued the first Monday in May each year, beginning in May 2019."
+  }
+]

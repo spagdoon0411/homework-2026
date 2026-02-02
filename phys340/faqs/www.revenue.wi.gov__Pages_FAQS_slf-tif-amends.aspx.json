@@ -1,0 +1,58 @@
+[
+  {
+    "Q": "How many times can a municipality change the boundaries of a Tax Incremental District (TID)?",
+    "A": "A municipality may complete a territory amendment to change TID boundaries up to four times during the TID's life. If a municipality completes a single amendment to add and subtract territory, it counts as one of the four territory amendments. Parcels within the TID must remain contiguous (geographically connected) when adding or subtracting parcels."
+  },
+  {
+    "Q": "How does a subtraction amendment differ from an addition amendment?",
+    "A": "Subtraction amendment –decreases the number of parcels in the TID"
+  },
+  {
+    "Q": "Does all property in a boundary amendment have to be in the same area?",
+    "A": "No. As long as added or subtracted parcels are contiguous with the original TID parcels, the added or subtracted parcels do not have to be in the same area."
+  },
+  {
+    "Q": "If a municipality adds territory to a TID, does the total area of the TID (original parcels and added parcels) have to meet the 50%  minimum property type based on its original TID type?",
+    "A": "Yes. After a TID is created and declared a specific type, it must remain that type throughout its life. If a municipality adds parcels, 50% of the total TID area must meet the TID's original type. If a municipality subtracts parcels, 50% of the remaining property must meet the TID's original type."
+  },
+  {
+    "Q": "What should the map and the metes and bounds (boundary legal description) show in a Territory Amendment?",
+    "A": "Map –must show the full TID's boundary and identify the added or subtracted parcels. The new boundary must show that the entire TID remains contiguous. ReviewParcels Common Question 4for more information on map requirements."
+  },
+  {
+    "Q": "Can a municipality discuss multiple amendments (to update projects, add/subtract territory, allocate to another TID) at the same public hearing?",
+    "A": "Yes. However, the municipality must describe each action in a separate statement in the public hearing notice."
+  },
+  {
+    "Q": "Can a municipality complete a territory addition amendment and update the project plan with new projects at the same time?",
+    "A": "Yes. A municipality usually updates the project plan during a territory amendment to add projects in the new territory. The municipality can also update the project plan with projects that do not relate to the new territory.  In both cases, the municipality can complete and submit one set of forms to DOR."
+  },
+  {
+    "Q": "When territory is added to a TID, does this change the base value of the existing parcels?",
+    "A": "No. The base value of the existing parcels does not change; however, when territory is added, the new parcels' current value is added to the TID's existing base value."
+  },
+  {
+    "Q": "Does adding territory affect the TID expenditure period?",
+    "A": "No. Adding territory does not change the TID's expenditure period. All project costs (original and additional costs) must be incurred within five years before the TID's maximum life."
+  },
+  {
+    "Q": "Does a municipality need to notify owners of blighted property prior to an amendment hearing?",
+    "A": "Yes. When adding parcels to a blighted or rehabilitation/conservation TID, the municipality must notify the owners of parcels being added and identified as blighted or rehabilitation/conservation 15 days before the public hearing."
+  },
+  {
+    "Q": "Can a municipality amend the boundaries of a distressed or severely distressed TID?",
+    "A": "A municipality may complete a boundary amendment to subtract territory from an existing distressed or severely distressed TID; however, a municipality may not add territory to a distressed or severely distressed TID."
+  },
+  {
+    "Q": "If the municipality adds territory to an existing TID, does the TID include the new territory's personal property and personal property value in the base?",
+    "A": "No, personal property is exempt effective January 1, 2024. When amending a TID in 2024 or after, only the taxable real property added to the TID becomes part of the TID's new base value."
+  },
+  {
+    "Q": "If a municipality is over the 12% value limit, can the municipality add and subtract territory simultaneously?",
+    "A": "If a municipality is over the 12% value limit, it can add and subtract territory in the same TID at the same time as long as the net change to the base value is negative. However, the value of the added and subtracted parcels is determined differently."
+  },
+  {
+    "Q": "A municipality is subtracting a parcel that did not exist when the TID was created. The parcel being subtracted was a portion of a larger parcel that was divided after the TID was created. How is the base value of the parcel being subtracted determined?",
+    "A": "When the parcel was part of one larger original TID parcel, the assessor must determine the prorated value of the parcel at the time it was included in the TID. For the land value, generally, this is based on the percentage of the current parcel to the original parcel. For the building/improvements value (if any), it may depend on whether they were located on the portion being removed. Provide an explanation of how the assessor determined the values on theTID Territory Subtraction Workbook."
+  }
+]

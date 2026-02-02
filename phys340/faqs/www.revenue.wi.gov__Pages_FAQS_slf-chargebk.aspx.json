@@ -1,0 +1,82 @@
+[
+  {
+    "Q": "What is a chargeback of rescinded or refunded taxes?",
+    "A": "A municipality may request reimbursement (chargeback) of property taxes it has refunded or rescinded to a property owner. If the request is approved, the other taxing jurisdictions must pay the municipality back for the amounts it had previously shared with them as part of the property tax settlement process."
+  },
+  {
+    "Q": "How do I file a chargeback of rescinded or refunded taxes?",
+    "A": "You must e-file a Request for Chargeback of Rescinded or Refunded Taxes (Form PC-201). This form is located inMyDORGov. For more information, on accessing MyDORGov, review ourOnline Filing Help – Using My DOR Government Account."
+  },
+  {
+    "Q": "Do I need a PIN number or password to file a chargeback request?",
+    "A": "This form is located inMyDORGov. You must be authorized to file. For more information on accessing MyDORGov, review ourOnline Filing Help – Using My DOR Government Account."
+  },
+  {
+    "Q": "What are the requirements for submitting a request for chargeback of rescinded or refunded taxes to the Wisconsin Department of Revenue (DOR)?",
+    "A": "Since January 1, 2018 property tax assessment, the tax refunded for any single description for one year is $250 or more. Taxes refunded/rescinded for any of the five assessment years immediately preceding the year Form PC-201 is submitted (or taxes refunded/rescinded because of a court determination) must be submitted no later than one year after the date of the court's determination."
+  },
+  {
+    "Q": "What if a municipality doesn't file the request by the October 1 deadline?",
+    "A": "If the municipality does not file a request by the October 1 deadline, it may file a request (Form PC-201) with DOR before the next October 1. DOR will not make a determination for the request until November 15 of the following year."
+  },
+  {
+    "Q": "When and who does DOR notify after making a determination?",
+    "A": "After DOR determines the amount of rescinded or refunded taxes for requests received by October 1, we certify the chargeback amount by November 15. DOR provides the municipal clerk with a copy of the request with the determination, showing the tax amount billed to each taxing jurisdiction. DOR also notifies each affected taxing jurisdiction.Note:These amounts are listed on the copy even if DOR denies the request."
+  },
+  {
+    "Q": "When do the affected taxing jurisdictions have to pay their amount of the chargeback to the municipality that filed the chargeback request?",
+    "A": "Each taxing jurisdiction must pay the municipality the total amount it owes by February 15 of the year following the determination."
+  },
+  {
+    "Q": "Does a Tax Incremental District have any effect on our chargeback determination made by DOR?",
+    "A": "Taxes refunded or rescinded for properties within a Tax Incremental District (TID) are not eligible for a chargeback unless the TID's current value is less than the TID's base value in the year the property owner received the tax refund."
+  },
+  {
+    "Q": "Does the chargeback amount have an effect on mill rate limits?",
+    "A": "No. Under state law (sec.74.41(6), Wis. Stats.), if a taxing jurisdiction levies a tax to fund an amount the taxing jurisdiction is required to pay, the amount should not be considered when determining whether the taxing jurisdiction complies with any statutorily imposed mill rate limit."
+  },
+  {
+    "Q": "What is a Preliminary Chargeback Determination memo, and why did I receive one?",
+    "A": "DOR reviews any large requests submitted and mails a preliminary chargeback determination memo to each municipality and taxing jurisdiction. The memo serves as our preliminary approval, which allows other taxing jurisdictions to budget for the amount they will owe the municipality."
+  },
+  {
+    "Q": "Do we need to issue bills to each taxing jurisdiction?",
+    "A": "No. By November 15 each year, DOR informs each taxing jurisdiction of the amount it owes to the municipal treasurer by the following February 15."
+  },
+  {
+    "Q": "How do we know what statute relates to the rescinded or refunded tax?",
+    "A": "The assessor should identify the appropriate Wisconsin Statute."
+  },
+  {
+    "Q": "Should I file Form PC-200 or PC-201?",
+    "A": "Note:"
+  },
+  {
+    "Q": "Are there additional resources for the chargeback process?",
+    "A": "Yes. For more information, reviewPublication PA-600, Property Tax Refund Requests and the Chargeback Process."
+  },
+  {
+    "Q": "What do we report on the Statement of Assessment (SOA) Line 23?",
+    "A": "Report only assessed value changes due to sec. 70.43 corrections of errors by assessors. If a value was reduced, report a negative amount. If a value was increased, report a positive amount."
+  },
+  {
+    "Q": "What do we report on the Statement of Taxes (SOT) Section I?",
+    "A": "Report only additional tax amounts or taxes refunded due to sec. 70.43 corrections of errors by assessors. If additional taxes were due, report a positive amount. If taxes were refunded or rescinded, report a negative amount."
+  },
+  {
+    "Q": "How do we know if our municipality has a chargeback?",
+    "A": "Review state law under sec. 74.41: Charging back refunded or rescinded taxes; sharing certain collected taxes."
+  },
+  {
+    "Q": "How do we calculate the refund after the BOR certifies the value of the assessors correction?",
+    "A": "Use the proper years mill rate to calculate the refund."
+  },
+  {
+    "Q": "Do we need to refund interest?",
+    "A": "Yes. If interest was included, it must be refunded. Effective January 1, 2023, any refund under sec. 74.35 and 74.37, Wis. Stats., may include interest. Calculate interest at the average annual discount rate determined by the last auction of six-month U.S. Treasury bills before the date of filing the claim per day for the period between the time when the tax was due and the date the refund was made."
+  },
+  {
+    "Q": "With the exemption of all locally assessed and manufacturing personal property effective January 1, 2024, can we still charge back personal property?",
+    "A": "Yes. If you refunded or rescinded personal property taxes under sec. 74.41, Wis. Stats., you may e-file Form PC-201 to request a chargeback from the other taxing jurisdictions. The assessment year must be within the last five assessment years if there is no court determination. If there is a court determination, the chargeback must be submitted within one year of the court determination date."
+  }
+]
