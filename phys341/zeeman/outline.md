@@ -5,15 +5,15 @@
 ## Introduction
 
 - Explanation of spin-orbit coupling and the standard Zeeman effect explanation in electrons
-    - Coupling diagram
-    - Quantum numbers involved
+    - ~~Coupling diagram~~
+    - ~~Quantum numbers involved~~
 - Note the relationship between spin-orbit coupling and the Bohr magneton
-    - Allowed energy transitions. What transitions do we expect for a cadmium atom?
-    - Energy level diagram? (This might be too much; just use an equation).
-    - Bohr magneton equation
-    - Relationship between wavelength and energy transitions
-    - Note the two possible emissions for Cd in particular
-    - Exact linear fit equation yielding the Bohr magneton
+    - ~~Allowed energy transitions. What transitions do we expect for a cadmium atom?~~
+    - ~~Energy level diagram? (This might be too much; just use an equation).~~
+    - ~~Bohr magneton equation~~
+    - ~~Relationship between wavelength of photon and energy transitions~~
+    - ~~Note the three possible unique emissions for Cd in particular~~
+- Exact linear fit equation yielding the Bohr magneton
 - Relevance of light polarization; waves emitted from the Zeeman effect are linearly or circularly polarized 
     - Aligned vs. perpendicular to the magnetic field
     - Role of a polarizer in the context of aligned vs. perpendicular components
@@ -24,6 +24,12 @@
 - Snell's law for angle in interferometer
 - Exact linear fit equation
 - What's the free spectral range (FSR)? Why is this an exact value?
+
+Next:
+- [ ] What does polarizer do (express action as a projection operator)
+- [ ] Fabry-Pérot interferometer explanation with equation; compare relative strengths of incoming angle vs m-value on ring radius and find that angle dominates. Express effect of magnetic field; does not separate rings but does increase split distance.
+- [ ] Create interferometer diagram
+- [ ] Create apparatus diagram
 
 ## Goal
 
