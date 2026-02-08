@@ -31,10 +31,7 @@
 \section{Introduction and Background}
 
 Atoms can be attributed a net spin angular momentum $\vec S$ resulting from their electrons' aggregate intrinsic angular momenta and a net orbital angular momentum $\vec J$ resulting from their electrons' motion around their
-parent nucleus. In a weak magnetic field $\vec B$, these two angular momenta couple. The result is a net angular momentum vector $\vec J$ that is quantized instead of either of its $\vec L$ and $\vec S$ consitiuents.
-
-The atom's angular momentum $\vec \mu_J$ is a function of this coupled $\vec J$, resulting in a quantized
-set of values. The relative orientation of $\vec \mu_J$ and $\vec B$ produce a quantized set of possible energies around the original zero-field energy level. Assuming a regime of weak magnetic fields (where magnetic potential energy contributions are much smaller than any energy contributions due to spin-orbit coupling), this energy shift is given to first order in $|\vec B| =B$ by the expectation of the Zeeman Hamiltonian term:
+parent nucleus. In a weak magnetic field $\vec B$, these two angular momenta couple. The result is a net angular momentum vector $\vec J$ that is quantized instead of either of its $\vec L$ and $\vec S$ consitiuents. The atom's magnetic dipole $\vec \mu_J$ is a function of this quantized $\vec J$, and thus the relative orientation of $\vec \mu_J$ and $\vec B$ produce a quantized set of possible energies around the atom's original zero-field energy level. Assuming a regime of weak magnetic fields (where magnetic potential energy contributions are much smaller than any energy contributions due to spin-orbit coupling), this energy shift is given to first order in $|\vec B| =B$ by the expectation of the Zeeman Hamiltonian term:
 
 \begin{equation}
 \braket{\hat {H_Z}} = -\braket{\hat {\boldsymbol \mu} \cdot {\mathbf B} } \approx \mu_B g_J \mathbf B \cdot \braket{\hat {\mathbf J}} = \mu_B g_J B M_J
@@ -85,33 +82,38 @@ Magnetic quantum number
 
 For the purposes of this experiment, the state's electron configuration is a sufficient stand-in for $\gamma$. 
 
-Emissions and absorptions of electrons are modeled through a Hamiltonian term characterizing interactions with an electromagnetic field, whose symmetries impose selection rules on the allowed transitions:
+Emissions and absorptions of photons are modeled through an electric-dipole interaction Hamiltonian. Some selection rules follow from exact symmetries of this Hamiltonian, while others arise from the rank-1 tensor character of the dipole operator.
 
 \begin{table}[H]
 \centering
 \label{tab:E1_selection_rules_ops}
-\begin{tabular}{cll}
+\begin{tabular}{clll}
 \hline
-\textbf{} & \textbf{Operator} & \textbf{Selection rule} \\
+\textbf{} & \textbf{Operator / Quantity} & \textbf{Selection rule} & \textbf{Notes} \\
 \hline
 1 & $\hat{\mathbf{S}}^2$ 
-  & $\Delta S = 0$ \\
+  & $\Delta S = 0$ 
+  & Conserved  \\
 
 2 & $\hat{\mathbf{L}}^2$ 
-  & $\Delta L = \pm 1$ \\
+  & $\Delta L = \pm 1$ 
+  & Rank-1 dipole coupling \\
 
 3 & $\hat{\mathbf{J}}^2$ 
-  & $\Delta J = 0, \pm 1$ \quad ($J=0 \nleftrightarrow J'=0$) \\
+  & $\Delta J = 0, \pm 1$ \; ($J=0 \nleftrightarrow J'=0$) 
+  & Rank-1 dipole coupling \\
 
 4 & $\hat{J}_z$ 
-  & $\Delta M_J = 0, \pm 1$ \\
+  & $\Delta M_J = 0, \pm 1$ 
+  & Conserved \\
 
 5 & $\hat{\Pi}$ (parity) 
-  & $\Pi' = -\Pi \;\;(\Delta \Pi \neq 0)$ \\
-
+  & $\Pi' = -\Pi$ 
+  & Conserved  \\
 \hline
 \end{tabular}
 \end{table}
+
 
 
 In the subset of transitions where the initial and final states of the electron have zero net intrinsic angular momentum $\vec S = 0$, $\vec J$ reduces to $\vec L$:
@@ -121,7 +123,7 @@ In the subset of transitions where the initial and final states of the electron 
 \label{eq:normal_transition}
 \end{equation}
 
-In the weak-field regime, the degeneracy splitting of atomic energy levels due to an external magnetic field is known as the Zeeman effect. For atoms whose initial and final states satisfy $\vec S = 0$, this splitting is known as the normal Zeeman effect---while cases in which $\vec S \neq 0$ are known as the anomalous Zeeman effect. A family of transitions that exhibits the normal Zeeman effect is the $5s5d \rightarrow 5s5p$ transition in neutral cadmium (Cd I):
+In the weak-field regime, the degeneracy splitting of atomic states due to an external magnetic field is known as the Zeeman effect. For atoms whose initial and final states satisfy $\vec S = 0$, this splitting is known as the normal Zeeman effect---while cases in which $\vec S \neq 0$ are known as the anomalous Zeeman effect. A family of transitions that exhibits the normal Zeeman effect is the $5s5d \rightarrow 5s5p$ transition in neutral cadmium (Cd I):
 
 \begin{equation}
 \ket{\gamma=5s5d;\,L=2,\,S=0,\,J=2,\,M_J}
@@ -130,9 +132,9 @@ In the weak-field regime, the degeneracy splitting of atomic energy levels due t
 \label{eq:cd_transition}
 \end{equation}
 
-In spectroscopic notation, this transition family is denoted $5s5d\;{}^{1}D_{2} \;\longrightarrow\;5s5p\;{}^{1}P_{1}$. Following \ref{tab:quantum_number_values}, the former state splits into 5 substates with $M_J \in \set{ -2, -1, 0, 1, 2}$, while the latter splits into 3 substates with $M_J' \in {-1, 0, 1}$.
+In spectroscopic notation, this transition family is denoted $5s5d\;{}^{1}D_{2} \;\longrightarrow\;5s5p\;{}^{1}P_{1}$. In a weak magnetic field, the former state splits into 5 substates with $M_J \in \set{ -2, -1, 0, 1, 2}$, while the latter splits into 3 substates with $M_J' \in \set{-1, 0, 1}$, following Table \ref{tab:quantum_number_values}. Each split state has a different energy, as a result of (\ref{eq:H_zeeman}).
 
-The degeneracy splitting of the $5s5d\;{}^{1}D_{2}$ and $5s5p\;{}^{1}P_{1}$ allows for three disctint changes in energy where there used to be one, resulting in three possible wave lengths of emitted photons. Because the energy shift $\braket{\hat {\mathbf H}_Z}$ is proportional to $M_J$ (Eq. \ref{eq:H_zeeman}), the possible changes in energy are proportional to $\Delta M_J$ over the transition. The selection rules of Table \ref{tab:E1_selection_rules_ops} restrict the allowed values of $\Delta M_J$ to $\set{-1, 0, 1}$, resulting in three possible energy changes (and thus three possible emitted photon wavelengths) for the $5s5d\;{}^{1}D_{2} \;\longrightarrow\;5s5p\;{}^{1}P_{1}$ transition, illustrated in Figure \ref{fig:energy_levels}.
+This degeneracy splitting of the $5s5d\;{}^{1}D_{2}$ and $5s5p\;{}^{1}P_{1}$ states allows for three distinct changes in energy where there used to be one, resulting in three possible wavelengths of emitted photons. Because the energy shift $\braket{\hat {\mathbf H}_Z}$ is proportional to $M_J$ (Eq. \ref{eq:H_zeeman}), the possible changes in energy are proportional to $\Delta M_J$ over the transition. The selection rules of Table \ref{tab:E1_selection_rules_ops} restrict the allowed values of $\Delta M_J$ to $\set{-1, 0, 1}$, resulting in three possible energy changes (and thus three possible emitted photon wavelengths) for the $5s5d\;{}^{1}D_{2} \;\longrightarrow\;5s5p\;{}^{1}P_{1}$ transition, illustrated in Figure \ref{fig:energy_levels}.
 
 % Include the TikZ diagram from the external file
 \begin{figure}[H]
@@ -142,32 +144,246 @@ The degeneracy splitting of the $5s5d\;{}^{1}D_{2}$ and $5s5p\;{}^{1}P_{1}$ allo
     \caption{}
 \end{figure}
 
-The transitions are grouped by their energy differences $\Delta E$---equivalently, their $\Delta M_J$ values--- and thus correspond to three distinct spectral lines. Cadmium atoms can therefore undergo, in order of increasing energy difference, $\sigma^-$, $\pi$, and $\sigma^+$ transitions. These correspond to $\Delta M_J = -1$, $0$, and $1$, respectively, and yield photons with short, moderate, and long wavelengths.
+In Figure \ref{fig:energy_levels}, possible transitions are grouped by the energy differences $\Delta E$ between their starting and ending states---or, equivalently, by their $\Delta M_J$ values. These produce three groups corresponding to, in order of increasing energy difference, $\sigma^-$, $\pi$, and $\sigma^+$ transition ($\Delta M_J = -1$, $0$, and $1$, respectively). Note that a transition with $\Delta M_J$ corresponds to a change in the $z$-component of the atom's aggregate angular momentum $J_z$ of $\hbar \Delta M_J$.
 
+Because a photon is massless, it can never have a frame in which it is at rest; a photon has a nonzero momentum $\vec p$ in all relativistic frames. As a result, the photon's intrinsic angular momentum must be defined in terms of symmetry operators whose actions do not change $\vec p$. The only such operator $\hat h$ that produces observable changes in photon states generates the group $\text{SO}(2)$, rotations about $\vec p$. This is the photon's helicity operator.\footnote{It is not correct to immediately assume that the only spin operators associated with a massless particle are pure rotations, despite its validity for massful particles. E.P. Wigner's definition of a photon's spin notes that additional momentum-preserving transformations exist for massless particles but act as gauge transformations for photons--leaving only $\text{SO}(2)$, with $\vec p$ as the "shared axis".} Photons are spin-1 bosons, implying that the only allowed eigenvalues for $\hat{h}$ are $\pm \hbar$.
 
-Note that because a photon is massless, it can never have a frame in which it is at rest; a photon has a momentum in all relativistic frames. Thus, the only generators of \textit{pure} rotations---i.e., operators corresponding to the photon spin---must produce rotations about the photon's momentum $\vec p$ to prevent changing the direction of the photon's momentum. This confines them to $\text{SO(2)}$. In conjunction with a photon's status as a spin-1 boson, this implies that the only allowed eigenvalues of the photon's spin operator $\hat{h}$ are $\pm \hbar$. Taken with the fact that a $\pi$-transition emits a photon with state $\ket \pi = \frac{1}{\sqrt{2}} \left ( \ket {\sigma^+} + \ket {\sigma^-} \right )$ with a spin of 0 in expectation, this means that the emission of appropriate photons can exactly satisfy a conservation of angular momentum constraint applied to the atom-photon system during a transition.
-
+In this experiment, the applied magnetic field causing Zeeman splitting is orthogonal to the propagation direction of detected photons. In this situation, it is \textit{not} the photons' helicity that satisfies a conservation of angular momentum condition between the relaxing atom and the emitted photon. The full Hamiltonian $\hat H$, including Zeeman terms, is invariant under rotation about the magnetic field direction and not along the photon's propagation direction. Therefore, $[\hat H, \hat h] \neq 0$ and $[\hat H, \hat J_z^{(\gamma)}] = 0$, and the eigenvalues of $\hat J_z^{(\gamma)}$ are such that angular momentum along $z$ is conserved, where $\hat J_z^{(\gamma)}$ is the operator correspondong to the $z$-component of the photon's angular momentum. Labeling photon states with the transition that produced them:
 \begin{equation}
-    \bra{\sigma^\pm} \hat{h} \ket{\sigma^{\pm}} = \pm \hbar
+    \hat J_z^{(\gamma)} \ket{\sigma^{\pm}} = \mp \hbar \ket{\sigma^{\pm}} 
     \quad 
-    \bra{\pi} \hat{h} \ket{\pi} = 0
+    \hat J_z^{(\gamma)} \ket{\pi} = 0 \ket{\pi} \\
 \end{equation}
 
-% Spin must be intrinsic physical and thus Lorentz invariant
-% Spin components can mix for particles that have rest frames (massive particles) but total spin should be agreed-upon; the total spin is intrinsic but basis changes can cause component mixing (observer-to-observer disagreement)
-% The only axis along which a measured spin can be Lorentz invariant is along the direction of motion--because photon cannot be at rest
-% 
+% During a $\pi$-transition, $\ket \pi = \frac{1}{\sqrt{2}} \left ( \ket {\sigma^+} + \ket {\sigma^-} \right )$, this means that the emission of appropriate photons can exactly satisfy a conservation of angular momentum constraint applied to the atom-photon system during a transition:
 
-% The only operator that cannot change the eigenvalue of the photon's generator of translation must be the rotation operator about the axis of motion (corr. helicity)
-% Thus those angular momentum eigenvalues must be defined along the axis of motion strictly
+Maxwell's equations dictate that the electric and magnetic field components of an electromagnetic wave caused by a source far away from the point of observation oscillate transverse to the direction of the wave's propagation (transversality). Although $\sigma^{\pm}$ photons would be circularly polarized if the applied magnetic field $\vec B$ were parallel to the propagation direction, these photons must be treated as if their fields oscillate orthogonally with $\vec B$ due to transversality. On the other hand, $\pi$ photons have zero angular momentum along $\vec B$, constraining their field components to oscillate parallel to $\vec B$. Thus, an ideal linear polarizer with transmission axis $\hat e$ (in this experiment, either parallel $\parallel$ or perpendicular $\perp$ to $\vec B$) acts as $\hat P_{\hat e} = \ket {\hat e} \bra {\hat e}$, cleanly filtering photons based on whether they were produced by transitions with $\Delta M_J = 0$ or $\Delta M_J \neq 0$:
+
+\begin{equation}
+\hat P_{\parallel \vec B}|\pi\rangle = |\pi\rangle
+\qquad
+\hat P_{\parallel \vec B}|\sigma^\pm\rangle = 0
+\qquad
+\hat P_{\perp \vec B}|\sigma^\pm\rangle = |\sigma^\pm\rangle
+\qquad
+\hat P_{\perp \vec B}|\pi\rangle = 0
+\end{equation}
 
 
-% SO(3) is a subgroup of the Lorentz group
+In this experiment, photons resulting from electron relaxation between Zeeman-split energy levels are passed through a Fabry-Perot interferometer. This device consists of a transparent material of a more refractive medium than the surrounding air, whose boundary produces two parallel surfaces at which incoming light
+rays experience partial internal reflection. Depicted in Figure \ref{fig:fb_plates}, light entering such an interferometer repeatedly reflects between the interferometer surfaces:
+
+\begin{figure}[H]
+\begin{tikzpicture}[>=Stealth]
+
+% Define parameters
+\def\plateheight{8}
+\def\platesep{3}
+\def\alphaDeg{30}
+\def\n{1.5}
+
+% Calculate beta using Snell's law: sin(alpha) = n*sin(beta)
+\pgfmathsetmacro{\betaDeg}{asin(sin(\alphaDeg)/\n)}
+\pgfmathsetmacro{\dx}{\platesep*tan(\betaDeg)}
+
+% Draw the two parallel plates
+\draw[thick, fill=black!20] (0,0) rectangle (0.2,\plateheight);
+\draw[thick, fill=black!20] (\platesep,0) rectangle (\platesep+0.2,\plateheight);
+
+% Plate distance label at top
+\draw[<->,thick] (0.2,\plateheight+0.3) -- (\platesep,\plateheight+0.3);
+\node at (1.6,\plateheight+0.6) {$t$};
+
+% ===== INCOMING RAY =====
+\coordinate (start) at (-2, 6.5);
+\coordinate (entry) at (0.1, 5.5);
+
+% Draw incident ray
+\draw[->,thick,black] (start) -- (entry);
+
+% Normal line for incoming ray
+\draw[dashed,thick,black!50] (entry) -- ++(0,1.5);
+
+% Calculate the actual angle the incoming arrow makes with vertical
+% Arrow goes from (-2, 6.5) to (0.1, 5.5)
+% dx = 2.1, dy = -1.0, so angle with vertical is atan(dx/dy) = atan(2.1/1.0)
+\pgfmathsetmacro{\incomingAngle}{atan2(2.1,1.0)}
+% Arc radius to reach the arrow: we need to go 1.0 units up along the normal
+\pgfmathsetmacro{\arcRadIncoming}{0.3/cos(\incomingAngle)}
+
+% Arc from vertical (90 degrees) to the incoming ray direction
+\draw[thick,black!50] (entry) ++(0,\arcRadIncoming) arc (90:90+\incomingAngle:\arcRadIncoming);
+\node at (-0.5, 6.3) {$\alpha$};
+
+% ===== FIRST INTERNAL RAY =====
+\coordinate (A1) at (0.1, 5.5);
+\coordinate (B1) at (\platesep+0.1, {5.5-\dx});
+
+% Draw first internal ray
+\draw[->,thick,black!80] (A1) -- (B1);
+
+% Normal line for beta angle (horizontal)
+\draw[dashed,thick,black!50] (A1) -- ++(2.0,0);
+
+% Calculate the actual angle the internal ray makes with horizontal
+% Ray goes from (0.1, 5.5) to (3.1, 5.5-dx)
+% dx_ray = 3.0, dy_ray = -dx
+\pgfmathsetmacro{\internalAngle}{atan2(-\dx,3.0)}
+% Arc radius to reach the arrow
+\pgfmathsetmacro{\arcRadInternal}{1.0/cos(\internalAngle)}
+
+% Arc from horizontal (0 degrees) to the internal ray direction
+\draw[thick,black!50] (A1) ++(\arcRadInternal,0) arc (0:\internalAngle:\arcRadInternal);
+\node at (2.2, 5.0) {$\beta$};
+
+% ===== FIRST TRANSMITTED RAY =====
+\coordinate (exit1) at ({\platesep+0.1+1.2}, {5.5-\dx-1.2*tan(\alphaDeg)});
+\draw[->,thick,black!40] (B1) -- (exit1);
+
+% Calculate angle for exit rays (used by all exit rays)
+% Ray goes from B1 to exit1: dx = 1.2, dy = -1.2*tan(alpha)
+\pgfmathsetmacro{\exitAngle}{atan2(1.2,1.2*tan(\alphaDeg))}
+\pgfmathsetmacro{\arcRadExit}{1.2*tan(\alphaDeg)/cos(\exitAngle)}
+
+% No arc or label at first exit point (B1) - this is just partial transmission
+
+% ===== FIRST REFLECTION BACK =====
+\coordinate (C1) at (0.1, {5.5-2*\dx});
+\draw[->,thick,black!70] (B1) -- (C1);
+
+% ===== SECOND INTERNAL RAY =====
+\coordinate (D1) at (\platesep+0.1, {5.5-3*\dx});
+\draw[->,thick,black!70] (C1) -- (D1);
+
+% ===== SECOND TRANSMITTED RAY =====
+\coordinate (exit2) at ({\platesep+0.1+1.2}, {5.5-3*\dx-1.2*tan(\alphaDeg)});
+\draw[->,thick,black!30] (D1) -- (exit2);
+
+% Normal line at second exit
+\draw[dashed,thick,black!20] (D1) -- ++(0,-1.5);
+
+% Calculate angle for this exit ray
+% Ray goes from D1 to exit2: dx = 1.2, dy = -1.2*tan(alpha)
+\pgfmathsetmacro{\exitAngleTwo}{atan2(1.2,1.2*tan(\alphaDeg))}
+\pgfmathsetmacro{\arcRadExitTwo}{0.6*tan(\alphaDeg)/cos(\exitAngleTwo)}
+
+% Arc from vertical down (270 degrees) counterclockwise to the exit ray
+\draw[thick,black!20] (D1) ++(0,-\arcRadExitTwo) arc (270:270+\exitAngleTwo:\arcRadExitTwo);
+\node at ({\platesep+0.8},{5.5-3*\dx-0.8}) {$\alpha$};
+
+% ===== SECOND REFLECTION BACK =====
+\coordinate (E1) at (0.1, {5.5-4*\dx});
+\draw[->,thick,black!60] (D1) -- (E1);
+
+% ===== THIRD INTERNAL RAY =====
+\coordinate (F1) at (\platesep+0.1, {5.5-5*\dx});
+\draw[->,thick,black!60] (E1) -- (F1);
+
+% ===== THIRD TRANSMITTED RAY =====
+\coordinate (exit3) at ({\platesep+0.1+1.2}, {5.5-5*\dx-1.2*tan(\alphaDeg)});
+\draw[->,thick,black!20] (F1) -- (exit3);
+
+% Normal line at third exit
+\draw[dashed,thick,black!15] (F1) -- ++(0,-1.5);
+
+% Calculate angle for this exit ray
+% Ray goes from F1 to exit3: dx = 1.2, dy = -1.2*tan(alpha)
+\pgfmathsetmacro{\exitAngleThree}{atan2(1.2,1.2*tan(\alphaDeg))}
+\pgfmathsetmacro{\arcRadExitThree}{0.6*tan(\alphaDeg)/cos(\exitAngleThree)}
+
+% Arc from vertical down (270 degrees) counterclockwise to the exit ray
+\draw[thick,black!15] (F1) ++(0,-\arcRadExitThree) arc (270:270+\exitAngleThree:\arcRadExitThree);
+\node at ({\platesep+0.8},{5.5-5*\dx-0.8}) {$\alpha$};
+
+% ===== THIRD REFLECTION BACK =====
+\coordinate (G1) at (0.1, {5.5-6*\dx});
+\draw[->,thick,black!50] (F1) -- (G1);
+
+% Calculate angle for this exit ray
+\pgfmathsetmacro{\exitAngle}{atan2(1.2,1.2*tan(\alphaDeg))}
+\pgfmathsetmacro{\arcRadExit}{0.6*tan(\alphaDeg)/cos(\exitAngle)}
+
+% Arc from vertical down (270 degrees) counterclockwise to the exit ray
+\draw[thick,black!30] (B1) ++(0,-\arcRadExit) arc (270:270+\exitAngle:\arcRadExit);
+\node at ({\platesep+0.8},{5.5-\dx-0.8}) {$\alpha$};
+
+\end{tikzpicture}
+\centering
+\label{fig:fb_plates}
+\caption{Interferometer}
+\end{figure}
+
+Suppose $t$ is the thickness of an interferometer, $n$ is its refractive index, $\alpha$ is the angle
+of incoming light rays, and $\beta$ is the resulting internal angle due to refraction. The path length traveled by a light ray as it leaves a first surface, partially reflects from the second surface, and meets the first surface again (completing a round trip) is $2t \cos \beta$, resulting in an optical path length of $2tn \cos \beta$ and a phase contribution $\Delta \phi = \frac{2 \pi}{\lambda} \cdot 2tn \cos \beta$. At particlar values $\alpha$, $\Delta \phi$ is exactly an integer multiple of $2 \pi$---producing no effective phase shift as compared to before the round-trip between the first and second surfaces:
+
+ \begin{equation}
+ \Delta \phi = 2\pi m = \frac{2\pi}{\lambda} 2 t n \cos \beta \Rightarrow  \lambda m = 2tn \cos \beta
+ \label{eq:resonance}
+ \end{equation}
+
+Equation \ref{eq:resonance} amounts to a resonance condition in $\alpha$. The path of any incoming ray
+results in two sets of parallel rays within the interferometer: one set for the forward direction and another for the backward direction of the round-trip. When the resonance condition is met, the rays of the forward pass are exactly in phase with one another, effectively producing standing waves in the interferometer. Because of partial transmission at the medium boundary, these parallel forward-propagating rays produce outgoing parallel rays at angle $\alpha$ that are also exactly in phase. convergent lens placed after the interferometer allows these outgoing parallel rays to join and constructively interfere at a point at the focal length of the lens. Note that rays exiting at angles not meeting the resonance condition still converge to a point, but do not constructively interfere strongly enough to result in a visible pattern.
+
+Because the event depicted in Figure $\ref{fig:fb_plates}$ occurs at every rotation angle about the axis of the lens, the resulting interference pattern for rays of a single incoming angle $\alpha$ and $\lambda$ fixed is a circle. Light emitted from a source enters the interferometer at a wide range of possible $\alpha$-values. This creates multiple angles $\alpha$ that meet the resonance condition, resulting in concentric circles in the final pattern. For light of different frequencies, the phase shift due to traversing a path with length fixed is greater for lower-wavelength (higher-energy) light than for higher-wavelength (lower-energy) light. This causes the interferometer to resonate at slightly larger $\alpha$ for light of higher energy, producing rings in the final interference pattern with larger radii than light of lower energy. Thus, the effect of Zeeman splitting is to slightly split each ring present in the zero-field interference pattern into three rings.
+
+Suppose $\beta_0$ is the angle within the interferometer corresponding to resonance for a ray of light not produced during Zeeman splitting, wavelength $\lambda$. Suppose $\beta_f$ is the corresponding angle for a ray emitted during Zeeman splitting, which provides a wavelength shift $\Delta \lambda$ corresponding to a Zeeman energy shift $\Delta E$. Analysis of (\ref{eq:resonance}) and (\ref{eq:H_zeeman}) produces an equation for $\Delta E$ as a function of resonant angles and the unsplit light wavelength:
+
+\begin{equation}
+  \Delta E = \mu_B g_J B M_J = -\frac{hc}{\lambda} \frac{\cos \beta_f - \cos \beta_0}{\cos \beta_0}
+  \label{eq:zeeman_shift}
+\end{equation}
+
+Snell's law relates $\beta$ and $\alpha$:
+
+\begin{equation}
+  \sin \beta = \frac{1}{n} \sin \alpha
+  \label{eq:snell}
+\end{equation}
+
+Thus, given tools that obtain $\alpha$ for a ring in the interference pattern, $\mu_B$ can be estimated using (\ref{eq:zeeman_shift}) and (\ref{eq:snell}).
+
+To estimate systematic error in measurements of the strength of the magnetic field used to cause Zeeman splitting, a theoretical value for the fixed frequency spacing (free spectral range, or FSR) between two adjacent transmission resonances of the interferometer proves useful. This relation is:
+
+\begin{equation}
+  \text{FSR} = \frac{c}{2nt}
+\end{equation}
+
+where $c$ is the speed of light, $n$ is the refractive index of the interferometer, and $t$ is the inteferometer thickness. The hypothetical magnetic field strength that would cause a photon emitted during Zeeman splitting to have an energy associated with the $\text{FSR}$ frequency is given by:
+
+\begin{equation}
+  h \text{FSR} = \mu_B g_J \Delta |M_J| B_{\text{FSR}} 
+  \Rightarrow
+  B_{\text{FSR}} =  \frac{h}{\mu_B} \frac{c}{2nt} \frac{1}{g_J |\Delta M|}
+\end{equation}
 
 \section{Goal}
+
+We obtain an experimental value for the Bohr magneton $\mu_B$ by investigating the dependence between resonant incoming angles $\alpha$ and the energy difference \eqref{eq:H_zeeman} associated with emitted photons during the $5s5d\;{}^{1}D_{2} \;\longrightarrow\;5s5p\;{}^{1}P_{1}$ transition in cadmium.
+
 \section{Procedure}
+
+A cadmium lamp is placed between two coils of wire, through which a current $I$ is produced by a variable-current power supply. When the lamp is powered on, photons are emitted. The magnetic field between the coils causes Zeeman splitting in the cadmium electrons. In front of the lamp, an optical rail perpendicular to $\vec B$ is arranged, on which a convergent lens, a polarizer, a Fabry-Perot interferometer, an optical filter, and another convergent lens are placed. Note that although photons of several wavelengths are produced, the emission spectrum of the lamp includes photons caused by the transition of interest. The optical filter is chosen to select wavelengths in the emission band of this transition. A camera sensor at the end of the rail captures the interference pattern, reporting a relationship between a voltage proxy for light intensity and angle of entry $\alpha$ into the interferometer and radial distance from an origin on the sensor.
+
+An empirical relationship between the magnetic field strength $B$ produced by the coils and the current through the coils $I$ is derived using a Gaussmeter, using readings taken at various currents. The relationship obtained is depected in Figure TODO.
+
+After powering on the cadmium lamp and allowing it to approach steady state, devices on the optical rail are adjusted such that a clear diffraction pattern is reported by the sensor software. The coil current is then set to a nonzero value. For each magnetic field strength caused by the coils, the $\alpha$-values of the resonance peaks corresponding to each value of $\Delta M_J$ are measured on one side of the centerline of the diffraction pattern, then the other. Via \eqref{eq:snell}, $\Delta M_J = 0$ readings provide values for $\beta_0$ in \eqref{eq:zeeman_shift}, while $\Delta M_J \neq 0$ readings provide data points for $\beta_f$. This process yields a dataset whose points are a field strength paired with one downshifted peak, one upshifted peak, and one unshifted peak per either side of the interference pattern: $(B^{(i)}, \alpha^{(i)}_{l, -}, \alpha^{(i)}_{l, +}, \alpha^{(i)}_{l, 0}, \alpha^{(i)}_{r, -}, \alpha^{(i)}_{r, +}, \alpha^{(i)}_{r, 0})$. These results are summarized in Table TODO.
+
 \section{Results and Analysis}
+
+% TODO: B vs. I plot
+% TODO: Table of alpha-values
+
+A difference between each pair of corresponding right and left camera readings taken on either side of the interference pattern is used to estimate the corresponding angle of entry into the interferometer as $\alpha^{(i)}_j = \frac{1}{2} \left ( \alpha_{r, j}^{(i)} - \alpha_{l, j}^{(i)} \right )$ for $j \in \set{-, 0, +}$, eliminating systematic angular shifts caused by camera miscentering. This produces a dataset where each experimental magnetic field strength is associated with a single alpha value per each of the upshifted, nonshifted, and downshifted emission lines. Upon application of \eqref{eq:snell}, each data point produces two values of the form $\left (g_J B_0^{(i)} M_J^{(i)}, -\frac{hc}{\lambda} \frac{\cos \beta_f^{(i)} - \cos \beta_0^{(i)}}{\cos \beta_0} \right)$. \eqref{eq:zeeman_shift} indicates that a linear plot fit to the resulting dataset yields an experimental value of $\mu_B$ as its slope.
+
+%of the form $(B^{(i)}, \alpha_{-}^{(i)}, \alpha_{0}^{(i)}, \alpha_{+}^{(i)} )$.
+
+To estimate the level of systematic unertainty in the magnetic field strength $B$, a field strength at which the distance between two unsplit rings (the free spectral range, FSR, of the interferometer) exactly equals the shift in photon energy caused by Zeeman splitting is extrapolated from the dataset described above. This experimental value is compared to the theoretical prediction provided by
+
 \section{Discussion}
 \section{Conclusion}
+
+% 7:15 - Conclude procedure description and apparatus diagram
+% 8:15 - Produce all necessary materials and write results and analysis section--not forgetting to actually discuss your results in discussion
+% 8:15 - 10:00 - Do citations, polish language, write conclusion, and ensure all points answered from lab manual
 
 \end{document}
