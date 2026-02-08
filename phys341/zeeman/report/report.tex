@@ -362,22 +362,82 @@ We obtain an experimental value for the Bohr magneton $\mu_B$ by investigating t
 
 \section{Procedure}
 
+\begin{figure}
+  \begin{tikzpicture}[scale=0.85]
+    
+    % Optical rail axis (single line through centers of rectangles)
+    \draw[->, line width=1pt] (-1,0) -- (13.5,0);
+    
+    % Cadmium bulb (not on rail, to the left)
+    \draw[draw=black, line width=1pt] (-2,0) circle (0.5);
+    
+    % Cd Lamp label - below bottom coil with line to circle
+    \node at (-2, -2.0) {Cd Lamp};
+    \draw[line width=1pt] (-2, -1.6) -- (-2, -0.5);
+    
+    % Coils - rectangles above and below the lamp
+    \draw[draw=black, line width=1pt] (-2.5, 0.7) rectangle (-1.5, 1.0);
+    \draw[draw=black, line width=1pt] (-2.5, -0.7) rectangle (-1.5, -1.0);
+    \node at (-2, 1.5) {Coils};
+    
+    % Power supply (to the left)
+    \draw[draw=black, line width=1pt] (-4.5, -0.5) rectangle (-3.5, 0.5);
+    
+    % Power supply label - above with line to rectangle
+    \node at (-4, 2.5) {Power Supply};
+    \draw[line width=1pt] (-4, 0.8) -- (-4, 2.0);
+    
+    % Wiring from power supply to coils
+    \draw[line width=1pt] (-3.5, 0.3) -- (-2.5, 0.85);
+    \draw[line width=1pt] (-3.5, -0.3) -- (-2.5, -0.85);
+    
+    % First convergent lens (uniform width = 0.5)
+    \draw[draw=black, line width=1pt] (2,-1) rectangle (2.5,1);
+    \node at (2.25, 1.8) {Convergent};
+    \node at (2.25, 1.4) {Lens 1};
+    
+    % Polarizer (uniform width = 0.5)
+    \draw[draw=black, line width=1pt] (4.5,-1) rectangle (5.0,1);
+    \node at (4.75, 1.6) {Polarizer};
+    
+    % Fabry-Perot interferometer (uniform width = 0.5)
+    \draw[draw=black, line width=1pt] (7,-1) rectangle (7.5,1);
+    \node at (7.25, 1.8) {Fabry-Perot};
+    \node at (7.25, 1.4) {Etalon};
+    
+    % Second convergent lens (uniform width = 0.5)
+    \draw[draw=black, line width=1pt] (10,-1) rectangle (10.5,1);
+    \node at (10.25, 1.8) {Convergent};
+    \node at (10.25, 1.4) {Lens 2};
+    
+    % Sensor (uniform width = 0.5)
+    \draw[draw=black, line width=1pt] (12.5,-1) rectangle (13.0,1);
+    \node at (12.75, 1.6) {Sensor};
+    
+\end{tikzpicture}
+\end{figure}
+
 A cadmium lamp is placed between two coils of wire, through which a current $I$ is produced by a variable-current power supply. When the lamp is powered on, photons are emitted. The magnetic field between the coils causes Zeeman splitting in the cadmium electrons. In front of the lamp, an optical rail perpendicular to $\vec B$ is arranged, on which a convergent lens, a polarizer, a Fabry-Perot interferometer, an optical filter, and another convergent lens are placed. Note that although photons of several wavelengths are produced, the emission spectrum of the lamp includes photons caused by the transition of interest. The optical filter is chosen to select wavelengths in the emission band of this transition. A camera sensor at the end of the rail captures the interference pattern, reporting a relationship between a voltage proxy for light intensity and angle of entry $\alpha$ into the interferometer and radial distance from an origin on the sensor.
 
-An empirical relationship between the magnetic field strength $B$ produced by the coils and the current through the coils $I$ is derived using a Gaussmeter, using readings taken at various currents. The relationship obtained is depected in Figure TODO.
+An empirical relationship between the magnetic field strength $B$ produced by the coils and the current through the coils $I$ is derived using a Gaussmeter, using readings taken at various currents. The relationship obtained is depected in Figure \ref{fig:b_vs_i}.
 
 After powering on the cadmium lamp and allowing it to approach steady state, devices on the optical rail are adjusted such that a clear diffraction pattern is reported by the sensor software. The coil current is then set to a nonzero value. For each magnetic field strength caused by the coils, the $\alpha$-values of the resonance peaks corresponding to each value of $\Delta M_J$ are measured on one side of the centerline of the diffraction pattern, then the other. Via \eqref{eq:snell}, $\Delta M_J = 0$ readings provide values for $\beta_0$ in \eqref{eq:zeeman_shift}, while $\Delta M_J \neq 0$ readings provide data points for $\beta_f$. This process yields a dataset whose points are a field strength paired with one downshifted peak, one upshifted peak, and one unshifted peak per either side of the interference pattern: $(B^{(i)}, \alpha^{(i)}_{l, -}, \alpha^{(i)}_{l, +}, \alpha^{(i)}_{l, 0}, \alpha^{(i)}_{r, -}, \alpha^{(i)}_{r, +}, \alpha^{(i)}_{r, 0})$. These results are summarized in Table TODO.
 
 \section{Results and Analysis}
 
-% TODO: B vs. I plot
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{b_vs_i.pdf}
+    \caption{Magnetic field $B$ vs.\ coil current $I$ with linear fit.}
+    \label{fig:b_vs_i}
+\end{figure}
 % TODO: Table of alpha-values
 
 A difference between each pair of corresponding right and left camera readings taken on either side of the interference pattern is used to estimate the corresponding angle of entry into the interferometer as $\alpha^{(i)}_j = \frac{1}{2} \left ( \alpha_{r, j}^{(i)} - \alpha_{l, j}^{(i)} \right )$ for $j \in \set{-, 0, +}$, eliminating systematic angular shifts caused by camera miscentering. This produces a dataset where each experimental magnetic field strength is associated with a single alpha value per each of the upshifted, nonshifted, and downshifted emission lines. Upon application of \eqref{eq:snell}, each data point produces two values of the form $\left (g_J B_0^{(i)} M_J^{(i)}, -\frac{hc}{\lambda} \frac{\cos \beta_f^{(i)} - \cos \beta_0^{(i)}}{\cos \beta_0} \right)$. \eqref{eq:zeeman_shift} indicates that a linear plot fit to the resulting dataset yields an experimental value of $\mu_B$ as its slope.
 
 %of the form $(B^{(i)}, \alpha_{-}^{(i)}, \alpha_{0}^{(i)}, \alpha_{+}^{(i)} )$.
 
-To estimate the level of systematic unertainty in the magnetic field strength $B$, a field strength at which the distance between two unsplit rings (the free spectral range, FSR, of the interferometer) exactly equals the shift in photon energy caused by Zeeman splitting is extrapolated from the dataset described above. This experimental value is compared to the theoretical prediction provided by
+To estimate the level of systematic uncertainty in the magnetic field strength $B$, a field strength at which the distance between two unsplit rings (the free spectral range, FSR, of the interferometer) exactly equals the shift in photon energy caused by Zeeman splitting is extrapolated from the dataset described above. This experimental value is compared to the theoretical prediction provided by
 
 \section{Discussion}
 \section{Conclusion}

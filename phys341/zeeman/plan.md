@@ -22,12 +22,12 @@ Create global settings for plot font sizes.
 Using these B vs. I values, obtain a linear fit for B vs. I with uncertainties. Display the plot under my report's results section.
 
 B vs. I values:
-B = [56.00 184.0 333.0 420.0 490.0 780.0 830.0 980.0  1170  1380  1470  1600  1710  1760  1860  2100]; # Gauss
+
+I = [0.020 0.231 0.443 0.656 0.868 1.082 1.294 1.508 1.721 1.933 2.144 2.356 2.567 2.776 2.987 3.079];
+dI = 0.001;
+
+B = [56.00 184.0 333.0 420.0 490.0 780.0 830.0 980.0  1170  1380  1470  1600  1710  1760  1860  2100];
 dB = 20;
-
-I = [2.411 2.825 3.110 3.431 3.708 4.100 4.321 4.635 4.909]; # Amps
-
-
 
 The following are data points for multiple current values:
 
