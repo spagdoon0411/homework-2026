@@ -1,0 +1,52 @@
+\begin{tikzpicture}[scale=0.85, every path/.style={line width=0.75pt}]
+
+    % Optical rail axis (single line through centers of rectangles)
+    \draw[->] (-1,0) -- (13.5,0);
+
+    % Cadmium bulb (not on rail, to the left)
+    \draw[draw=black] (-2,0) circle (0.5);
+
+    % Cd Lamp label - below bottom coil with line to circle
+    \node at (-2, -2.0) {Cd Lamp};
+    \draw (-2, -1.6) -- (-2, -0.5);
+
+    % Coils - rectangles above and below the lamp
+    \draw[draw=black] (-2.5, 0.7) rectangle (-1.5, 1.0);
+    \draw[draw=black] (-2.5, -0.7) rectangle (-1.5, -1.0);
+    \node at (-2, 1.5) {Coils};
+
+    % Power supply (to the left)
+    \draw[draw=black] (-4.5, -0.5) rectangle (-3.5, 0.5);
+
+    % Power supply label - above with line to rectangle
+    \node at (-4, 2.5) {Power Supply};
+    \draw (-4, 0.8) -- (-4, 2.0);
+
+    % Wiring from power supply to coils
+    \draw (-3.5, 0.3) -- (-2.5, 0.85);
+    \draw (-3.5, -0.3) -- (-2.5, -0.85);
+
+    % First convergent lens (uniform width = 0.5)
+    \draw[draw=black] (2,-1) rectangle (2.5,1);
+    \node at (2.25, 1.8) {Convergent};
+    \node at (2.25, 1.4) {Lens 1};
+
+    % Polarizer (uniform width = 0.5)
+    \draw[draw=black] (4.5,-1) rectangle (5.0,1);
+    \node at (4.75, 1.6) {Polarizer};
+
+    % Fabry-Perot interferometer (uniform width = 0.5)
+    \draw[draw=black] (7,-1) rectangle (7.5,1);
+    \node at (7.25, 1.8) {Fabry-Perot};
+    \node at (7.25, 1.4) {Etalon};
+
+    % Second convergent lens (uniform width = 0.5)
+    \draw[draw=black] (10,-1) rectangle (10.5,1);
+    \node at (10.25, 1.8) {Convergent};
+    \node at (10.25, 1.4) {Lens 2};
+
+    % Sensor (uniform width = 0.5)
+    \draw[draw=black] (12.5,-1) rectangle (13.0,1);
+    \node at (12.75, 1.6) {Sensor};
+
+\end{tikzpicture}

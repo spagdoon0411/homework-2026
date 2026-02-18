@@ -35,22 +35,22 @@ Next:
 ## Procedure
 
 ### Apparatus 
-- [ ] Lamp
-- [ ] Rail
-- [ ] Convergent/divergent lenses (mention focal lengths)
-- [ ] Parallel ray region
-- [ ] Polarizer 
-- [ ] Fabry-Pérot interferometer
-- [ ] Camera
- 
-- Apparatus diagram
+~~- [ ] Lamp~~
+~~- [ ] Rail~~
+~~- [ ] Convergent/divergent lenses (mention focal lengths)~~
+~~- [ ] Parallel ray region~~
+~~- [ ] Polarizer ~~
+~~- [ ] Fabry-Pérot interferometer~~
+~~- [ ] Camera~~
+~~ ~~
+~~- Apparatus diagram~~
 
 ### Steps
 - Explain apparatus components
-- Obtain B vs. I calibration curve (point to plot)
+~~- Obtain B vs. I calibration curve (point to plot)~~
 - Obtain FSR B-value 
-- Describe sensor pattern and what's being measured to obtain dataset
-- Point out exact linear fit equation being used; point to plot
+~~- Describe sensor pattern and what's being measured to obtain dataset~~
+~~- Point out exact linear fit equation being used; point to plot~~
 
 ## Results
 - B vs. I calibration curve

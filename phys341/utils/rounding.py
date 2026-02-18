@@ -94,3 +94,46 @@ def round_unc_pdg(value, uncertainty, extract_magnitude=False):
     if scalar_input:
         return rounded_v[0], rounded_u[0]
     return rounded_v, rounded_u
+
+
+def _clean_mantissa_strs(mv, mu):
+    """Return (value_str, uncertainty_str) with floating-point noise removed."""
+    mu_stripped = f"{abs(mu):.10f}".rstrip('0').rstrip('.')
+    ndec = len(mu_stripped) - mu_stripped.index('.') - 1 if '.' in mu_stripped else 0
+    mv = round(float(mv), ndec)
+    mu = round(float(abs(mu)), ndec)
+    mv_s = f"{mv:.{ndec}f}" if ndec > 0 else f"{mv:.0f}"
+    mu_s = f"{mu:.{ndec}f}" if ndec > 0 else f"{mu:.0f}"
+    return mv_s, mu_s
+
+
+def fmt_val(value, uncertainty):
+    """Round a value by its uncertainty and return a clean string."""
+    rv, ru = round_unc_pdg(value, uncertainty)
+    mv_s, _ = _clean_mantissa_strs(rv, ru)
+    return mv_s
+
+
+def fmt_pm(value, uncertainty):
+    r"""Round and return ``a \pm b`` LaTeX string (no scientific notation)."""
+    rv, ru = round_unc_pdg(value, uncertainty)
+    mv_s, mu_s = _clean_mantissa_strs(rv, ru)
+    return f"{mv_s} \\pm {mu_s}"
+
+
+def fmt_sci(value, uncertainty):
+    r"""Round and return ``(a \pm b) \times 10^{k}`` LaTeX string."""
+    mv, mu, exp = round_unc_pdg(value, uncertainty, extract_magnitude=True)
+    mv_s, mu_s = _clean_mantissa_strs(mv, mu)
+    if exp == 0:
+        return f"({mv_s} \\pm {mu_s})"
+    return f"({mv_s} \\pm {mu_s}) \\times 10^{{{exp}}}"
+
+
+def fmt_mantissa(value, uncertainty, forced_exp):
+    r"""Round and return ``a \pm b`` LaTeX string at a forced power of 10."""
+    rv, ru = round_unc_pdg(value, uncertainty)
+    mv = rv / 10.0**forced_exp
+    mu = ru / 10.0**forced_exp
+    mv_s, mu_s = _clean_mantissa_strs(mv, mu)
+    return f"{mv_s} \\pm {mu_s}"

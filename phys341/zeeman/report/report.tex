@@ -4,7 +4,6 @@
 \usepackage{amsmath}
 \usepackage{circuitikz}
 \usepackage{amssymb}
-\usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{tikz}
 \usepackage{tikz-3dplot}
@@ -17,6 +16,7 @@
 \usepackage{xcolor}
 \usepackage{parskip}
 \usepackage{braket}
+\usepackage{makecell}
 
 \title{Measurement of the Zeeman Effect via a Fabry-Pérot Interferometer}
 \author{Spandan Suthar and Antoni Gonzalez}
@@ -30,8 +30,7 @@
 
 \section{Introduction and Background}
 
-Atoms can be attributed a net spin angular momentum $\vec S$ resulting from their electrons' aggregate intrinsic angular momenta and a net orbital angular momentum $\vec J$ resulting from their electrons' motion around their
-parent nucleus. In a weak magnetic field $\vec B$, these two angular momenta couple. The result is a net angular momentum vector $\vec J$ that is quantized instead of either of its $\vec L$ and $\vec S$ consitiuents. The atom's magnetic dipole $\vec \mu_J$ is a function of this quantized $\vec J$, and thus the relative orientation of $\vec \mu_J$ and $\vec B$ produce a quantized set of possible energies around the atom's original zero-field energy level. Assuming a regime of weak magnetic fields (where magnetic potential energy contributions are much smaller than any energy contributions due to spin-orbit coupling), this energy shift is given to first order in $|\vec B| =B$ by the expectation of the Zeeman Hamiltonian term:
+Atoms can be attributed a net spin angular momentum $\vec S$ and a net orbital angular momentum $\vec L$ resulting from their electrons' aggregate intrinstic angular momenta and their electrons' motion around their parent nucleus, respectively \cite{harris, qmech,griffiths_qm}. In a weak magnetic field $\vec B$, these two angular momenta couple. The result is a net angular momentum vector $\vec J$ that is quantized instead of either of its $\vec L$ and $\vec S$ constituents \cite{harris, qmech,griffiths_qm}. The atom's magnetic dipole $\vec \mu_J$ is a function of this quantized $\vec J$, and thus the relative orientation of $\vec \mu_J$ and $\vec B$ produces a quantized set of possible energies around the atom's original zero-field energy level\cite{harris, qmech,griffiths_qm}. Assuming a regime of weak magnetic fields (where magnetic potential energy contributions are much smaller than any energy contributions due to spin-orbit coupling), this energy shift is given to first order in $|\vec B| =B$ by the expectation of the Zeeman Hamiltonian term  \cite{qmech,griffiths_qm}:
 
 \begin{equation}
 \braket{\hat {H_Z}} = -\braket{\hat {\boldsymbol \mu} \cdot {\mathbf B} } \approx \mu_B g_J \mathbf B \cdot \braket{\hat {\mathbf J}} = \mu_B g_J B M_J
@@ -45,48 +44,48 @@ parent nucleus. In a weak magnetic field $\vec B$, these two angular momenta cou
 
 where $\mu_B$ is the Bohr magneton, $g_J$ is the Landé g-factor for the state, $\braket{\hat {\mathbf J}} \equiv \vec J$ is the expectation value of the total angular momentum operator $\hat {\boldsymbol J}$, $M_J$ is the magnetic quantum number corresponding to the projection of $\vec J$ along the direction of $\vec B$, $e$ is the elementary charge, $\hbar$ is the reduced Planck constant, and $m_e$ is the electron mass.
 
-Electrons can transition from one state to another, resulting in the emission or absorption of photons with wavelengths corresponding to the energy difference between the states:
+Electrons can transition from one state to another, resulting in the emission or absorption of photons with wavelengths corresponding to the energy difference between the states \cite{harris}:
 
 \begin{equation}
-\ket{\gamma, L, S, J, M_J} \rightarrow \ket{\gamma, L', S, J', M_J'}
+\ket{\gamma, L, S, J, M_J} \rightarrow \ket{\gamma', L', S, J', M_J'}
 \label{eq:general_transition}
 \end{equation}
 
-where $L$ is the atom's total orbital angular momentum quantum number, $S$ is the atom's total spin quantum number, $M_J$ is the atom's total magnetic quantum number, $J$ is the atom's net angular momentum quantum number, and $\gamma$ represents other values necessary to uniquely identify the states. These quantum numbers have values constrained to the following ranges:
+where $L$ is the atom's total orbital angular momentum quantum number, $S$ is the atom's total spin quantum number, $M_J$ is the atom's total magnetic quantum number, $J$ is the atom's net angular momentum quantum number, and $\gamma$ represents other values necessary to uniquely identify the states. These quantum numbers have values constrained to the following ranges \cite{griffiths_qm,harris, qmech}:
 
 \begin{table}[H]
 \centering
-\label{tab:quantum_number_values}
 \begin{tabular}{cll}
 \hline
 \textbf{Quantum number} & \textbf{Symbol} & \textbf{Range} \\
 \hline
-Spin & $S$ 
+Spin & $S$
 & $\set{0, \tfrac12, 1, \tfrac32, \dots}$ \\
 
-Orbital angular momentum 
-& $L$ 
+Orbital angular momentum
+& $L$
 & $\set{0,1,2,\dots}$ \\
 
-Total angular momentum 
-& $J$ 
+Total angular momentum
+& $J$
 & $\set{|L-S|,\dots,L+S}$ \\
 
-Magnetic quantum number 
-& $M_J$ 
+Magnetic quantum number
+& $M_J$
 & $\set{-J,\,-J+1,\dots,J}$ \\
 
 \hline
 \end{tabular}
+\caption{Quantum numbers for an atom experiencing spin-orbit coupling and Zeeman splitting in a weak magnetic field. Note that each quantum number is associated with a net quantity across the atom: $S$ corresponds to a net spin, $L$ corresponds to a net orbital angular momentum, $J$ corresponds to a total angular momentum, and $M_J$ corresponds to the $z$-component, along $\vec B$, of $\vec J$.}
+\label{tab:quantum_number_values}
 \end{table}
 
 For the purposes of this experiment, the state's electron configuration is a sufficient stand-in for $\gamma$. 
 
-Emissions and absorptions of photons are modeled through an electric-dipole interaction Hamiltonian. Some selection rules follow from exact symmetries of this Hamiltonian, while others arise from the rank-1 tensor character of the dipole operator.
+Emissions and absorptions of photons are modeled through an electric-dipole interaction Hamiltonian. Some selection rules follow from exact symmetries of this Hamiltonian, while others arise from the rank-1 tensor character of the dipole operator \cite{griffiths_qm, qmech}.
 
 \begin{table}[H]
 \centering
-\label{tab:E1_selection_rules_ops}
 \begin{tabular}{clll}
 \hline
 \textbf{} & \textbf{Operator / Quantity} & \textbf{Selection rule} & \textbf{Notes} \\
@@ -112,6 +111,8 @@ Emissions and absorptions of photons are modeled through an electric-dipole inte
   & Conserved  \\
 \hline
 \end{tabular}
+\caption{Selection rules for state transitions, arising from properties of the Hamiltonian $\hat H_{\text{int}}$ governing atomic interactions with the electromagnetic field. For more details regarding how either symmetries of $\hat H_{\text{int}}$ or its interactions with the dipole operator for the atom derive these symmetry rules, see Sakurai and Napolitano's \textit{Modern Quantum Mechanics}, Edition 3\cite{qmech}.}
+\label{tab:E1_selection_rules_ops}
 \end{table}
 
 
@@ -123,7 +124,7 @@ In the subset of transitions where the initial and final states of the electron 
 \label{eq:normal_transition}
 \end{equation}
 
-In the weak-field regime, the degeneracy splitting of atomic states due to an external magnetic field is known as the Zeeman effect. For atoms whose initial and final states satisfy $\vec S = 0$, this splitting is known as the normal Zeeman effect---while cases in which $\vec S \neq 0$ are known as the anomalous Zeeman effect. A family of transitions that exhibits the normal Zeeman effect is the $5s5d \rightarrow 5s5p$ transition in neutral cadmium (Cd I):
+In the weak-field regime, the degeneracy splitting of atomic states due to an external magnetic field is known as the Zeeman effect. For atoms whose initial and final states satisfy $\vec S = 0$, this splitting is known as the normal Zeeman effect---while cases in which $\vec S \neq 0$ are known as the anomalous Zeeman effect \cite{harris}. A family of transitions that exhibits the normal Zeeman effect arises around the $5s5d \rightarrow 5s5p$ transition in neutral cadmium (Cd I) \cite{leybold}:
 
 \begin{equation}
 \ket{\gamma=5s5d;\,L=2,\,S=0,\,J=2,\,M_J}
@@ -132,32 +133,34 @@ In the weak-field regime, the degeneracy splitting of atomic states due to an ex
 \label{eq:cd_transition}
 \end{equation}
 
-In spectroscopic notation, this transition family is denoted $5s5d\;{}^{1}D_{2} \;\longrightarrow\;5s5p\;{}^{1}P_{1}$. In a weak magnetic field, the former state splits into 5 substates with $M_J \in \set{ -2, -1, 0, 1, 2}$, while the latter splits into 3 substates with $M_J' \in \set{-1, 0, 1}$, following Table \ref{tab:quantum_number_values}. Each split state has a different energy, as a result of (\ref{eq:H_zeeman}).
+In spectroscopic notation, this transition family is denoted $5s5d\;{}^{1}D_{2} \;\longrightarrow\;5s5p\;{}^{1}P_{1}$ \cite{harris}. In a weak magnetic field, the former state splits into 5 substates with $M_J \in \set{ -2, -1, 0, 1, 2}$, while the latter splits into 3 substates with $M_J' \in \set{-1, 0, 1}$, following Table \ref{tab:quantum_number_values} \cite{harris,griffiths_qm,qmech}. Each split state has a different energy, as a result of (\ref{eq:H_zeeman}).
 
-This degeneracy splitting of the $5s5d\;{}^{1}D_{2}$ and $5s5p\;{}^{1}P_{1}$ states allows for three distinct changes in energy where there used to be one, resulting in three possible wavelengths of emitted photons. Because the energy shift $\braket{\hat {\mathbf H}_Z}$ is proportional to $M_J$ (Eq. \ref{eq:H_zeeman}), the possible changes in energy are proportional to $\Delta M_J$ over the transition. The selection rules of Table \ref{tab:E1_selection_rules_ops} restrict the allowed values of $\Delta M_J$ to $\set{-1, 0, 1}$, resulting in three possible energy changes (and thus three possible emitted photon wavelengths) for the $5s5d\;{}^{1}D_{2} \;\longrightarrow\;5s5p\;{}^{1}P_{1}$ transition, illustrated in Figure \ref{fig:energy_levels}.
+This degeneracy splitting of the $5s5d\;{}^{1}D_{2}$ and $5s5p\;{}^{1}P_{1}$ states allows for three distinct changes in energy where there used to be one, resulting in three possible wavelengths of emitted photons. Because the energy shift $\braket{\hat {\mathbf H}_Z}$ is proportional to $M_J$ (Eq. \ref{eq:H_zeeman}), the possible changes in energy are proportional to $\Delta M_J$ over the transition. The selection rules of Table \ref{tab:E1_selection_rules_ops} restrict the allowed values of $\Delta M_J$ to $\set{-1, 0, 1}$ \cite{harris}, resulting in three possible unique energy changes (and thus three possible emitted photon wavelengths) for the $5s5d\;{}^{1}D_{2} \;\longrightarrow\;5s5p\;{}^{1}P_{1}$ transition, illustrated in Figure \ref{fig:energy_levels}.
 
 % Include the TikZ diagram from the external file
 \begin{figure}[H]
     \centering
     \input{energy_levels.tikz}
+    \caption{Possible energy transitions between $5s5d\;{}^{1}D_{2}$ and $5s5p\;{}^{1}P_{1}$ states in a neutral cadmium atom. Note the three groups containing transitions of the same net change in energy: $\sigma^+$ (orange), $\sigma^-$ (red), and $\pi$ (blue).}
     \label{fig:energy_levels}
-    \caption{}
 \end{figure}
+In Figure \ref{fig:energy_levels}, possible transitions are grouped by the energy differences $\Delta E$ between their starting and ending states---or, equivalently, by their $\Delta M_J$ values. This produces three groups corresponding to, in order of increasing energy difference, $\sigma^-$, $\pi$, and $\sigma^+$ transition ($\Delta M_J = -1$, $0$, and $1$, respectively) \cite{leybold}. Note that a transition with a change in magnetic quantum number of $\Delta M_J$ corresponds to a change in the $z$-component of the atom's aggregate angular momentum $J_z$ of $\hbar \Delta M_J$.
 
-In Figure \ref{fig:energy_levels}, possible transitions are grouped by the energy differences $\Delta E$ between their starting and ending states---or, equivalently, by their $\Delta M_J$ values. These produce three groups corresponding to, in order of increasing energy difference, $\sigma^-$, $\pi$, and $\sigma^+$ transition ($\Delta M_J = -1$, $0$, and $1$, respectively). Note that a transition with $\Delta M_J$ corresponds to a change in the $z$-component of the atom's aggregate angular momentum $J_z$ of $\hbar \Delta M_J$.
+This change in angular momentum must be balanced by the angular momentum of emitted photons \cite{harris}. The possible candidates for photon angular momenta that meet this constraint are the photon's spin or the photon's extrinsic total angular momentum \cite{harris}. Because a photon is massless, it can never have a frame in which it is at rest; a photon has a nonzero momentum $\vec p$ in all relativistic frames \cite{wigner}. As a result, the photon's intrinsic angular momentum must be defined in terms of symmetry operators whose actions do not change $\vec p$. The only such operator $\hat h$ that produces observable changes in photon states generates the group $\text{SO}(2)$, rotations in two dimensions (here, about $\vec p$) \cite{wigner, tung}. This is the photon's helicity operator \cite{wigner}.\footnote{It is not correct to immediately assume that the only spin operators associated with a massless particle are pure rotations, despite its validity for massful particles. E.P. Wigner's definition of a photon's spin notes that additional momentum-preserving transformations exist for massless particles but act as gauge transformations for photons--leaving only $\text{SO}(2)$, with $\vec p$ as the "shared axis" \cite{wigner}.} Photons are spin-1 bosons, implying that the only allowed eigenvalues for $\hat{h}$ are $\pm \hbar$ \cite{harris, qmech,griffiths_qm}.
 
-Because a photon is massless, it can never have a frame in which it is at rest; a photon has a nonzero momentum $\vec p$ in all relativistic frames. As a result, the photon's intrinsic angular momentum must be defined in terms of symmetry operators whose actions do not change $\vec p$. The only such operator $\hat h$ that produces observable changes in photon states generates the group $\text{SO}(2)$, rotations about $\vec p$. This is the photon's helicity operator.\footnote{It is not correct to immediately assume that the only spin operators associated with a massless particle are pure rotations, despite its validity for massful particles. E.P. Wigner's definition of a photon's spin notes that additional momentum-preserving transformations exist for massless particles but act as gauge transformations for photons--leaving only $\text{SO}(2)$, with $\vec p$ as the "shared axis".} Photons are spin-1 bosons, implying that the only allowed eigenvalues for $\hat{h}$ are $\pm \hbar$.
-
-In this experiment, the applied magnetic field causing Zeeman splitting is orthogonal to the propagation direction of detected photons. In this situation, it is \textit{not} the photons' helicity that satisfies a conservation of angular momentum condition between the relaxing atom and the emitted photon. The full Hamiltonian $\hat H$, including Zeeman terms, is invariant under rotation about the magnetic field direction and not along the photon's propagation direction. Therefore, $[\hat H, \hat h] \neq 0$ and $[\hat H, \hat J_z^{(\gamma)}] = 0$, and the eigenvalues of $\hat J_z^{(\gamma)}$ are such that angular momentum along $z$ is conserved, where $\hat J_z^{(\gamma)}$ is the operator correspondong to the $z$-component of the photon's angular momentum. Labeling photon states with the transition that produced them:
+In this experiment, the applied magnetic field causing Zeeman splitting is orthogonal to the propagation direction of detected photons. In this situation, it is \textit{not} the photons' helicity that satisfies a conservation of angular momentum condition between the relaxing atom and the emitted photon. The full Hamiltonian $\hat H$, including Zeeman terms, is invariant under rotation about the magnetic field direction and not along the photon's propagation direction \cite{harris, qmech}. Allowing $\hat J_z^{(\gamma)}$ to represent the operator corresponding to the $z$-component of the photon's angular momentum, $[\hat H, \hat h] \neq 0$ and $[\hat H, \hat J_z^{(\gamma)}] = 0$ \cite{qmech,griffiths_qm}. Therefore the eigenvalues of $\hat J_z^{(\gamma)}$, not $\hat h$, are such that angular momentum along $z$ is conserved. 
 \begin{equation}
     \hat J_z^{(\gamma)} \ket{\sigma^{\pm}} = \mp \hbar \ket{\sigma^{\pm}} 
     \quad 
-    \hat J_z^{(\gamma)} \ket{\pi} = 0 \ket{\pi} \\
+    \hat J_z^{(\gamma)} \ket{\pi} = 0 \ket{\pi}
+    \quad
+    \Delta J_z^{(\text{atom})} + 
+    J_z^{(\gamma)} = 0
 \end{equation}
 
 % During a $\pi$-transition, $\ket \pi = \frac{1}{\sqrt{2}} \left ( \ket {\sigma^+} + \ket {\sigma^-} \right )$, this means that the emission of appropriate photons can exactly satisfy a conservation of angular momentum constraint applied to the atom-photon system during a transition:
 
-Maxwell's equations dictate that the electric and magnetic field components of an electromagnetic wave caused by a source far away from the point of observation oscillate transverse to the direction of the wave's propagation (transversality). Although $\sigma^{\pm}$ photons would be circularly polarized if the applied magnetic field $\vec B$ were parallel to the propagation direction, these photons must be treated as if their fields oscillate orthogonally with $\vec B$ due to transversality. On the other hand, $\pi$ photons have zero angular momentum along $\vec B$, constraining their field components to oscillate parallel to $\vec B$. Thus, an ideal linear polarizer with transmission axis $\hat e$ (in this experiment, either parallel $\parallel$ or perpendicular $\perp$ to $\vec B$) acts as $\hat P_{\hat e} = \ket {\hat e} \bra {\hat e}$, cleanly filtering photons based on whether they were produced by transitions with $\Delta M_J = 0$ or $\Delta M_J \neq 0$:
+Maxwell's equations dictate that the electric and magnetic field components of an electromagnetic wave caused by a source far away from the point of observation must oscillate transverse to the direction of the wave's propagation (transversality) \cite{griff}. Although $\sigma^{\pm}$ photons would be circularly polarized if the applied magnetic field $\vec B$ were parallel to the propagation direction \cite{griff, qmech,griffiths_qm,hecht_optics}, here these photons must be treated as if their fields oscillate orthogonally with $\vec B$ due to transversality. On the other hand, $\pi$ photons have zero angular momentum along $\vec B$, constraining their field components to oscillate parallel to $\vec B$ \cite{griff,qmech,griffiths_qm,hecht_optics}. Thus, an ideal linear polarizer with transmission axis $\hat e$ (in this experiment, either parallel $\parallel$ or perpendicular $\perp$ to $\vec B$) acts as $\hat P_{\hat e} = \ket {\hat e} \bra {\hat e}$, cleanly filtering photons based on whether they were produced by transitions with $\Delta M_J = 0$ or $\Delta M_J \neq 0$ \cite{griffiths_qm, qmech}:
 
 \begin{equation}
 \hat P_{\parallel \vec B}|\pi\rangle = |\pi\rangle
@@ -167,11 +170,12 @@ Maxwell's equations dictate that the electric and magnetic field components of a
 \hat P_{\perp \vec B}|\sigma^\pm\rangle = |\sigma^\pm\rangle
 \qquad
 \hat P_{\perp \vec B}|\pi\rangle = 0
+\label{eq:polarizer}
 \end{equation}
 
 
-In this experiment, photons resulting from electron relaxation between Zeeman-split energy levels are passed through a Fabry-Perot interferometer. This device consists of a transparent material of a more refractive medium than the surrounding air, whose boundary produces two parallel surfaces at which incoming light
-rays experience partial internal reflection. Depicted in Figure \ref{fig:fb_plates}, light entering such an interferometer repeatedly reflects between the interferometer surfaces:
+In this experiment, photons resulting from electron relaxation between Zeeman-split energy levels are passed through a Fabry-P\'{e}rot interferometer. This device consists of a transparent material of a more refractive medium than the surrounding air, whose boundary produces two parallel surfaces at which incoming light
+rays experience partial internal reflection \cite{mel,leybold}. Depicted in Figure \ref{fig:fb_plates}, light entering such an interferometer repeatedly reflects between the interferometer surfaces \cite{mel,leybold}:
 
 \begin{figure}[H]
 \begin{tikzpicture}[>=Stealth]
@@ -309,12 +313,12 @@ rays experience partial internal reflection. Depicted in Figure \ref{fig:fb_plat
 
 \end{tikzpicture}
 \centering
+\caption{Schematic diagram of the behavior of light rays passing through the Fabry-Pérot interferometer. Light rays enter and exit the inteferometer at angle $\alpha$, but are refracted to have an angle $\beta$ with the interferometer wall while in the transparent medium. Light entering at resonant angles experiences long-running internal reflection, with partial transmission at each boundary interaction. This produces a series of outgoing rays, each with angle $\alpha$ with the interferometer.}
 \label{fig:fb_plates}
-\caption{Interferometer}
 \end{figure}
 
 Suppose $t$ is the thickness of an interferometer, $n$ is its refractive index, $\alpha$ is the angle
-of incoming light rays, and $\beta$ is the resulting internal angle due to refraction. The path length traveled by a light ray as it leaves a first surface, partially reflects from the second surface, and meets the first surface again (completing a round trip) is $2t \cos \beta$, resulting in an optical path length of $2tn \cos \beta$ and a phase contribution $\Delta \phi = \frac{2 \pi}{\lambda} \cdot 2tn \cos \beta$. At particlar values $\alpha$, $\Delta \phi$ is exactly an integer multiple of $2 \pi$---producing no effective phase shift as compared to before the round-trip between the first and second surfaces:
+of incoming light rays, and $\beta$ is the resulting internal angle due to refraction. The path length traveled by a light ray as it leaves a first surface, partially reflects from the second surface, and meets the first surface again (completing a round trip) is $2t \cos \beta$, resulting in an optical path length of $2tn \cos \beta$ and a phase contribution $\Delta \phi = \frac{2 \pi}{\lambda} \cdot 2tn \cos \beta$ \cite{mel,leybold}. At particular values $\alpha$, $\Delta \phi$ is exactly an integer multiple of $2 \pi$---producing no effective phase shift as compared to before the round-trip between the first and second surfaces:
 
  \begin{equation}
  \Delta \phi = 2\pi m = \frac{2\pi}{\lambda} 2 t n \cos \beta \Rightarrow  \lambda m = 2tn \cos \beta
@@ -322,18 +326,58 @@ of incoming light rays, and $\beta$ is the resulting internal angle due to refra
  \end{equation}
 
 Equation \ref{eq:resonance} amounts to a resonance condition in $\alpha$. The path of any incoming ray
-results in two sets of parallel rays within the interferometer: one set for the forward direction and another for the backward direction of the round-trip. When the resonance condition is met, the rays of the forward pass are exactly in phase with one another, effectively producing standing waves in the interferometer. Because of partial transmission at the medium boundary, these parallel forward-propagating rays produce outgoing parallel rays at angle $\alpha$ that are also exactly in phase. convergent lens placed after the interferometer allows these outgoing parallel rays to join and constructively interfere at a point at the focal length of the lens. Note that rays exiting at angles not meeting the resonance condition still converge to a point, but do not constructively interfere strongly enough to result in a visible pattern.
+results in two sets of parallel rays within the interferometer: one set for the forward direction and another for the backward direction of the round-trip. When the resonance condition is met, the rays of the forward pass are exactly in phase with one another, effectively producing standing waves in the interferometer \cite{mel,leybold}. Because of partial transmission at the medium boundary, these parallel forward-propagating rays produce outgoing parallel rays at angle $\alpha$ that are also exactly in phase \cite{leybold, mel}. A convergent lens placed after the interferometer allows these outgoing parallel rays to join and constructively interfere at a point at the focal length of the lens \cite{hecht_optics}. Note that rays exiting at angles not meeting the resonance condition still converge to a point, but do not constructively interfere strongly enough to result in a visible contribution to the pattern.
 
-Because the event depicted in Figure $\ref{fig:fb_plates}$ occurs at every rotation angle about the axis of the lens, the resulting interference pattern for rays of a single incoming angle $\alpha$ and $\lambda$ fixed is a circle. Light emitted from a source enters the interferometer at a wide range of possible $\alpha$-values. This creates multiple angles $\alpha$ that meet the resonance condition, resulting in concentric circles in the final pattern. For light of different frequencies, the phase shift due to traversing a path with length fixed is greater for lower-wavelength (higher-energy) light than for higher-wavelength (lower-energy) light. This causes the interferometer to resonate at slightly larger $\alpha$ for light of higher energy, producing rings in the final interference pattern with larger radii than light of lower energy. Thus, the effect of Zeeman splitting is to slightly split each ring present in the zero-field interference pattern into three rings.
+Because the event depicted in Figure $\ref{fig:fb_plates}$ occurs at every rotation angle about the axis of the lens, the resulting interference pattern for rays of a single incoming angle $\alpha$ and $\lambda$ fixed is a circle. Light emitted from a source enters the interferometer at a wide range of possible $\alpha$-values. This creates multiple angles $\alpha$ that meet the resonance condition, resulting in concentric circles in the final pattern. For light of different frequencies, the phase shift due to traversing a path with length fixed is greater for lower-wavelength (higher-energy) light than for higher-wavelength (lower-energy) light \cite{griff}. This causes the interferometer to resonate at slightly larger $\alpha$ for light of higher energy, producing rings in the final interference pattern with larger radii than light of lower energy. Thus, the effect of Zeeman splitting is to slightly split each ring present in the zero-field interference pattern into three rings, depicted in Figure \ref{fig:pattern}.
 
-Suppose $\beta_0$ is the angle within the interferometer corresponding to resonance for a ray of light not produced during Zeeman splitting, wavelength $\lambda$. Suppose $\beta_f$ is the corresponding angle for a ray emitted during Zeeman splitting, which provides a wavelength shift $\Delta \lambda$ corresponding to a Zeeman energy shift $\Delta E$. Analysis of (\ref{eq:resonance}) and (\ref{eq:H_zeeman}) produces an equation for $\Delta E$ as a function of resonant angles and the unsplit light wavelength:
+\begin{figure}[H]
+  \begin{tikzpicture}[scale=0.7]
+      
+      % Define colors
+      \definecolor{sigmaplus}{RGB}{255, 140, 0}  % Orange
+      \definecolor{sigmaminus}{RGB}{200, 0, 0}   % Red
+      \definecolor{unsplit}{RGB}{0, 100, 200}     % Blue
+
+      % Main rings (blue) with larger spacing
+      \draw[thick, unsplit] (0, 0) circle (4.5);
+      \draw[thick, unsplit] (0, 0) circle (3.8);
+      \draw[thick, unsplit] (0, 0) circle (3.0);
+      \draw[thick, unsplit] (0, 0) circle (2.0);
+      \draw[thick, unsplit] (0, 0) circle (0.8);
+      
+      % Zeeman split rings - sigma^- (red, slightly smaller)
+      \draw[thick, sigmaminus] (0, 0) circle (4.35);
+      \draw[thick, sigmaminus] (0, 0) circle (3.65);
+      \draw[thick, sigmaminus] (0, 0) circle (2.85);
+      \draw[thick, sigmaminus] (0, 0) circle (1.85);
+      \draw[thick, sigmaminus] (0, 0) circle (0.65);
+      
+      % Zeeman split rings - sigma^+ (orange, slightly larger)
+      \draw[thick, sigmaplus] (0, 0) circle (4.65);
+      \draw[thick, sigmaplus] (0, 0) circle (3.95);
+      \draw[thick, sigmaplus] (0, 0) circle (3.15);
+      \draw[thick, sigmaplus] (0, 0) circle (2.15);
+      \draw[thick, sigmaplus] (0, 0) circle (0.95);
+      
+      % Labels
+      \node[unsplit] at (5.15, 0) {$\pi$};
+      \node[sigmaminus] at (5.3, -0.5) {$\sigma^-$};
+      \node[sigmaplus] at (5.3, 0.5) {$\sigma^+$};
+  \end{tikzpicture}
+  \centering
+  \caption{Schematic of Zeeman-split interference rings. Blue lines represent the locations of both zero-field and $\pi$ interference rings, while $\sigma^+$ and $\sigma^-$ emission rings form with slightly different radii concentric with the blue rings.} 
+  \label{fig:pattern}
+  \end{figure}
+
+
+Suppose $\beta_0$ is the angle within the interferometer corresponding to resonance for a ray of light not produced during Zeeman splitting, wavelength $\lambda$. Suppose $\beta_f$ is the corresponding angle for a ray emitted during Zeeman splitting, which provides a wavelength shift $\Delta \lambda$ corresponding to a Zeeman energy shift $\Delta E$. Analysis of (\ref{eq:resonance}) and (\ref{eq:H_zeeman}) produces an equation for $\Delta E$ as a function of resonant angles and the unsplit light wavelength (see Appendix A for more detail):
 
 \begin{equation}
   \Delta E = \mu_B g_J B M_J = -\frac{hc}{\lambda} \frac{\cos \beta_f - \cos \beta_0}{\cos \beta_0}
   \label{eq:zeeman_shift}
 \end{equation}
 
-Snell's law relates $\beta$ and $\alpha$:
+Snell's law relates $\beta$ and $\alpha$ \cite{young}:
 
 \begin{equation}
   \sin \beta = \frac{1}{n} \sin \alpha
@@ -342,86 +386,42 @@ Snell's law relates $\beta$ and $\alpha$:
 
 Thus, given tools that obtain $\alpha$ for a ring in the interference pattern, $\mu_B$ can be estimated using (\ref{eq:zeeman_shift}) and (\ref{eq:snell}).
 
-To estimate systematic error in measurements of the strength of the magnetic field used to cause Zeeman splitting, a theoretical value for the fixed frequency spacing (free spectral range, or FSR) between two adjacent transmission resonances of the interferometer proves useful. This relation is:
+To estimate systematic error in measurements of the strength of the magnetic field used to cause Zeeman splitting, a theoretical value for the fixed frequency spacing (free spectral range, or FSR) between two adjacent zero-field transmission resonances of the interferometer proves useful \cite{leybold}. This relation is:
 
 \begin{equation}
   \text{FSR} = \frac{c}{2nt}
 \end{equation}
 
-where $c$ is the speed of light, $n$ is the refractive index of the interferometer, and $t$ is the inteferometer thickness. The hypothetical magnetic field strength that would cause a photon emitted during Zeeman splitting to have an energy associated with the $\text{FSR}$ frequency is given by:
+where $c$ is the speed of light, $n$ is the refractive index of the interferometer, and $t$ is the interferometer thickness. The hypothetical magnetic field strength that would cause a photon emitted during Zeeman splitting to have an energy associated with the $\text{FSR}$ frequency is given by:
 
 \begin{equation}
-  h \text{FSR} = \mu_B g_J \Delta |M_J| B_{\text{FSR}} 
+  h \cdot \text{FSR} = \mu_B g_J |\Delta M_J| B_{\text{FSR}} 
   \Rightarrow
   B_{\text{FSR}} =  \frac{h}{\mu_B} \frac{c}{2nt} \frac{1}{g_J |\Delta M|}
+  \label{eq:hFSR}
 \end{equation}
 
 \section{Goal}
 
-We obtain an experimental value for the Bohr magneton $\mu_B$ by investigating the dependence between resonant incoming angles $\alpha$ and the energy difference \eqref{eq:H_zeeman} associated with emitted photons during the $5s5d\;{}^{1}D_{2} \;\longrightarrow\;5s5p\;{}^{1}P_{1}$ transition in cadmium.
+We obtain an experimental value for the Bohr magneton $\mu_B$ by investigating the dependence between resonant incoming angles $\alpha$ and the energy difference \eqref{eq:H_zeeman} associated with emitted photons during the $5s5d\;{}^{1}D_{2} \;\longrightarrow\;5s5p\;{}^{1}P_{1}$ transition in cadmium. 
 
 \section{Procedure}
 
-\begin{figure}
-  \begin{tikzpicture}[scale=0.85]
-    
-    % Optical rail axis (single line through centers of rectangles)
-    \draw[->, line width=1pt] (-1,0) -- (13.5,0);
-    
-    % Cadmium bulb (not on rail, to the left)
-    \draw[draw=black, line width=1pt] (-2,0) circle (0.5);
-    
-    % Cd Lamp label - below bottom coil with line to circle
-    \node at (-2, -2.0) {Cd Lamp};
-    \draw[line width=1pt] (-2, -1.6) -- (-2, -0.5);
-    
-    % Coils - rectangles above and below the lamp
-    \draw[draw=black, line width=1pt] (-2.5, 0.7) rectangle (-1.5, 1.0);
-    \draw[draw=black, line width=1pt] (-2.5, -0.7) rectangle (-1.5, -1.0);
-    \node at (-2, 1.5) {Coils};
-    
-    % Power supply (to the left)
-    \draw[draw=black, line width=1pt] (-4.5, -0.5) rectangle (-3.5, 0.5);
-    
-    % Power supply label - above with line to rectangle
-    \node at (-4, 2.5) {Power Supply};
-    \draw[line width=1pt] (-4, 0.8) -- (-4, 2.0);
-    
-    % Wiring from power supply to coils
-    \draw[line width=1pt] (-3.5, 0.3) -- (-2.5, 0.85);
-    \draw[line width=1pt] (-3.5, -0.3) -- (-2.5, -0.85);
-    
-    % First convergent lens (uniform width = 0.5)
-    \draw[draw=black, line width=1pt] (2,-1) rectangle (2.5,1);
-    \node at (2.25, 1.8) {Convergent};
-    \node at (2.25, 1.4) {Lens 1};
-    
-    % Polarizer (uniform width = 0.5)
-    \draw[draw=black, line width=1pt] (4.5,-1) rectangle (5.0,1);
-    \node at (4.75, 1.6) {Polarizer};
-    
-    % Fabry-Perot interferometer (uniform width = 0.5)
-    \draw[draw=black, line width=1pt] (7,-1) rectangle (7.5,1);
-    \node at (7.25, 1.8) {Fabry-Perot};
-    \node at (7.25, 1.4) {Etalon};
-    
-    % Second convergent lens (uniform width = 0.5)
-    \draw[draw=black, line width=1pt] (10,-1) rectangle (10.5,1);
-    \node at (10.25, 1.8) {Convergent};
-    \node at (10.25, 1.4) {Lens 2};
-    
-    % Sensor (uniform width = 0.5)
-    \draw[draw=black, line width=1pt] (12.5,-1) rectangle (13.0,1);
-    \node at (12.75, 1.6) {Sensor};
-    
-\end{tikzpicture}
+\begin{figure}[H]
+  \centering
+  \input{apparatus.tikz}
+  \caption{Schematic diagram of the optical apparatus, consisting of a cadmium lamp, coils whose currents can be adjusted with a power supply, a first convergent lens, a polarizer, a Fabry-P\'{e}rot interferometer, and a second convergent lens. The sensor at the end of the apparatus detects the interference pattern depicted in Figure \ref{fig:pattern}.}
 \end{figure}
 
-A cadmium lamp is placed between two coils of wire, through which a current $I$ is produced by a variable-current power supply. When the lamp is powered on, photons are emitted. The magnetic field between the coils causes Zeeman splitting in the cadmium electrons. In front of the lamp, an optical rail perpendicular to $\vec B$ is arranged, on which a convergent lens, a polarizer, a Fabry-Perot interferometer, an optical filter, and another convergent lens are placed. Note that although photons of several wavelengths are produced, the emission spectrum of the lamp includes photons caused by the transition of interest. The optical filter is chosen to select wavelengths in the emission band of this transition. A camera sensor at the end of the rail captures the interference pattern, reporting a relationship between a voltage proxy for light intensity and angle of entry $\alpha$ into the interferometer and radial distance from an origin on the sensor.
+A cadmium lamp is placed between two coils of wire, through which a current $I$ is produced by a variable-current power supply. When the lamp is powered on, photons are emitted from the lamp at all angles. The magnetic field between the coils causes Zeeman splitting in the cadmium electrons \cite{harris,griffiths_qm,qmech}, causing the emitted photons to contain the wavelength-shifted photons of interest. In front of the lamp, an optical rail perpendicular to $\vec B$ is arranged, on which a convergent lens, a polarizer, a Fabry-P\'{e}rot interferometer, an optical filter, and another convergent lens are placed. As light rays exit the excited cadmium bulb, the first convergent lens on the optical rail reduces the degree of divergence, preserving intensity as the photons pass through the polarizer and then the Fabry-P\'{e}rot interferometer (etalon). The second convergent lens produces the sharp interference pattern depicted in Figure \ref{fig:pattern}, causing parallel rays to converge to single points onto the sensor's photoelectric plate.
 
-An empirical relationship between the magnetic field strength $B$ produced by the coils and the current through the coils $I$ is derived using a Gaussmeter, using readings taken at various currents. The relationship obtained is depected in Figure \ref{fig:b_vs_i}.
+Note that although the emission spectrum of the lamp includes photons caused by the transition of interest, the lamp emits photons of a wide range of frequencies. The optical filter is thus chosen to select wavelengths in the emission band of the transition of interest \cite{hecht_optics}. A camera sensor at the end of the rail captures the interference pattern, reporting a relationship between a voltage proxy for intensity and the angle of entry $\alpha$ into the interferometer.
 
-After powering on the cadmium lamp and allowing it to approach steady state, devices on the optical rail are adjusted such that a clear diffraction pattern is reported by the sensor software. The coil current is then set to a nonzero value. For each magnetic field strength caused by the coils, the $\alpha$-values of the resonance peaks corresponding to each value of $\Delta M_J$ are measured on one side of the centerline of the diffraction pattern, then the other. Via \eqref{eq:snell}, $\Delta M_J = 0$ readings provide values for $\beta_0$ in \eqref{eq:zeeman_shift}, while $\Delta M_J \neq 0$ readings provide data points for $\beta_f$. This process yields a dataset whose points are a field strength paired with one downshifted peak, one upshifted peak, and one unshifted peak per either side of the interference pattern: $(B^{(i)}, \alpha^{(i)}_{l, -}, \alpha^{(i)}_{l, +}, \alpha^{(i)}_{l, 0}, \alpha^{(i)}_{r, -}, \alpha^{(i)}_{r, +}, \alpha^{(i)}_{r, 0})$. These results are summarized in Table TODO.
+An empirical relationship between the magnetic field strength $B$ produced by the coils and the current through the coils $I$ is first derived using a Gaussmeter, using readings taken at various currents. The relationship obtained is depicted in Figure \ref{fig:b_vs_i}.
+
+After powering on the cadmium lamp and allowing it to approach a steady state of emissions, devices on the optical rail are adjusted such that a clear diffraction pattern is reported by the sensor software. The coil current is then set to a nonzero value. For each magnetic field strength caused by the coils, the $\alpha$-values of the resonance peaks corresponding to each value of $\Delta M_J$ are measured on one side of the centerline of the diffraction pattern (left), then the other (right). The polarizer behavior described in $\eqref{eq:polarizer}$ is used to isolate peaks due to $\pi$ emissions from those due to $\sigma^{\pm}$ emissions, providing more precise readings of peak locations.
+
+This process yields a dataset whose points are a field strength paired with one downshifted peak, one upshifted peak, and one unshifted peak per side of the pattern: $(B^{(i)}, \alpha^{(i)}_{l, -}, \alpha^{(i)}_{l, +}, \alpha^{(i)}_{l, 0}, \alpha^{(i)}_{r, -}, \alpha^{(i)}_{r, +}, \alpha^{(i)}_{r, 0})$. Via \eqref{eq:snell}, $\Delta M_J = 0$ readings from this dataset provide values for $\beta_0$ in \eqref{eq:zeeman_shift}, while $\Delta M_J \neq 0$ readings provide data points for $\beta_f$. 
 
 \section{Results and Analysis}
 
@@ -431,19 +431,152 @@ After powering on the cadmium lamp and allowing it to approach steady state, dev
     \caption{Magnetic field $B$ vs.\ coil current $I$ with linear fit.}
     \label{fig:b_vs_i}
 \end{figure}
-% TODO: Table of alpha-values
 
-A difference between each pair of corresponding right and left camera readings taken on either side of the interference pattern is used to estimate the corresponding angle of entry into the interferometer as $\alpha^{(i)}_j = \frac{1}{2} \left ( \alpha_{r, j}^{(i)} - \alpha_{l, j}^{(i)} \right )$ for $j \in \set{-, 0, +}$, eliminating systematic angular shifts caused by camera miscentering. This produces a dataset where each experimental magnetic field strength is associated with a single alpha value per each of the upshifted, nonshifted, and downshifted emission lines. Upon application of \eqref{eq:snell}, each data point produces two values of the form $\left (g_J B_0^{(i)} M_J^{(i)}, -\frac{hc}{\lambda} \frac{\cos \beta_f^{(i)} - \cos \beta_0^{(i)}}{\cos \beta_0} \right)$. \eqref{eq:zeeman_shift} indicates that a linear plot fit to the resulting dataset yields an experimental value of $\mu_B$ as its slope.
+A difference between each pair of corresponding right and left readings of $\alpha$ taken on the left and right sides of the interference pattern is used to estimate the corresponding angle of entry into the interferometer as $\alpha^{(i)}_j = \frac{1}{2} \left ( \alpha_{r, j}^{(i)} - \alpha_{l, j}^{(i)} \right )$ for $j \in \set{-, 0, +}$, eliminating systematic angular shifts caused by camera miscentering. This produces a dataset where each experimental magnetic field strength is associated with a single alpha value per each of the upshifted, nonshifted, and downshifted emission lines. Upon application of \eqref{eq:snell} and the right-hand side of \eqref{eq:zeeman_shift} to both the upshifted and downshifted line (corresponding to $\beta_f$) and the nonshifted line (corresponding to $\beta_0$), each data point produces two values of the form $\left (g_J B_0^{(i)} {M_J}_j^{(i)}, \Delta E^{(i)}_j\right)$\footnote{Note that $\Delta E^{(i)}_j =  -\frac{hc}{\lambda} \frac{\cos \beta_{f, j} - \cos \beta_0}{\cos \beta_{0}}$, as in \eqref{eq:zeeman_shift}}, reported in Table \ref{tab:beta_dE}.
 
-%of the form $(B^{(i)}, \alpha_{-}^{(i)}, \alpha_{0}^{(i)}, \alpha_{+}^{(i)} )$.
+\input{table_alpha.tex}
 
-To estimate the level of systematic uncertainty in the magnetic field strength $B$, a field strength at which the distance between two unsplit rings (the free spectral range, FSR, of the interferometer) exactly equals the shift in photon energy caused by Zeeman splitting is extrapolated from the dataset described above. This experimental value is compared to the theoretical prediction provided by
+\input{table_beta_dE.tex}
+
+\eqref{eq:zeeman_shift} indicates that a linear plot fit to the resulting dataset yields an experimental value of $\mu_B$ as its slope. This experimental value is found to be $\mu_B =(9.4 \pm 0.4) \times 10^{-24} \;\frac{\text{J}}{\text{T}}$.
+
+% \input{table_tidied.tex}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{mu_B_fit.pdf}
+    \caption{Linear fit (red) of Zeeman energy shift to $|\Delta E|$ vs.\ $g_J B \Delta | M_J |$ data points (blue for $\Delta M_J = 1$ and orange for $\Delta M_J = -1$), whose slope yields an experimental value of $\mu_B$.}
+    \label{fig:mu_B_fit}
+\end{figure}
+
+To estimate the level of systematic uncertainty in the magnetic field strength $B$, the angular position $\alpha$ of a $\sigma^+$ line from the innermost interference ring is compared to the angular position of a $\sigma^-$ line from a neighboring larger interference ring. These results are presented in Table \ref{tab:fsr}. The magnetic field at which these quantities are equal is extrapolated from a linear fit on the difference between the values at each field strength, yielding half of $B_\text{FSR}$---the magnetic field strength at which an emitted photon has a frequency exactly equal to one free spectral range of the Fabry-P\'{e}rot interferometer. The extrapolation method yields $15200 \pm 2400$ Gauss, while \eqref{eq:hFSR} yields $18300$ Gauss.
+
+\input{table_fsr.tex}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{fsr_extrapolation.pdf}
+    \caption{Extrapolation of the difference between adjacent-ring angular positions to determine $B_{\mathrm{FSR}}$. A linear fit (red) is performed on the data points from Table \ref{tab:fsr} (blue).}
+    \label{fig:fsr_extrapolation}
+\end{figure}
 
 \section{Discussion}
+
+The relationship between the applied magnetic field and the current through the coils appears to be strongly linear, allowing for straightforward estimation of the magnetic field strength per experimental coil current value tested. After averaging between the left and right hand sides of the interference pattern, $\sigma^\pm$ emission lines are found in Table \ref{tab:alpha} to increase monotonically away from their parent emission line. Their energy spacing relative to their $\Delta M_J = 0$ parent follows \eqref{eq:H_zeeman} closely and increases in magnitude with $B$, as observed in Table \ref{tab:beta_dE}. Plotting the computed magnitude of Zeeman energy splitting with the magnitude of $g_J B \Delta M_J$ in Figure \ref{fig:mu_B_fit} emphasizes the positive linear relationship between the two values, with the magnitudes of the energy shifts of $\Delta M_J = -1$ (orange) transitions closely matching their $\Delta M_J = 1$ counterparts (blue) in the same magnetic field.
+
+The plot in Figure \ref{fig:mu_B_fit} corresponding to \eqref{eq:zeeman_shift} provides a value for $\mu_B$ that is within $0.23 \sigma$ of the accepted value, suggesting adequate mitigation of sources of experimental uncertainty. The intercept of this plot is $0.49\%$ of $\mu_B$ and well within $1\sigma$, making it effectively negligible. This aligns with theory: at a field strength $B =0$, no Zeeman splitting is expected and $|\Delta E|$ is expected to approach 0.
+
+Systematic error in magnetic field strength measurements is expected due to unreliable instrumentation---though the extrapolated value for the magnetic field corresponding to full spectral range Zeeman splitting is approximately $1.3\sigma$ of the theoretical value, characterizing this systematic error as small to moderate. The angular distance $\Delta \alpha$ between a $\sigma^+$ line and a $\sigma^-$ line from a ring of higher order in the interference pattern monotonically approaches zero as $B$ increases, as expected due to Zeeman energy splitting that increases in magnitude with $B$.
+
 \section{Conclusion}
 
-% 7:15 - Conclude procedure description and apparatus diagram
-% 8:15 - Produce all necessary materials and write results and analysis section--not forgetting to actually discuss your results in discussion
-% 8:15 - 10:00 - Do citations, polish language, write conclusion, and ensure all points answered from lab manual
+The Bohr magneton is measured to be $\mu_B = (9.4 \pm 0.4) \times 10^{-24}$ J/T, within $0.23\sigma$ of the accepted value, confirming the linear dependence of Zeeman energy splitting on the applied magnetic field predicted by \eqref{eq:H_zeeman}. Extrapolation of adjacent-ring angular positions yields a free-spectral-range field strength of $B_{\text{FSR}} = 15200 \pm 2400$ Gauss, consistent with the theoretical value of $18300$ Gauss to within $1.3\sigma$, indicating that systematic uncertainty in $B$ is moderate.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\appendix
+
+\section{Derivation of Zeeman Split Equation}
+
+% Zeeman splitting with a Fabry–Perot etalon (lab-manual derivation)
+
+% (1) Fabry–Perot transmission condition (inside the etalon)
+\[
+2 n t \cos\beta = m\lambda
+\]
+
+% (2) Snell's law at the camera-side interface (air to glass)
+\[
+\sin\alpha = n\sin\beta
+\qquad\Rightarrow\qquad
+\beta(\alpha)=\arcsin\!\left(\frac{\sin\alpha}{n}\right)
+\]
+
+% (3) Write the FP condition for the same order m at B=0 and at B\neq 0
+\[
+2nt\cos\beta_1 = m\lambda_1,
+\qquad
+2nt\cos\beta_2 = m\lambda_2
+\]
+
+% (4) Eliminate m and t by dividing the two equations
+\[
+\frac{\lambda_2}{\lambda_1}=\frac{\cos\beta_2}{\cos\beta_1}
+\]
+
+% (5) Express the fractional wavelength shift
+\[
+\frac{\Delta\lambda}{\lambda_1}
+=\frac{\lambda_2-\lambda_1}{\lambda_1}
+=\frac{\cos\beta_2}{\cos\beta_1}-1
+=\frac{\cos\beta_2-\cos\beta_1}{\cos\beta_1}
+\]
+
+% (6) Photon energy and its differential
+\[
+E=\frac{hc}{\lambda}
+\qquad\Rightarrow\qquad
+dE=-\frac{hc}{\lambda^2}\,d\lambda
+\]
+
+% (7) Replace differentials with small shifts about \lambda_1
+\[
+\Delta E \approx -\frac{hc}{\lambda_1^2}\,\Delta\lambda
+\]
+
+% (8) Substitute the expression for \Delta\lambda
+\[
+\Delta E
+\approx
+-\frac{hc}{\lambda_1^2}\,\lambda_1
+\left(\frac{\cos\beta_2-\cos\beta_1}{\cos\beta_1}\right)
+=
+-\frac{hc}{\lambda_1}
+\left(\frac{\cos\beta_2-\cos\beta_1}{\cos\beta_1}\right)
+\]
+
+% (9) Final working formula (angles from data via Snell's law)
+\[
+\boxed{
+\Delta E
+=
+-\frac{hc}{\lambda}
+\frac{\cos\beta_2-\cos\beta_1}{\cos\beta_1}
+\,,\quad
+\beta_i=\arcsin\!\left(\frac{\sin\alpha_i}{n}\right)
+}
+\]
+
+\section{Error Propagation Equations}
+
+% Uncertainty in the internal angle beta via Snell's law
+\[
+\frac{\partial \beta}{\partial \alpha} = \frac{\cos\alpha}{n\cos\beta}
+\qquad\Rightarrow\qquad
+\boxed{\delta\beta = \left|\frac{\cos\alpha}{n\cos\beta}\right| \delta\alpha}
+\]
+
+% Uncertainty in the Zeeman energy shift
+\[
+\frac{\partial(\Delta E)}{\partial \beta_f}
+= \frac{hc}{\lambda}\frac{\sin\beta_f}{\cos\beta_0}
+\,,\quad
+\frac{\partial(\Delta E)}{\partial \beta_0}
+= -\frac{hc}{\lambda}\frac{\sin\beta_0\,\cos\beta_f}{\cos^2\beta_0}
+\]
+\[
+\Rightarrow\quad
+\boxed{
+\delta(\Delta E)
+= \sqrt{
+  \left(\frac{\partial(\Delta E)}{\partial \beta_f}\right)^{\!2}
+  (\delta\beta_f)^2
+  +
+  \left(\frac{\partial(\Delta E)}{\partial \beta_0}\right)^{\!2}
+  (\delta\beta_0)^2
+}
+}
+\]
 
 \end{document}
