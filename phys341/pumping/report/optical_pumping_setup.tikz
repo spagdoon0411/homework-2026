@@ -1,0 +1,86 @@
+\begin{tikzpicture}[scale=1.2]
+
+  % Centerline arrow
+  \draw[-{Stealth[length=2mm,width=1.5mm]},gray!50] (-1.2,0) -- (12.5,0);
+
+  % RF Discharge Lamp
+  \begin{scope}[shift={(0,0)}]
+    \draw (0,0) circle (0.6);
+    \node[align=center,below] at (0,-1.0) {\small RF\\[-0.1cm]\small discharge\\[-0.1cm]\small lamp};
+  \end{scope}
+
+  % First Convergent Lens
+  \begin{scope}[shift={(1.5,0)}]
+    \draw (0,-1) to[bend left=15] (0,1);
+    \draw (0,-1) to[bend right=15] (0,1);
+    \node[align=center,below] at (0,-1.3) {\small Lens};
+  \end{scope}
+
+  % Interference Filter
+  \begin{scope}[shift={(3.0,0)}]
+    \draw (-0.08,-1) rectangle (0.08,1);
+    \node[align=center,below] at (0,-1.3) {\small Interference\\[-0.1cm]\small filter};
+  \end{scope}
+
+  % Linear Polarizer
+  \begin{scope}[shift={(4.5,0)}]
+    \draw (-0.08,-1) rectangle (0.08,1);
+    \node[align=center,below] at (0,-1.3) {\small Linear\\[-0.1cm]\small polarizer};
+  \end{scope}
+
+  % Quarter Wave Plate
+  \begin{scope}[shift={(6.0,0)}]
+    \draw (-0.08,-1) rectangle (0.08,1);
+    \node[align=center,below] at (0,-1.3) {\small Quarter\\[-0.1cm]\small wave plate};
+  \end{scope}
+
+  % Rubidium Absorption Cell (center)
+  \begin{scope}[shift={(8.2,0)}]
+    \draw (-0.8,-0.5) rectangle (0.8,0.5);
+    \node[align=center,below] at (0,-0.85) {\small Rubidium\\[-0.1cm]\small absorption cell};
+  \end{scope}
+
+  % Second Convergent Lens
+  \begin{scope}[shift={(10.0,0)}]
+    \draw (0,-1) to[bend left=15] (0,1);
+    \draw (0,-1) to[bend right=15] (0,1);
+    \node[align=center,below] at (0,-1.3) {\small Lens};
+  \end{scope}
+
+  % Optical Detector
+  \begin{scope}[shift={(11.5,0)}]
+    \draw (-0.15,-0.4) rectangle (0.15,0.4);
+    \node[align=center,below] at (0,-0.8) {\small Optical\\[-0.1cm]\small detector};
+  \end{scope}
+
+  % Light rays
+  % Upper ray: lamp top → focal point in cell
+  \draw (0,0.6) -- (8.2,0);
+  % Lower ray: lamp bottom → focal point in cell
+  \draw (0,-0.6) -- (8.2,0);
+
+  % Upper ray: focal point → second lens → detector
+  % Angle matches: slope_in = -0.6/8.2 ≈ -0.0732, slope_out = +0.0732
+  % At x=10.0: y = 0.0732 * 1.8 ≈ 0.132
+  \draw (8.2,0) -- (10.0,0.132);
+  \draw (10.0,0.132) -- (11.35,0);
+
+  % Lower ray: focal point → second lens → detector
+  \draw (8.2,0) -- (10.0,-0.132);
+  \draw (10.0,-0.132) -- (11.35,0);
+
+  % Coordinate system indicator (above cell)
+  \begin{scope}[shift={(8.2,1.5)}]
+    % z-axis (left to right, along optical axis)
+    \draw[-{Stealth[length=2mm,width=1.5mm]}] (0,0) -- (0.67,0);
+    \node[right] at (0.67,0) {$z$};
+    % y-axis (down to up)
+    \draw[-{Stealth[length=2mm,width=1.5mm]}] (0,0) -- (0,0.67);
+    \node[above] at (0,0.67) {$y$};
+    % x-axis (into page)
+    \fill[white] (0,0) circle (0.125);
+    \node at (0,0) {$\otimes$};
+    \node[below left] at (0,0) {$x$};
+  \end{scope}
+
+\end{tikzpicture}

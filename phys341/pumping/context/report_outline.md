@@ -1,0 +1,27 @@
+- Write out the energy expectation equation with all terms present
+  - Spin-orbit coupling (fine structure) and resulting energy shifts
+    - [ ] Equation for coupling into $J$, with relevant quantum numbers
+    - [ ] Equation for energy contribution
+    - [ ] In describing the quantum numbers that are relevant to the spin-orbit coupling, point out the $5 S_{1/2} \rightarrow 5 P_{1/2}$ levels in particular
+  - Hyperfine splitting
+    - [ ] Equation for coupling into $F$, with relevant quantum numbers
+    - [ ] Equation for energy contribution
+    - [ ] Produces the pronounced differences between the two isotopes because of the differences between their $g$-values
+  - Zeeman splitting
+    - [ ] Equation for Zeeman splitting energy contribution
+    - [ ] Emphasize what gives rise to the $M_F$ quantum number, which is the relevant one.
+- Diagram transitions between the states for either isotope
+  - [ ] Apply selection rules to produce complete transition diagrams
+- Linearly polarized light produces $\Delta M_J = 1$ transitions in particular
+  - [ ] Make conservation of angular momentum argument for why one circular polarization accomplishes this
+- Explanation of expected dark state:
+  - [ ] During a pumping cycle (excitation -> relaxation), possible $\Delta M_J$ values are $\Delta M_J = \set{+ 0, + 1, + 2}$
+  - [ ] This means there's a net increase up to $M_J = F$, the state of maximum possible $M_J$
+  - [ ] Thus we expect the electrons to settle in a single state with $M_J = F$ and not absorb any other photons
+- Why an RF signal causes state transitions
+  - [ ] The static $B_0$ creates dipole precession about $B_0$
+    - [ ] Insert nuclear spin precession diagram here
+  - [ ] RF pulse causes coupling between neighboring Zeeman states
+    - [ ] Classically: Creating a B-field rotating in the frame of a nuclear spin causes a torque against the magnetic field, doing work and causing the electron's energy to raise
+    - [ ] TODO: what's the quantum explanation for this?
+- The exact condition between RF voltage and sweep B-field?

@@ -1,0 +1,121 @@
+\begin{tikzpicture}[>=Stealth]
+
+% --- Horizontal positions ---
+\def\xA{0}
+\def\xAend{2.2}
+\def\xB{2.9}
+\def\xBend{5.0}
+\def\xC{5.7}
+\def\xCend{7.8}
+\def\xD{8.5}
+\def\xDend{11.5}
+
+% --- Vertical positions ---
+\def\yP{6}
+\def\yS{0}
+\def\yPth{7.5}
+\def\yPoh{5.2}
+\def\ySoh{0}
+\def\yFpThree{5.95}
+\def\yFpTwo{4.35}
+\def\yFgThree{0.95}
+\def\yFgTwo{-0.95}
+\def\dz{0.18}
+
+% --- Column headers ---
+\node[font=\small, anchor=south] at ({(\xA+\xAend)/2}, 8.6) {Coulomb};
+\node[font=\small, anchor=south] at ({(\xB+\xBend)/2}, 8.6)
+  {$+\hat{H}_{\mathrm{SO}}$};
+\node[font=\small, anchor=south] at ({(\xC+\xCend)/2}, 8.6)
+  {$+\hat{H}_{\mathrm{HS}}$};
+\node[font=\small, anchor=south] at ({(\xD+\xDend)/2}, 8.6)
+  {$+\hat{H}_{\mathrm{Z}}$};
+
+% --- Dashed column separators ---
+\foreach \xs in {2.55, 5.35, 8.15} {
+  \draw[black!25, dashed] (\xs, -1.8) -- (\xs, 8.5);
+}
+
+% ===================== UNSPLIT =====================
+\draw[very thick] (\xA, \yP) -- (\xAend, \yP);
+\node[above, font=\small] at ({(\xA+\xAend)/2}, \yP) {$5P$};
+
+\draw[very thick] (\xA, \yS) -- (\xAend, \yS);
+\node[above, font=\small] at ({(\xA+\xAend)/2}, \yS) {$5S$};
+
+% ===================== SO SPLIT =====================
+\draw (\xAend, \yP) -- (\xB, \yPth);
+\draw (\xAend, \yP) -- (\xB, \yPoh);
+
+\draw[thick] (\xB, \yPth) -- (\xBend, \yPth);
+\node[above, font=\small] at ({(\xB+\xBend)/2}, \yPth) {$5P_{3/2}$};
+
+\draw[thick] (\xB, \yPoh) -- (\xBend, \yPoh);
+\node[above, font=\small] at ({(\xB+\xBend)/2}, \yPoh) {$5P_{1/2}$};
+
+\draw (\xAend, \yS) -- (\xB, \ySoh);
+\draw[thick] (\xB, \ySoh) -- (\xBend, \ySoh);
+\node[above, font=\small] at ({(\xB+\xBend)/2}, \ySoh) {$5S_{1/2}$};
+
+% ===================== HS SPLIT =====================
+% 5P_{3/2} continues as dashed (D2 manifold, not used here)
+\draw[thick, dashed] (\xBend, \yPth) -- (\xDend, \yPth);
+
+% 5P_{1/2} -> F'=3, F'=2 (I=5/2 for 85Rb)
+\draw (\xBend, \yPoh) -- (\xC, \yFpThree);
+\draw (\xBend, \yPoh) -- (\xC, \yFpTwo);
+
+\draw[thick] (\xC, \yFpThree) -- (\xCend, \yFpThree);
+\node[above, font=\small] at ({(\xC+\xCend)/2}, \yFpThree) {$F'=3$};
+
+\draw[thick] (\xC, \yFpTwo) -- (\xCend, \yFpTwo);
+\node[above, font=\small] at ({(\xC+\xCend)/2}, \yFpTwo) {$F'=2$};
+
+% 5S_{1/2} -> F=3, F=2
+\draw (\xBend, \ySoh) -- (\xC, \yFgThree);
+\draw (\xBend, \ySoh) -- (\xC, \yFgTwo);
+
+\draw[thick] (\xC, \yFgThree) -- (\xCend, \yFgThree);
+\node[above, font=\small] at ({(\xC+\xCend)/2}, \yFgThree) {$F=3$};
+
+\draw[thick] (\xC, \yFgTwo) -- (\xCend, \yFgTwo);
+\node[above, font=\small] at ({(\xC+\xCend)/2}, \yFgTwo) {$F=2$};
+
+% ===================== ZEEMAN SPLIT =====================
+% F'=3: m_F' = -3,...,+3
+\foreach \mf/\i in {-3/-3, -2/-2, -1/-1, 0/0, 1/1, 2/2, 3/3} {
+  \pgfmathsetmacro\ypos{\yFpThree + \i*\dz}
+  \draw (\xCend, \yFpThree) -- (\xD, \ypos);
+  \draw[thick] (\xD, \ypos) -- (\xDend, \ypos);
+  \node[right, font=\scriptsize] at (\xDend, \ypos) {$m_F\!=\!\mf$};
+}
+
+% F'=2: m_F' = -2,...,+2
+\foreach \mf/\i in {-2/-2, -1/-1, 0/0, 1/1, 2/2} {
+  \pgfmathsetmacro\ypos{\yFpTwo + \i*\dz}
+  \draw (\xCend, \yFpTwo) -- (\xD, \ypos);
+  \draw[thick] (\xD, \ypos) -- (\xDend, \ypos);
+  \node[right, font=\scriptsize] at (\xDend, \ypos) {$m_F\!=\!\mf$};
+}
+
+% F=3: m_F = -3,...,+3
+\foreach \mf/\i in {-3/-3, -2/-2, -1/-1, 0/0, 1/1, 2/2, 3/3} {
+  \pgfmathsetmacro\ypos{\yFgThree + \i*\dz}
+  \draw (\xCend, \yFgThree) -- (\xD, \ypos);
+  \draw[thick] (\xD, \ypos) -- (\xDend, \ypos);
+  \node[right, font=\scriptsize] at (\xDend, \ypos) {$m_F\!=\!\mf$};
+}
+
+% F=2: m_F = -2,...,+2
+\foreach \mf/\i in {-2/-2, -1/-1, 0/0, 1/1, 2/2} {
+  \pgfmathsetmacro\ypos{\yFgTwo + \i*\dz}
+  \draw (\xCend, \yFgTwo) -- (\xD, \ypos);
+  \draw[thick] (\xD, \ypos) -- (\xDend, \ypos);
+  \node[right, font=\scriptsize] at (\xDend, \ypos) {$m_F\!=\!\mf$};
+}
+
+% --- Energy axis ---
+\draw[->, thick] (-0.7, -1.8) -- (-0.7, 8.5);
+\node[rotate=90] at (-1.0, 3.2) {Energy};
+
+\end{tikzpicture}

@@ -1,0 +1,65 @@
+\begin{tikzpicture}[scale=0.85, every path/.style={line width=0.75pt}]
+
+    % Optical rail axis
+    \draw[->] (-1,0) -- (14.5,0);
+
+    % Cadmium bulb (not on rail, to the left)
+    \draw[draw=black] (-2,0) circle (0.5);
+
+    % Cd Lamp label - below bottom coil with line to circle
+    \node at (-2, -2.0) {Cd Lamp};
+    \draw (-2, -1.6) -- (-2, -0.5);
+
+    % Coils - rectangles above and below the lamp
+    \draw[draw=black] (-2.5, 0.7) rectangle (-1.5, 1.0);
+    \draw[draw=black] (-2.5, -0.7) rectangle (-1.5, -1.0);
+    \node at (-2, 1.5) {Coils};
+
+    % Power supply (to the left)
+    \draw[draw=black] (-4.5, -0.5) rectangle (-3.5, 0.5);
+
+    % Power supply label - above with line to rectangle
+    \node at (-4, 2.5) {Power Supply};
+    \draw (-4, 0.8) -- (-4, 2.0);
+
+    % Wiring from power supply to coils
+    \draw (-3.5, 0.3) -- (-2.5, 0.85);
+    \draw (-3.5, -0.3) -- (-2.5, -0.85);
+
+    % B field arrows inside the coils
+    \foreach \x in {-2.3, -2.0, -1.7} {
+        \draw[->, line width=0.75pt] (\x, -0.6) -- (\x, 0.6);
+    }
+    \node[right] at (-1.55, 0.4) {$\vec{B}$};
+
+    % Instruments: 6 items, centers at x = 0.75, 3.25, 5.75, 8.25, 10.75, 13.25 (spacing 2.5)
+
+    % Convergent Lens 1 (center 0.75)
+    \draw[draw=black] (0.5,-1) rectangle (1.0,1);
+    \node at (0.75, 1.8) {Convergent};
+    \node at (0.75, 1.4) {Lens 1};
+
+    % Polarizer (center 3.25)
+    \draw[draw=black] (3.0,-1) rectangle (3.5,1);
+    \node at (3.25, 1.6) {Polarizer};
+
+    % Fabry-Perot etalon (center 5.75)
+    \draw[draw=black] (5.5,-1) rectangle (6.0,1);
+    \node at (5.75, 1.8) {Fabry-Perot};
+    \node at (5.75, 1.4) {Etalon};
+
+    % Convergent Lens 2 (center 8.25)
+    \draw[draw=black] (8.0,-1) rectangle (8.5,1);
+    \node at (8.25, 1.8) {Convergent};
+    \node at (8.25, 1.4) {Lens 2};
+
+    % 643.8nm Filter (center 10.75)
+    \draw[draw=black] (10.5,-1) rectangle (11.0,1);
+    \node at (10.75, 1.8) {643.8nm};
+    \node at (10.75, 1.4) {Filter};
+
+    % Sensor (center 13.25)
+    \draw[draw=black] (13.0,-1) rectangle (13.5,1);
+    \node at (13.25, 1.6) {Sensor};
+
+\end{tikzpicture}

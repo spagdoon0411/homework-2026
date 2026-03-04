@@ -1,0 +1,19 @@
+\begin{tikzpicture}[scale=1.0]
+
+  % Parallel upward arrows
+  \foreach \x in {0, 0.6, 1.2, 1.8, 2.4} {
+    \draw[->, line width=0.5pt] (\x, -0.6) -- (\x, 0.6);
+  }
+
+  % \vec{B} label next to center arrow
+  \node[right] at (1.2, 0.3) {$\vec{B}$};
+
+  % Red squiggly photon arrow (horizontal, rightward)
+  \draw[->, red, line width=0.5pt,
+    decorate, decoration={snake, amplitude=3pt, segment length=8pt, post length=6pt}]
+    (-0.4, 0) -- (2.8, 0);
+
+  % gamma label at photon tip
+  \node[red, right] at (2.8, 0) {$\gamma$};
+
+\end{tikzpicture}

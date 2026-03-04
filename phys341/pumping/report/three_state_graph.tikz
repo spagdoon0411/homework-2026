@@ -1,0 +1,66 @@
+\begin{tikzpicture}[
+  >=Stealth,
+  every node/.style={font=\small, align=center},
+  gnode/.style={draw, rounded corners=2pt, minimum width=20mm, minimum height=8mm},
+  enode/.style={draw, rounded corners=2pt, minimum width=20mm, minimum height=8mm},
+  abs/.style={->, line width=0.7pt},
+  em/.style={->, line width=0.6pt},
+  rf/.style={->, dashed, line width=0.6pt}
+]
+
+\node[anchor=west] at (0,3.2) {\textbf{Edges:} absorption ($\sigma^+$): $\Delta m_F=+1$ \quad emission: $\Delta m_F=0,\pm1$ \quad RF: $\Delta m_F=\pm1$};
+
+\graph [layered layout,
+        grow down=16mm,
+        level distance=16mm,
+        sibling distance=10mm] {
+
+  g_m2[gnode, as={$|g,F=2\rangle$\\$m_F=-2$}];
+  g_m1[gnode, as={$|g,F=2\rangle$\\$m_F=-1$}];
+  g_0 [gnode, as={$|g,F=2\rangle$\\$m_F=0$}];
+  g_p1[gnode, as={$|g,F=2\rangle$\\$m_F=+1$}];
+  g_p2[gnode, as={$|g,F=2\rangle$\\$m_F=+2$}];
+
+  e_m1[enode, as={$|e,F'=2\rangle$\\$m_F'=-1$}];
+  e_0 [enode, as={$|e,F'=2\rangle$\\$m_F'=0$}];
+  e_p1[enode, as={$|e,F'=2\rangle$\\$m_F'=+1$}];
+  e_p2[enode, as={$|e,F'=2\rangle$\\$m_F'=+2$}];
+
+  { [same layer] e_m1, e_0, e_p1, e_p2; };
+  { [same layer] g_m2, g_m1, g_0, g_p1, g_p2; };
+
+  g_m2 ->[abs] e_m1;
+  g_m1 ->[abs] e_0;
+  g_0  ->[abs] e_p1;
+  g_p1 ->[abs] e_p2;
+
+  e_m1 ->[em] g_m2;
+  e_m1 ->[em] g_m1;
+  e_m1 ->[em] g_0;
+
+  e_0  ->[em] g_m1;
+  e_0  ->[em] g_0;
+  e_0  ->[em] g_p1;
+
+  e_p1 ->[em] g_0;
+  e_p1 ->[em] g_p1;
+  e_p1 ->[em] g_p2;
+
+  e_p2 ->[em] g_p1;
+  e_p2 ->[em] g_p2;
+
+  g_m2 ->[rf] g_m1;
+  g_m1 ->[rf] g_0;
+  g_0  ->[rf] g_p1;
+  g_p1 ->[rf] g_p2;
+
+  g_m1 ->[rf] g_m2;
+  g_0  ->[rf] g_m1;
+  g_p1 ->[rf] g_0;
+  g_p2 ->[rf] g_p1;
+};
+
+\node[anchor=west] at (10.2,1.2) {\small Excited manifold ($5P_{1/2},F'=2$)};
+\node[anchor=west] at (10.2,-1.9) {\small Ground manifold ($5S_{1/2},F=2$)};
+
+\end{tikzpicture}

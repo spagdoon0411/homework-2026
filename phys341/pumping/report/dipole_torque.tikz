@@ -1,0 +1,125 @@
+\begin{tikzpicture}[scale=1.7]
+  \definecolor{Fcolor}{HTML}{000000}
+  \definecolor{Fproj}{HTML}{505050}
+  \definecolor{Mucolor}{HTML}{1F5AA6}
+  \definecolor{Bzerocolor}{HTML}{DA4333}
+  \definecolor{Bonecolor}{HTML}{FE9920}
+  \tdplotsetmaincoords{70}{120}
+  \begin{scope}[tdplot_main_coords]
+    % Define the total angular-momentum direction (spherical coordinates)
+    \def\theta{40}
+    \def\phi{150}
+    \def\Lradius{2.5}
+
+    % Cartesian coordinates
+    \pgfmathsetmacro{\Lx}{\Lradius*sin(\theta)*cos(\phi)}
+    \pgfmathsetmacro{\Ly}{\Lradius*sin(\theta)*sin(\phi)}
+    \pgfmathsetmacro{\Lz}{\Lradius*cos(\theta)}
+    \pgfmathsetmacro{\LxyRadius}{sqrt(\Lx*\Lx + \Ly*\Ly)}
+
+    % Transverse plane
+    \filldraw[black!10, opacity=0.3] (-2.5,-2.5,0) -- (2.5,-2.5,0)
+    -- (2.5,2.5,0) -- (-2.5,2.5,0) -- cycle;
+
+    % Coordinate axes
+    \draw[black,->] (0,0,0) -- (3,0,0) node[anchor=north east]{$x$};
+    \draw[black,->] (0,0,0) -- (0,3,0) node[anchor=north west]{$y$};
+    \draw[black,->] (0,0,0) -- (0,0,3) node[anchor=south]{$z$};
+
+    % Projection of F onto z
+    \draw[thick, dashed, Fproj] (\Lx,\Ly,\Lz) -- (0,0,\Lz);
+    \draw[thick, Fproj, ->] (0,0,0) -- (0,0,\Lz);
+    \node[Fproj] at (0.5,0,\Lz+0.3) {$\vec{F}_{z}$};
+
+    % Static field B0
+    \draw[thick, Bzerocolor, ->] (0,0,0) -- (0,0,1.6);
+    \node[Bzerocolor] at (0.5,0,1.0) {$\vec{B}_0$};
+
+    % Precession circle about B0
+    \draw[dashed, Bzerocolor] (0,0,\Lz) circle (\LxyRadius);
+
+    % Total angular momentum vector
+    \draw[very thick, Fcolor, ->] (0,0,0) -- (\Lx,\Ly,\Lz) node[above right] {$\vec{F}$};
+
+    % Projection of F onto xy
+    \draw[thick, dashed, Fproj] (\Lx,\Ly,\Lz) -- (\Lx,\Ly,0);
+    \draw[thick, Fproj, ->] (0,0,0) -- (\Lx,\Ly,0);
+    \node[Fproj] at (\Lx+0.5,\Ly+0.6,0) {$\vec{F}_{xy}$};
+
+    % Azimuthal angle beta
+    \pgfmathsetmacro{\betaAngle}{atan2(\Ly,\Lx)}
+    \draw[thick, Bzerocolor] (0,0,0) + (0:0.7) arc (0:{\betaAngle}:0.7);
+    \pgfmathsetmacro{\betaLabelAngle}{\betaAngle/2}
+    \pgfmathsetmacro{\betaLabelX}{1.1*cos(\betaLabelAngle) - 0.75}
+    \pgfmathsetmacro{\betaLabelY}{1.1*sin(\betaLabelAngle) - 0.3}
+    \node[Bzerocolor] at (\betaLabelX,\betaLabelY,0) {$\beta$};
+
+    % Rotating field B1 (orthogonal to F_xy in xy-plane)
+    \pgfmathsetmacro{\Bnorm}{sqrt(\Lx*\Lx + \Ly*\Ly)}
+    \pgfmathsetmacro{\BoneScale}{1.0}
+    \pgfmathsetmacro{\BoneX}{\BoneScale*\Ly/\Bnorm}
+    \pgfmathsetmacro{\BoneY}{-\BoneScale*\Lx/\Bnorm}
+    \draw[thick, Bonecolor, ->] (0,0,0) -- (\BoneX,\BoneY,0);
+    \node[Bonecolor] at (\BoneX+0.3,\BoneY+0.3,0) {$\vec{B}_1$};
+
+    % Circle in plane perpendicular to B1 passing through F
+    \pgfmathsetmacro{\BoneAngle}{atan2(\BoneY,\BoneX)}
+    \pgfmathsetmacro{\BoneNorm}{sqrt(\BoneX*\BoneX + \BoneY*\BoneY)}
+    \pgfmathsetmacro{\MdotBone}{(\Lx*\BoneX + \Ly*\BoneY)/\BoneNorm}
+    \pgfmathsetmacro{\MparallelX}{\MdotBone*\BoneX/\BoneNorm}
+    \pgfmathsetmacro{\MparallelY}{\MdotBone*\BoneY/\BoneNorm}
+    \pgfmathsetmacro{\MperpX}{\Lx - \MparallelX}
+    \pgfmathsetmacro{\MperpY}{\Ly - \MparallelY}
+    \pgfmathsetmacro{\MperpZ}{\Lz}
+    \pgfmathsetmacro{\radiusPerpToBone}{sqrt(\MperpX*\MperpX + \MperpY*\MperpY + \MperpZ*\MperpZ)}
+    \tdplotsetrotatedcoords{\BoneAngle}{90}{0}
+    \tdplotdrawarc[tdplot_rotated_coords,dashed,Bonecolor]{(0,0,0)}{\radiusPerpToBone}{0}{360}{}{}
+
+    % Spin-orbit picture: mu precessing around F
+    \pgfmathsetmacro{\ux}{\Lx/\Lradius}
+    \pgfmathsetmacro{\uy}{\Ly/\Lradius}
+    \pgfmathsetmacro{\uz}{\Lz/\Lradius}
+    \pgfmathsetmacro{\rho}{sqrt(\ux*\ux + \uy*\uy)}
+    \pgfmathsetmacro{\px}{-\uy/\rho}
+    \pgfmathsetmacro{\py}{\ux/\rho}
+    \pgfmathsetmacro{\pz}{0}
+    \pgfmathsetmacro{\qx}{-\uz*\py}
+    \pgfmathsetmacro{\qy}{\uz*\px}
+    \pgfmathsetmacro{\qz}{\ux*\py - \uy*\px}
+
+    \pgfmathsetmacro{\muAlong}{1.45}
+    \pgfmathsetmacro{\muConeR}{0.55}
+    \pgfmathsetmacro{\cx}{\muAlong*\ux}
+    \pgfmathsetmacro{\cy}{\muAlong*\uy}
+    \pgfmathsetmacro{\cz}{\muAlong*\uz}
+    \def\muPhase{270}
+    \def\muTilt{14}
+
+    % Slight visual tilt of the mu-precession ring toward the viewer.
+    \pgfmathsetmacro{\qtx}{\qx*cos(\muTilt) + \ux*sin(\muTilt)}
+    \pgfmathsetmacro{\qty}{\qy*cos(\muTilt) + \uy*sin(\muTilt)}
+    \pgfmathsetmacro{\qtz}{\qz*cos(\muTilt) + \uz*sin(\muTilt)}
+
+    \pgfmathsetmacro{\muX}{\cx + \muConeR*(\px*cos(\muPhase) + \qx*sin(\muPhase))}
+    \pgfmathsetmacro{\muY}{\cy + \muConeR*(\py*cos(\muPhase) + \qy*sin(\muPhase))}
+    \pgfmathsetmacro{\muZ}{\cz + \muConeR*(\pz*cos(\muPhase) + \qz*sin(\muPhase))}
+
+    \draw[dashed, Mucolor]
+      plot[samples=80, domain=0:360, smooth, variable=\t]
+      ({\cx + \muConeR*(\px*cos(\t) + \qtx*sin(\t))},
+       {\cy + \muConeR*(\py*cos(\t) + \qty*sin(\t))},
+       {\cz + \muConeR*(\pz*cos(\t) + \qtz*sin(\t))});
+    \draw[thick, Mucolor, ->] (0,0,0) -- (\muX,\muY,\muZ)
+      node[pos=0.5, below=2pt] {$\vec{\mu}$};
+
+    % Polar angle alpha relative to B0
+    \tdplotsetthetaplanecoords{\phi}
+    \tdplotdrawarc[tdplot_rotated_coords,thick,Bonecolor]{(0,0,0)}{0.5}{0}{\theta}{}{}
+    \pgfmathsetmacro{\labelR}{0.8}
+    \pgfmathsetmacro{\labelTheta}{\theta/2}
+    \pgfmathsetmacro{\labelX}{\labelR*sin(\labelTheta)*cos(\phi)}
+    \pgfmathsetmacro{\labelY}{\labelR*sin(\labelTheta)*sin(\phi)}
+    \pgfmathsetmacro{\labelZ}{\labelR*cos(\labelTheta)}
+    \node[Bonecolor] at (\labelX,\labelY,\labelZ) {$\alpha$};
+  \end{scope}
+\end{tikzpicture}

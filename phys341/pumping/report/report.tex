@@ -1,0 +1,454 @@
+% !TEX program = lualatex
+\documentclass[11pt]{article}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{circuitikz}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{cite}
+\usetikzlibrary{graphs,graphdrawing}  % REQUIRED
+\usegdlibrary{layered}
+\usetikzlibrary{arrows.meta,graphs,graphdrawing}
+\usegdlibrary{layered}
+\usepackage{url}
+\usetikzlibrary{chains}
+\usetikzlibrary{decorations.pathmorphing,calc,positioning,arrows.meta}
+\usetikzlibrary{positioning,shapes,arrows.meta}
+\usetikzlibrary{circuits.ee.IEC}
+\usetikzlibrary{graphs,graphdrawing,quotes}
+\usegdlibrary{force}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{braket}
+
+\title{Obtaining $g$-Factors for Rb-87 and Rb-85 via Optical Pumping}
+\author{Spandan Suthar and Antoni Gonzalez}
+\date{March 2, 2026}
+
+\geometry{margin=1in}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+% TODO: insert better introduction for optical pumping
+
+Relative to the energy levels described by pure Coulomb-potential
+considerations, electrons' energies accrue additional terms in a weak magnetic
+field due to several
+effects associated with their angular momenta. Three important such
+effects are the coupling
+between electrons' spins and their own angular momenta,
+(spin-orbit, annotated SO), the
+coupling between electrons's spins and their nuclei's spins
+(hyperfine structure, annotated HS), and the
+weak-field (linear) Zeeman effect (annotated Z). Each effect can be treated as a
+first-order perturbation to
+an electron's original Coulomb Hamiltonian, producing independent
+energy contributions:
+
+\begin{equation}
+  \braket{\hat H} = \braket{\hat H_\text{C}} + \braket{\hat
+  H_\text{SO}} + \braket{\hat H_\text{HS}} +   \braket{\hat H_\text{Z}}
+  \label{eq:hamiltonian}
+\end{equation}
+
+In a weak magnetic field, electrons' intrinsic spin angular momentum
+$\mathbf{S}$ and the electron's
+orbital angular momentum $\mathbf{L}$ couple to form a total angular
+momentum $\mathbf{J}$,
+quantized independently of $\mathbf{S}$ and $\mathbf{L}$. When the
+effects of hyperfine structure are considered, $\mathbf{J}$ couples with
+the nuclear spin vector $\mathbf{I}$--producing a total atomic angular
+momentum $\mathbf{F}$.
+
+When considering spin-orbit
+split states subject to hyperfine splitting, electron
+states are expressed in a hyperfine-coupled basis, whose members
+are eigenstates of the operators $\mathbf{L}^2, \mathbf{S}^2,
+\mathbf{J}^2, \mathbf{I}^2, \mathbf{F}^2, F_z$, all simultaneously
+diagonalizable. These operators give rise
+to the quantum numbers $l, s, j, i, f,$ and $m_f$, respectively, and allow the
+states to be labeled as $\ket{n\,\ell\,j\,f\,m_f}$ (omitting $s$ and
+$i$, which do not change during transitions).
+
+The perturbative energy shifts added to to the Coulomb Hamiltonian
+can each be expressed as a function
+of these quantum numbers, and thus of the electrons' states:
+
+\begin{equation}
+  \braket{\hat H_\text{SO}}
+  = \left\langle
+  \frac{\mu_0 e^2}{4\pi m_e^2 r^3}\,
+  \hat{\mathbf S}\!\cdot\!\hat{\mathbf L}
+  \right\rangle
+  = \left\langle
+  \frac{\mu_0 e^2}{4\pi m_e^2 r^3}
+  \right\rangle
+  \frac{\hbar^2}{2}\!\left[
+    j(j+1)-\ell(\ell+1)-s(s+1)
+  \right]
+  \label{eq:spinorbit}
+\end{equation}
+
+\begin{equation}
+  \braket{\hat H_\text{HS}}
+  = \left\langle
+  A\,\hat{\mathbf I}\!\cdot\!\hat{\mathbf J}
+  \right\rangle
+  = A\,\frac{\hbar^2}{2}\!\left[
+    f(f+1)-i(i+1)-j(j+1)
+  \right]
+  \label{eq:hyperfine}
+\end{equation}
+
+\begin{equation}
+  \braket{\hat H_\text{Z}}
+  = \left\langle
+  \mu_B\, g_F \,\hat{\mathbf F}\!\cdot\!\mathbf B
+  \right\rangle
+  = \mu_B\, g_F \, B\,\braket{\hat F_z}
+  = \mu_B\, g_F \, B\, \hbar m_f
+  \label{eq:zeeman}
+\end{equation}
+
+where $A$ is the hyperfine constant, varying from system to system.
+Comparing orders of magnitudes, spin-orbit coupling produces the
+largest energy shifts---followed by hyperfine structure and the
+Zeeman effect.
+
+% Configuration for Rb: [Kr]5s1
+
+This experiment focuses on the $5S_{1/2}$, $5P_{1/2}$, and $5P_{3/2}$ states of
+rubidium 85 and rubidium 87 isotopes\footnote{In $nlj$ spectroscopic
+  notation, $n$ is the principal quantum number, $l$ is the orbital
+  angular momentum, and $j$ is the total electronic angular momentum
+  from spin-orbit coupling. $5P_{1/2}$ and $5P_{3/2}$ refer to $n=5$,
+  $l=1$ states split into $J=1/2$ and $J=3/2$ fine-structure levels,
+respectively.}. Figure \ref{fig:rb87_splitting} depicts the split energy
+levels of rubidium 87 due to spin-orbit, hyperfine, and Zeeman
+splitting. Transitions between the finest levels can occur for
+several reasons, but are always restricted by
+selection rules (Table
+\ref{tab:e1_selection_rules_corrected}) arising
+from the electric-dipole interaction Hamiltonian describing the
+interaction of the atom with the electromagnetic field.
+
+\begin{figure}[t]
+  \centering
+  \resizebox{0.8\textwidth}{!}{\input{rb85_splitting.tikz}}
+  \caption{Successive splitting of a representative $^{85}$Rb D1
+    excited-state manifold, showing one spin-orbit split ($5P \to
+    5P_{1/2},5P_{3/2}$), one hyperfine split ($5P_{1/2}\to F'=2,3$),
+    and one Zeeman split ($F'=3\to m_F'$ sublevels).}
+  \label{fig:rb85_splitting}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \resizebox{0.8\textwidth}{!}{\input{rb87_splitting.tikz}}
+  \caption{Successive splitting of a representative $^{87}$Rb D1
+    excited-state manifold, showing one spin-orbit split ($5P \to
+    5P_{1/2},5P_{3/2}$), one hyperfine split ($5P_{1/2}\to F'=1,2$),
+    and one Zeeman split ($F'=2\to m_F'$ sublevels). Note that
+    splitting due to spin-orbit coupling is much larger than that due
+    to hyperfine structure, which is much larger than that due to
+  Zeeman splitting.}
+  \label{fig:rb87_splitting}
+\end{figure}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{cll}
+    \hline
+    \textbf{} & \textbf{Quantity} & \textbf{Selection Rule (E1)} \\
+    \hline
+    1 & Spin $s$
+    & $\Delta s = 0$ \\
+
+    2 & Orbital $l$
+    & $\Delta l = 0,\pm1$ \; ($l=0 \nleftrightarrow l'=0$) \\
+
+    3 & Total electronic $j$
+    & $\Delta j = 0,\pm1$ \; ($j=0 \nleftrightarrow j'=0$) \\
+
+    4 & Total atomic $f$
+    & $\Delta f = 0,\pm1$ \; ($f=0 \nleftrightarrow f'=0$) \\
+
+    5 & Magnetic sublevel $m_f$
+    & $\Delta m_f = 0,\pm1$ \\
+
+    6 & Parity $\pi$
+    & $\pi' = -\pi$ \\
+    \hline
+  \end{tabular}
+  \caption{Electric-dipole (E1) selection rules relevant to the $^{87}$Rb D$_1$
+    ($5S_{1/2}\rightarrow5P_{1/2}$) optical-pumping transition, expressed in the
+  hyperfine-coupled basis.}
+  \label{tab:e1_selection_rules_corrected}
+\end{table}
+
+% The selection rules and states available produce a nontrivial
+% stochastic system; an initial distribution
+% of electrons amongst the available states evolves according to
+% probabilities of transitions between states, where a transition from state
+% $\ket{i}$ to state $\ket{j}$ occurs with probability $P_{ij}$.
+%
+% \begin{figure}[htbp]
+%   \centering
+%   \input{three_state_graph.tikz}
+%   \caption{Five-state transition graph with transition probabilities
+%     labeled by $P_{ij}$ for transitions $i\to j$. Nodes represent a subset
+%     of $^{87}$Rb D1 Zeeman sublevels in the $f=2$ and $f'=2$ manifolds.
+%     Every shown edge is E1-allowed with
+%     $\Delta s=0$, $\Delta l=+1$, $\Delta j=0$, and
+%   $\Delta m_f\in\{-1,0,+1\}$.}
+%   \label{fig:three_state_graph}
+% \end{figure}
+
+% In a weak magnetic field, each hyperfine level splits into $m_F$
+% sublevels, so the transition energy depends on $\Delta m_F$. The three
+% allowed values correspond to the three polarization channels:
+% \begin{equation}
+%   \Delta m_F = +1 \;(\sigma^+), \qquad
+%   \Delta m_F = 0 \;(\pi), \qquad
+%   \Delta m_F = -1 \;(\sigma^-).
+%   \label{eq:sigma_pi_channels}
+% \end{equation}
+% In the pumping configuration, circularly polarized light is chosen so
+% that repeated absorption favors one sign of $\Delta m_F$, driving
+% population toward a stretched state where no further allowed
+% $\Delta m_F=+1$ absorption exists.
+
+The rubidium atoms in this experiment are exposed to a magnetic
+field $\vec B_0$ along an axis $\vec z$, causing the energy splitting
+described in Figure \ref{fig:rb87_splitting} and precession about
+$\vec B_0$ with a Larmor frequency $\omega_0$.
+The atoms are simultaneously exposed to radiofrequency (RF) pulses
+$\vec B_{RF} = B_1 \cos(\omega_1 t) \hat x$ applied transverse to
+$\vec B_0$. These RF pulses are indistinguishable from a pair of
+counter-rotating magnetic fields of equal strength and frequency
+$\omega_{RF}$, circularly polarized in the $x$-$y$ plane:
+\begin{align}
+  \vec B_{1}(t) &= \frac{B_1}{2}\left[\hat x\cos(\omega_{RF} t)+\hat
+  y\sin(\omega_{RF} t)\right] \\
+  \vec B_{1}'(t) &= \frac{B_1}{2}\left[\hat x\cos(\omega_{RF} t)-\hat
+  y\sin(\omega_{RF} t)\right] \\
+  \vec B_{RF} &= \vec B_{1} + \vec B_{1}' = B_1 \cos(\omega_{RF} t) \hat x
+\end{align}
+
+Figure \ref{fig:dipole_torque} depicts the geometry of the atom's
+total angular momentum $\vec F$ relative to applied fields $\vec B_0$
+and $\vec B_1$, including a precession angle $\alpha$ relative to
+$\vec B_0$, an azimuthal angular position $\beta$ of $\vec F$, and a
+magnetic dipole moment $\vec \mu$ precessing about $\vec F$.
+
+When
+$\omega_{RF} = \omega_0 = \dot \beta$,
+$\vec B_1$ appears
+stationary in the precession frame---while $\vec B_{1}'$ appears to
+rotate in the opposite direction.
+Both $\vec B_1$ and $\vec B_{1}'$
+cause additional torques
+on $\vec \mu$. In $\vec \mu$'s frame of reference, $\vec B_1$ appears
+stationary while $\vec B_{1}'$ appears to rotate in the opposite
+direction with frequency $2\omega_{RF} = 2\omega_0$. Thus, $\vec B_1$ causes
+a steady torque $\tau_1$ on $\mu$ while $\vec B_{1}'$ causes a time-dependent
+torque $\tau_{1}'$ whose effects net to zero across precession
+cycles. The aggregate effect is a steady precession about $\vec B_1$
+with a Larmor frequency $\dot \alpha = \omega_1$, causing $\vec F$ to change its
+precession angle. Thus, an RF pulse can cause a change in $\vec F_z$,
+suggesting that RF pulses can cause changes in the $m_F$ quantum number.
+
+A quantum-mechanical interpretation produces the exact magnitudes of
+the RF-driven energy changes. When an RF pulse $\vec B_1(t) = B_1
+\cos(\omega_{RF} t) \hat x$ is
+applied, the atom's briefly gains a new Hamiltonian contribution due
+to the coupling between $\vec \mu$ and $\vec B_1$: $\hat H_{RF} =
+-\vec \mu \cdot \left( B_1 \cos(\omega_{RF} t) \hat x \right)$.
+
+As Figure \ref{fig:dipole_torque} illustrates, the atom's magnetic dipole
+moment $\vec \mu$ precesses about $\vec F$; in expectation, it is
+proportional to $\vec F$: $\braket{\mu} = -\frac{g_F \mu_B}{\hbar}
+\vec F$. Thus, one can make the approximation $\vec \mu \approx -\frac{g_F
+\mu_B}{\hbar} \vec F$ and $\hat H_{RF}$ becomes:
+
+% H^rf​=−μ⋅Brf​=ℏgF​μB​​F⋅(B1​cos(ωt)x^).
+
+\begin{equation}
+  \hat H_{\text{rf}}
+  = -\,{\boldsymbol{\mu}}\cdot \mathbf B_{\text{rf}}
+  \approx \frac{g_F \mu_B}{\hbar}\mathbf F \cdot \left(B_1 \cos(\omega
+  t)\,\hat x\right)
+  = \frac{g_F \mu_B B_1}{\hbar}\cos(\omega t)\, \hat F_x
+  \label{eq:hamiltonian_rf}
+\end{equation}
+
+where $\hat F_x$ is the projection of the total angular momentum
+operator $\hat F$ onto the $x$-axis (equivalently, the axis of the RF
+pulse). Introduce the operators $\hat F_\pm$ that raise and lower the
+$m_F$ quantum number by 1, respectively. These are defined by:
+\begin{align}
+  \hat F_\pm &= \hat F_x \pm i \hat F_y \quad \left (\text{providing
+    } \hat F_x =
+  \frac{1}{2} (\hat F_+ + \hat F_-) \right )\\
+  \hat F_\pm \ket{F, m_F} &= \hbar \sqrt{F(F+1) - m_F(m_F \pm 1)} \ket{F,
+  m_F \pm 1}
+  \label{eq:ladder_operators}
+\end{align}
+
+Inserting \eqref{eq:ladder_operators} into \eqref{eq:hamiltonian_rf}
+yields:
+
+\begin{equation}
+  \hat H_{\text{rf}} \ket{F, m_F} \propto (\hat F_+ + \hat F_-) \ket{F,
+  m_F} \propto \left( \ket {F, m_F + 1 } + \ket {F,
+  m_F - 1 } \right)
+\end{equation}
+
+indicating that the RF interaction connects states with relative
+$m_F$ values of $\pm 1$, consistent with the classical conclusion
+that an RF pulse can change $\vec F_z$ via magnetic torque effects.
+
+\begin{figure}[H]
+  \centering
+  \input{dipole_torque.tikz}
+  \caption{Precession geometry showing $\vec{F}$ precessing about a
+    magnetic field $\vec{B}_0$ of constant direction. In the
+    spin-orbit-coupled picture, the magnetic dipole moment of the
+    atom $\vec{\mu}$
+    precesses about $\vec{F}$. Note the azimuthal and polar positions
+    $\beta$ and $\alpha$ of
+    $\vec{F}$, associated with the Larmor frequencies $\omega_0$ and $\omega_1$
+    caused by $\vec{B}_0$ and $\vec{B}_1$, respectively.
+  }
+  \label{fig:dipole_torque}
+\end{figure}
+
+Another avenue providing control over the rubidium atoms' energy levels is
+interaction with circularly polarized photons in an E1
+electric-dipole interaction. During these interactions, E1 selection
+rules apply: these include $\pi' = -\pi$, $\Delta \ell = \pm 1$,
+$\Delta j = 0, \pm 1$, and $\Delta m_f = q$ determined by the
+light's polarization component $q$. Note that $q$ is $+1$ for
+right-circularly polarized light and $-1$ for
+left-circularly polarized light.
+
+These photons can cause transitions
+consistent with the selection rules expressed in Table
+\ref{tab:e1_selection_rules_corrected}---namely,
+transitions with $\Delta l = \pm 1$, $\Delta j = 0, \pm 1$, and
+$\Delta m_f = 0, \pm 1$, allowing transitions between the
+ground $5S_{1/2}$ manifold and the excited $5P_{1/2}$ and $5P_{3/2}$
+manifolds. Upon spontaneous emission, the atoms return to the ground
+$5S_{1/2}$ manifold, resulting in unchanged $l$ and $j$ quantum
+numbers. Abstractly, for an atom starting in the ground manifold,
+a single absorption-emission cycle can be viewed as a process that changes
+$f$, $m_f$, or both.
+
+\[
+  \ket{n, l^{(0)}, j^{(0)}, f^{(0)}, m_f^{(0)}}
+  \xrightarrow{\text{absorption}}
+  \ket{n, l^{(1)}, j^{(1)}, f^{(1)}, m_f^{(1)}}
+  \xrightarrow{\text{emission}}
+  \ket{n, l^{(0)}, j^{(0)}, f^{(2)}, m_f^{(2)}}
+\]
+\[
+  \Downarrow
+\]
+\[
+  \ket{f, m_f} \xrightarrow{\text{absorption-emission}} \ket{f', m_f'}
+\]
+
+Note that other short-lived intermediate states in the excited
+manifold can be attained between absorption and emission, not
+depicted above for clarity. Also of note is that atoms' stints in the
+excited manifold are orders of magnitude more short-lived than atoms
+in the ground manifold, suggesting that these intermediate states are
+negligible.
+
+Spontaneous emissions have no bias toward a particular $\Delta
+m_f$ value. Thus, if the light triggering an absorption-emission cycle is
+right-circularly polarized, possible values of $\Delta m_f$ across an
+complete absorption-emission cycle are $m_f = \Delta m_f^\text{absorption} +
+\Delta m_f^\text{emission} \in \set{-1 + 1, 0 + 1, 1 + 1} = \set{0,
++1, +2}$, creating a bias toward higher $m_f$ values. Consider states
+with $F = 2$ and $m_F = 2$. Figure \ref{fig:rb87_splitting} suggests that
+a transition with $\Delta m_f = +1$ is forbidden; no states in the
+excited manifold have $m_F = 3$. Thus, the stochastic process governing
+the redistribution of atomic states through the ground manifold during
+repeated absorption-emission cycles ($\mathcal P$) provides no
+outward flow from the
+state $\ket{\eta} \equiv \ket{n = 5, l = 0, j = 1/2, f = 2, m_f =
+2}$\footnote{Allow states to be uniquely indexed as $\ket{i}$ for
+  brevity, with $i = \eta$ identifying the unique zero-outflow
+state.}---while providing
+healthy inward flow. No other states have this property, and $\ket{\eta}$
+is reachable from any other state in the ground manifold. Thus,
+$\ket{\eta}$ becomes an attractor for the system, with an
+attraction basin that is the entire $5S_{1/2}$ ground manifold.
+
+Thus, from a uniform distribution $\pi_0$ of states in the ground manifold,
+the distribution $\pi_n$ of states after $n$ absorption-emission
+cycles converges to a delta distribution centered on $\ket{\eta}$:
+
+$$
+\lim_{n \to \infty} \pi_n = \lim_{n \to \infty} (\mathcal P^n[\pi_0]) =
+\delta_{\eta}
+$$
+
+The distribution $\delta_\eta$ is characterized by zero photon
+absorption probability, causing the rubidium isotope to transmit
+light of the wavelength of the $5P_{1/2} \rightarrow 5S_{1/2}$
+transition.
+
+$\mathcal P$ can be changed by switching on an RF field $\vec B_1$.
+Established above, the RF field produces spontaneous $\Delta m_f = \pm
+1$ transitions through coupling with $\vec \mu$, removing the bias toward higher
+$m_f$ values and providing outward flow from $\ket{\eta}$. This
+produces a new steady-state distribution $\pi_\text{depumped}$,
+characterized by a nonzero absorption probability for the $5P_{1/2} \rightarrow
+5S_{1/2}$ transition photons and a smaller transmission intensity.
+
+\section{Procedure}
+
+The experimental setup for optical pumping is shown in Figure
+\ref{fig:optical_pumping_setup}. Light from an RF discharge lamp
+passes through an interference filter to select the appropriate
+wavelength for the rubidium D$_1$ transition ($5S_{1/2} \rightarrow
+5P_{1/2}$, $\lambda = 794.8$ nm). The light then passes through a
+linear polarizer and a quarter-wave plate to produce circularly
+polarized light, which is directed through the rubidium absorption
+cell. The rubidium cell is placed in a static magnetic field oriented
+horizontally and an RF magnetic field oriented vertically. The
+transmitted light intensity is measured by an optical detector.
+
+\begin{figure}[H]
+  \centering
+  \resizebox{\textwidth}{!}{\input{optical_pumping_setup.tikz}}
+  \caption{Schematic diagram of the optical pumping apparatus. Light
+    from the RF discharge lamp is filtered, polarized, and directed
+    through the rubidium absorption cell, which is subjected to both
+    static and RF magnetic fields. The transmitted light intensity is
+  monitored by the optical detector.}
+  \label{fig:optical_pumping_setup}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \resizebox{0.5\textwidth}{!}{\input{helmholtz_coils.tikz}}
+  \caption{Magnetic field configuration for the rubidium absorption
+    cell. The large annulus represents the Helmholtz coils providing
+    the primary static magnetic field. Two pairs of smaller rectangular
+    coils (top/bottom and left/right) provide additional field
+    control and RF magnetic fields.}
+  \label{fig:helmholtz_coils}
+\end{figure}
+
+\end{document}

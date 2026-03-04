@@ -1,0 +1,2 @@
+- Don't use Dirac (bra-ket) notation
+- This is an audience of upper-division physics undergraduates. They're experienced with the modern physics level.
