@@ -1,0 +1,45 @@
+\begin{tikzpicture}[>=Stealth]
+
+% --- Horizontal positions ---
+\def\xA{0}
+\def\xAend{2.5}
+\def\xB{3.2}
+\def\xBend{6.0}
+
+% --- Vertical positions ---
+\def\yZero{2}
+\def\dz{0.8}
+
+% --- Column headers ---
+\node[font=\normalsize, anchor=south] at ({(\xA+\xAend)/2}, 3.5) {$B_0 = 0$};
+\node[font=\normalsize, anchor=south] at ({(\xB+\xBend)/2}, 3.5) {$B_0 \neq 0$};
+
+% --- Dashed column separator ---
+\draw[black!25, dashed] (2.85, 0) -- (2.85, 3.3);
+
+% ===================== NO FIELD =====================
+\draw[very thick] (\xA, \yZero) -- (\xAend, \yZero);
+\node[left, font=\normalsize] at (\xA, \yZero) {$I = \frac{1}{2}$};
+
+% ===================== ZEEMAN SPLIT =====================
+% m_I = -1/2
+\draw (\xAend, \yZero) -- (\xB, \yZero + \dz);
+\draw[thick] (\xB, \yZero + \dz) -- (\xBend, \yZero + \dz);
+\node[right, font=\normalsize] at (\xBend, \yZero + \dz) {$m_I = -\frac{1}{2}$};
+
+% m_I = +1/2
+\draw (\xAend, \yZero) -- (\xB, \yZero - \dz);
+\draw[thick] (\xB, \yZero - \dz) -- (\xBend, \yZero - \dz);
+\node[right, font=\normalsize] at (\xBend, \yZero - \dz) {$m_I = +\frac{1}{2}$};
+
+% --- RF transition arrow ---
+\definecolor{RFcolor}{HTML}{DA4333}
+\pgfmathsetmacro{\arrowX}{4.5}
+\draw[-Stealth, very thick, RFcolor] (\arrowX, \yZero - \dz + 0.1) -- (\arrowX, \yZero + \dz - 0.1);
+\node[right, RFcolor, font=\normalsize] at (\arrowX + 0.1, \yZero) {RF pulse};
+
+% --- Energy axis ---
+\draw[->, thick] (-1.5, 0) -- (-1.5, 3.3);
+\node[rotate=90, anchor=south] at (-1.8, 1.65) {Energy};
+
+\end{tikzpicture}

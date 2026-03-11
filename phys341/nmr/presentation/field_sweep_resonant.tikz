@@ -1,0 +1,61 @@
+\begin{tikzpicture}
+  \definecolor{SineColor}{HTML}{4682B4}
+  \definecolor{StaticColor}{HTML}{808080}
+  \definecolor{ResonantColor}{HTML}{DA4333}
+  \definecolor{WindowColor}{HTML}{4682B4}
+
+  % Axis ranges
+  \def\xmax{16}
+  \def\ymin{0}
+  \def\ymax{4}
+
+  % Wave parameters
+  \def\amplitude{1.2}
+  \def\offset{2}
+  \def\frequency{1}
+
+  % Field values
+  \pgfmathsetmacro{\Bstatic}{\offset}
+  \pgfmathsetmacro{\Bresonant}{\offset}
+
+  % Period length
+  \pgfmathsetmacro{\period}{6.283}
+
+  % Calculate intersection x-values (equally spaced at zero-crossings)
+  \pgfmathsetmacro{\xone}{\period/4}
+  \pgfmathsetmacro{\xtwo}{3*\period/4}
+  \pgfmathsetmacro{\xthree}{5*\period/4}
+  \pgfmathsetmacro{\xfour}{7*\period/4}
+  \pgfmathsetmacro{\xfive}{9*\period/4}
+
+  % Draw translucent vertical windows at intersections
+  \def\windowWidth{0.3}
+  \fill[WindowColor, opacity=0.15] (\xone-\windowWidth/2, \ymin) rectangle (\xone+\windowWidth/2, \ymax);
+  \fill[WindowColor, opacity=0.15] (\xtwo-\windowWidth/2, \ymin) rectangle (\xtwo+\windowWidth/2, \ymax);
+  \fill[WindowColor, opacity=0.15] (\xthree-\windowWidth/2, \ymin) rectangle (\xthree+\windowWidth/2, \ymax);
+  \fill[WindowColor, opacity=0.15] (\xfour-\windowWidth/2, \ymin) rectangle (\xfour+\windowWidth/2, \ymax);
+  \fill[WindowColor, opacity=0.15] (\xfive-\windowWidth/2, \ymin) rectangle (\xfive+\windowWidth/2, \ymax);
+
+  % Draw axes
+  \draw[->, thick] (0,0) -- (\xmax,0) node[right] {$t$};
+  \draw[->, thick] (0,\ymin) -- (0,\ymax) node[above] {$B$};
+
+  % Draw B_static line (dashed grey)
+  \draw[thick, dashed, StaticColor] (0,\Bstatic) -- (\xmax-0.3,\Bstatic);
+  \node[left, StaticColor] at (0,\Bstatic) {$B_\text{static}$};
+
+  % Draw cosine wave (2.5 periods)
+  \draw[very thick, SineColor, samples=400, smooth, domain=0:\xmax-0.5]
+    plot (\x, {\offset + \amplitude*cos(\frequency*\x*360/6.283)});
+
+  % Draw dots at intersection points
+  \fill[SineColor] (\xone, \Bresonant) circle (2pt);
+  \fill[SineColor] (\xtwo, \Bresonant) circle (2pt);
+  \fill[SineColor] (\xthree, \Bresonant) circle (2pt);
+  \fill[SineColor] (\xfour, \Bresonant) circle (2pt);
+  \fill[SineColor] (\xfive, \Bresonant) circle (2pt);
+
+  % Label the cosine wave near a peak
+  \node[SineColor, font=\small] at (6.28, 3.5) {$B_0(t) = B_\text{static} + \tilde{B} \cos(\omega_s t)$};
+
+\end{tikzpicture}

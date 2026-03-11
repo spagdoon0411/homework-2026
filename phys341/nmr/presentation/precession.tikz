@@ -1,0 +1,69 @@
+\begin{tikzpicture}[scale=1.7]
+  \definecolor{Bcolor}{HTML}{000000}
+  \definecolor{Mcolor}{HTML}{4682B4}
+  \definecolor{Bonecolor}{HTML}{FE9920}
+  \definecolor{Bzerocolor}{HTML}{DA4333}
+  \tdplotsetmaincoords{70}{120}
+  \begin{scope}[tdplot_main_coords]
+    % Define the magnetization vector direction (spherical coordinates)
+    \def\theta{35}  % angle from B0 (renamed to avoid conflict with \alpha)
+    \def\phi{135}   % azimuthal angle (x negative, y positive)
+    \def\Mradius{2.0}
+    \def\Bzero{2.5}
+
+    % Cartesian coordinates of M
+    \pgfmathsetmacro{\Mx}{\Mradius*sin(\theta)*cos(\phi)}
+    \pgfmathsetmacro{\My}{\Mradius*sin(\theta)*sin(\phi)}
+    \pgfmathsetmacro{\Mz}{\Mradius*cos(\theta)}
+    \pgfmathsetmacro{\MxyRadius}{sqrt(\Mx*\Mx + \My*\My)}
+
+    % Transverse plane (smaller)
+    \filldraw[black!10, opacity=0.3] (-1.2,-1.2,0) -- (1.2,-1.2,0)
+    -- (1.2,1.2,0) -- (-1.2,1.2,0) -- cycle;
+
+    % Coordinate axes
+    \draw[black,->] (0,0,0) -- (1.8,0,0) node[anchor=north east]{$x$};
+    \draw[black,->] (0,0,0) -- (0,1.8,0) node[anchor=north west]{$y$};
+    \draw[black,->] (0,0,0) -- (0,0,3) node[anchor=south]{$z$};
+
+    % B0 field (vertical)
+    \draw[semithick, Bcolor, ->] (0,0,0) -- (0,0,\Bzero);
+    \node[Bcolor] at (0.5,0,\Bzero+0.3) {$\vec{B}_0$};
+
+    % Precession circle at the height of M_z
+    \draw[semithick, dashed, Bzerocolor] (0,0,\Mz) circle (\MxyRadius);
+
+    % Projection of M onto z
+    \draw[semithick, dashed, gray] (\Mx,\My,\Mz) -- (0,0,\Mz);
+    \draw[semithick, gray, ->] (0,0,0) -- (0,0,\Mz);
+    \node[gray] at (0.5,0,\Mz+0.3) {$\vec{M}_{z}$};
+
+    % Magnetization vector M
+    \draw[semithick, Mcolor, ->] (0,0,0) -- (\Mx,\My,\Mz);
+    \node[Mcolor] at (\Mx-0.1,\My+0.2,\Mz+0.15) {$\vec{M}$};
+
+    % Projection of M onto xy
+    \draw[semithick, dashed, gray] (\Mx,\My,\Mz) -- (\Mx,\My,0);
+    \draw[semithick, gray, ->] (0,0,0) -- (\Mx,\My,0);
+    \node[gray] at (\Mx-0.15,\My+0.25,0.2) {$\vec{M}_{xy}$};
+
+    % Azimuthal angle beta
+    \pgfmathsetmacro{\betaAngle}{atan2(\My,\Mx)}
+    \draw[semithick, Bzerocolor] (0,0,0) + (0:0.7) arc (0:{\betaAngle}:0.7);
+    \pgfmathsetmacro{\betaLabelAngle}{\betaAngle/2}
+    \pgfmathsetmacro{\betaLabelX}{1.0*cos(\betaLabelAngle)}
+    \pgfmathsetmacro{\betaLabelY}{1.0*sin(\betaLabelAngle)}
+    \node[Bzerocolor] at (\betaLabelX,\betaLabelY,0) {$\beta$};
+
+    % Angle alpha
+    \tdplotsetthetaplanecoords{\phi}
+    \tdplotdrawarc[tdplot_rotated_coords,semithick,Bonecolor]{(0,0,0)}{0.7}{0}{\theta}{}{}
+    \pgfmathsetmacro{\labelR}{1.0}
+    \pgfmathsetmacro{\labelTheta}{\theta/2}
+    \pgfmathsetmacro{\labelX}{\labelR*sin(\labelTheta)*cos(\phi)}
+    \pgfmathsetmacro{\labelY}{\labelR*sin(\labelTheta)*sin(\phi)}
+    \pgfmathsetmacro{\labelZ}{\labelR*cos(\labelTheta)}
+    \node[Bonecolor] at (\labelX,\labelY,\labelZ) {$\alpha$};
+
+  \end{scope}
+\end{tikzpicture}

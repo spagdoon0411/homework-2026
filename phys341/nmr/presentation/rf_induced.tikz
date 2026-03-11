@@ -1,0 +1,98 @@
+\begin{tikzpicture}[scale=1.7]
+  \definecolor{Mcolor}{HTML}{4682B4}
+  \definecolor{Mproj}{HTML}{505050}
+  \definecolor{Bzerocolor}{HTML}{DA4333}
+  \definecolor{Bonecolor}{HTML}{FE9920}
+  \definecolor{Bzerovec}{HTML}{000000}
+  \tdplotsetmaincoords{70}{120}
+  \begin{scope}[tdplot_main_coords]
+    % Define the magnetization direction (spherical coordinates)
+    \def\theta{40}
+    \def\phi{150}
+    \def\Mradius{2.5}
+
+    % Cartesian coordinates
+    \pgfmathsetmacro{\Mx}{\Mradius*sin(\theta)*cos(\phi)}
+    \pgfmathsetmacro{\My}{\Mradius*sin(\theta)*sin(\phi)}
+    \pgfmathsetmacro{\Mz}{\Mradius*cos(\theta)}
+    \pgfmathsetmacro{\MxyRadius}{sqrt(\Mx*\Mx + \My*\My)}
+
+    % Transverse plane
+    \filldraw[black!10, opacity=0.3] (-2.5,-2.5,0) -- (2.5,-2.5,0)
+    -- (2.5,2.5,0) -- (-2.5,2.5,0) -- cycle;
+
+    % Coordinate axes
+    \draw[semithick,black,->] (0,0,0) -- (3,0,0) node[anchor=north east]{$x$};
+    \draw[semithick,black,->] (0,0,0) -- (0,3,0) node[anchor=north west]{$y$};
+    \draw[semithick,black,->] (0,0,0) -- (0,0,3) node[anchor=south]{$z$};
+
+    % Projection of M onto z
+    \draw[semithick, dashed, Mproj] (\Mx,\My,\Mz) -- (0,0,\Mz);
+    \draw[semithick, Mproj, ->] (0,0,0) -- (0,0,\Mz);
+    \node[Mproj] at (0.5,0,\Mz+0.3) {$\vec{M}_{z}$};
+
+    % Static field B0
+    \draw[semithick, Bzerovec, ->] (0,0,0) -- (0,0,1.6);
+    \node[Bzerovec] at (0.5,0,1.0) {$\vec{B}_0$};
+
+    % Precession circle about B0
+    \draw[semithick, dashed, Bzerocolor] (0,0,\Mz) circle (\MxyRadius);
+
+    % Add arrows to show direction of precession around B0
+    \draw[semithick, dashed, Bzerocolor, -stealth] (0,0,\Mz) + (85:\MxyRadius) arc (85:95:\MxyRadius);
+    \draw[semithick, dashed, Bzerocolor, -stealth] (0,0,\Mz) + (175:\MxyRadius) arc (175:185:\MxyRadius);
+    \draw[semithick, dashed, Bzerocolor, -stealth] (0,0,\Mz) + (265:\MxyRadius) arc (265:275:\MxyRadius);
+
+    % Magnetization vector
+    \draw[semithick, Mcolor, ->] (0,0,0) -- (\Mx,\My,\Mz) node[above right] {$\vec{M}$};
+
+    % Projection of M onto xy
+    \draw[semithick, dashed, Mproj] (\Mx,\My,\Mz) -- (\Mx,\My,0);
+    \draw[semithick, Mproj, ->] (0,0,0) -- (\Mx,\My,0);
+    \node[Mproj] at (\Mx+0.5,\My+0.6,0) {$\vec{M}_{xy}$};
+
+    % Azimuthal angle beta
+    \pgfmathsetmacro{\betaAngle}{atan2(\My,\Mx)}
+    \draw[semithick, Bzerocolor] (0,0,0) + (0:0.7) arc (0:{\betaAngle}:0.7);
+    \pgfmathsetmacro{\betaLabelAngle}{\betaAngle/2}
+    \pgfmathsetmacro{\betaLabelX}{1.1*cos(\betaLabelAngle) - 0.75}
+    \pgfmathsetmacro{\betaLabelY}{1.1*sin(\betaLabelAngle) - 0.3}
+    \node[Bzerocolor] at (\betaLabelX,\betaLabelY,0) {$\beta$};
+
+    % Rotating field B1 (orthogonal to M_xy in xy-plane)
+    \pgfmathsetmacro{\Mnorm}{sqrt(\Mx*\Mx + \My*\My)}
+    \pgfmathsetmacro{\BoneScale}{1.0}
+    \pgfmathsetmacro{\BoneX}{\BoneScale*\My/\Mnorm}
+    \pgfmathsetmacro{\BoneY}{-\BoneScale*\Mx/\Mnorm}
+    \draw[semithick, Bonecolor, ->] (0,0,0) -- (\BoneX,\BoneY,0);
+    \node[Bonecolor] at (\BoneX+0.3,\BoneY+0.3,0) {$\vec{B}_1$};
+
+    % Circle in plane perpendicular to B1 passing through M
+    \pgfmathsetmacro{\BoneAngle}{atan2(\BoneY,\BoneX)}
+    \pgfmathsetmacro{\BoneNorm}{sqrt(\BoneX*\BoneX + \BoneY*\BoneY)}
+    \pgfmathsetmacro{\MdotBone}{(\Mx*\BoneX + \My*\BoneY)/\BoneNorm}
+    \pgfmathsetmacro{\MparallelX}{\MdotBone*\BoneX/\BoneNorm}
+    \pgfmathsetmacro{\MparallelY}{\MdotBone*\BoneY/\BoneNorm}
+    \pgfmathsetmacro{\MperpX}{\Mx - \MparallelX}
+    \pgfmathsetmacro{\MperpY}{\My - \MparallelY}
+    \pgfmathsetmacro{\MperpZ}{\Mz}
+    \pgfmathsetmacro{\radiusPerpToBone}{sqrt(\MperpX*\MperpX + \MperpY*\MperpY + \MperpZ*\MperpZ)}
+    \tdplotsetrotatedcoords{\BoneAngle}{90}{0}
+    \tdplotdrawarc[tdplot_rotated_coords,semithick,dashed,Bonecolor]{(0,0,0)}{\radiusPerpToBone}{0}{360}{}{}
+
+    % Add arrows to show direction of nutation
+    \tdplotdrawarc[tdplot_rotated_coords,semithick,dashed,Bonecolor,-stealth]{(0,0,0)}{\radiusPerpToBone}{85}{95}{}{}
+    \tdplotdrawarc[tdplot_rotated_coords,semithick,dashed,Bonecolor,-stealth]{(0,0,0)}{\radiusPerpToBone}{175}{185}{}{}
+    \tdplotdrawarc[tdplot_rotated_coords,semithick,dashed,Bonecolor,-stealth]{(0,0,0)}{\radiusPerpToBone}{265}{275}{}{}
+
+    % Polar angle alpha relative to B0
+    \tdplotsetthetaplanecoords{\phi}
+    \tdplotdrawarc[tdplot_rotated_coords,semithick,Bonecolor]{(0,0,0)}{0.5}{0}{\theta}{}{}
+    \pgfmathsetmacro{\labelR}{0.8}
+    \pgfmathsetmacro{\labelTheta}{\theta/2}
+    \pgfmathsetmacro{\labelX}{\labelR*sin(\labelTheta)*cos(\phi)}
+    \pgfmathsetmacro{\labelY}{\labelR*sin(\labelTheta)*sin(\phi)}
+    \pgfmathsetmacro{\labelZ}{\labelR*cos(\labelTheta)}
+    \node[Bonecolor] at (\labelX,\labelY,\labelZ) {$\alpha$};
+  \end{scope}
+\end{tikzpicture}

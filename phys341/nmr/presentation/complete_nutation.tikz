@@ -1,0 +1,70 @@
+\begin{tikzpicture}[scale=1.7]
+  \definecolor{Mcolor}{HTML}{4682B4}
+  \definecolor{Bonecolor}{HTML}{FE9920}
+  \definecolor{Trajcolor}{HTML}{DA4333}
+  \tdplotsetmaincoords{70}{120}
+  \begin{scope}[tdplot_main_coords]
+    % Define the magnetization direction (spherical coordinates)
+    \def\Mradius{2.5}
+    \pgfmathsetmacro{\nturns}{3}
+
+    % Cartesian coordinates slightly before midpoint of trajectory
+    \pgfmathsetmacro{\tmid}{1.35}
+    \pgfmathsetmacro{\Mx}{\Mradius*sin(90*\tmid/\nturns)*cos(\tmid*360)}
+    \pgfmathsetmacro{\My}{\Mradius*sin(90*\tmid/\nturns)*sin(\tmid*360)}
+    \pgfmathsetmacro{\Mz}{\Mradius*cos(90*\tmid/\nturns)}
+    \pgfmathsetmacro{\MxyRadius}{sqrt(\Mx*\Mx + \My*\My)}
+
+    % Transverse plane
+    \filldraw[black!10, opacity=0.3] (-2.5,-2.5,0) -- (2.5,-2.5,0)
+    -- (2.5,2.5,0) -- (-2.5,2.5,0) -- cycle;
+
+    % Coordinate axes
+    \draw[black,->] (0,0,0) -- (3,0,0) node[anchor=north east]{$x$};
+    \draw[black,->] (0,0,0) -- (0,3,0) node[anchor=north west]{$y$};
+    \draw[black,->] (0,0,0) -- (0,0,3) node[anchor=south]{$z$};
+
+    % Projection of spiral onto xy plane
+    \draw[thick, dashed, gray, samples=400, smooth, variable=\t, domain=0:\nturns]
+      plot ({\Mradius*sin(90*\t/\nturns)*cos(\t*360)},
+            {\Mradius*sin(90*\t/\nturns)*sin(\t*360)},
+            {0});
+
+    % Add arrows to projection
+    \draw[thick, dashed, gray, -stealth, samples=20, smooth, variable=\t, domain=0.98:1.02]
+      plot ({\Mradius*sin(90*\t/\nturns)*cos(\t*360)},
+            {\Mradius*sin(90*\t/\nturns)*sin(\t*360)},
+            {0});
+    \draw[thick, dashed, gray, -stealth, samples=20, smooth, variable=\t, domain=2.48:2.52]
+      plot ({\Mradius*sin(90*\t/\nturns)*cos(\t*360)},
+            {\Mradius*sin(90*\t/\nturns)*sin(\t*360)},
+            {0});
+
+    % Helical nutation trajectory on the sphere
+    % Starts at pole (theta=0) and spirals down to theta=90 degrees
+    % Parameter t goes 0 to 3 (representing 3 full azimuthal rotations)
+    \draw[very thick, Trajcolor, samples=400, smooth, variable=\t, domain=0:\nturns]
+      plot ({\Mradius*sin(90*\t/\nturns)*cos(\t*360)},
+            {\Mradius*sin(90*\t/\nturns)*sin(\t*360)},
+            {\Mradius*cos(90*\t/\nturns)});
+
+    % Add arrows to show direction along trajectory
+    \draw[very thick, Trajcolor, -stealth, samples=20, smooth, variable=\t, domain=0.98:1.02]
+      plot ({\Mradius*sin(90*\t/\nturns)*cos(\t*360)},
+            {\Mradius*sin(90*\t/\nturns)*sin(\t*360)},
+            {\Mradius*cos(90*\t/\nturns)});
+    \draw[very thick, Trajcolor, -stealth, samples=20, smooth, variable=\t, domain=2.48:2.52]
+      plot ({\Mradius*sin(90*\t/\nturns)*cos(\t*360)},
+            {\Mradius*sin(90*\t/\nturns)*sin(\t*360)},
+            {\Mradius*cos(90*\t/\nturns)});
+
+    % Projection of M onto xy plane
+    \draw[semithick, dashed, Mcolor!50] (\Mx,\My,\Mz) -- (\Mx,\My,0);
+    \draw[semithick, Mcolor, ->] (0,0,0) -- (\Mx,\My,0);
+    \node[Mcolor] at (\Mx+0.5,\My+0.5,0) {$\vec{M}_{xy}$};
+
+    % Magnetization vector at current position
+    \draw[very thick, Mcolor, ->] (0,0,0) -- (\Mx,\My,\Mz) node[above right] {$\vec{M}$};
+
+  \end{scope}
+\end{tikzpicture}
