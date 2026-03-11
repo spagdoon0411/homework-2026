@@ -37,50 +37,50 @@
 
 \section{Introduction}
 
-% TODO: insert better introduction for optical pumping
-
-Relative to the energy levels described by pure Coulomb-potential
-considerations, electrons' energies accrue additional terms in a weak magnetic
-field due to several
-effects associated with their angular momenta. Three important such
-effects are the coupling
-between electrons' spins and their own angular momenta,
-(spin-orbit, annotated SO), the
-coupling between electrons's spins and their nuclei's spins
-(hyperfine structure, annotated HS), and the
-weak-field (linear) Zeeman effect (annotated Z). Each effect can be treated as a
-first-order perturbation to
-an electron's original Coulomb Hamiltonian, producing independent
-energy contributions:
+The most basic analysis of the possible energy levels of an atom involves
+considering the effect of the Coulomb potential on the atom's
+electrons \cite{harris, qmech, griffiths_qm}. Relative to these energy levels,
+atoms' energies accrue additional shifts when placed in a weak
+magnetic field due to several effects associated with their angular
+momenta. Three
+important such effects are the coupling between electrons' spins and
+their own angular momenta, (spin-orbit, annotated SO), the coupling
+between electrons' spins and their nuclei's spins
+(hyperfine structure, annotated HS), and the weak-field
+Zeeman effect (annotated Z) \cite{harris}. Each
+effect can be treated as a
+first-order perturbation to the electron's original Coulomb
+Hamiltonian (annotated C) \cite{harris, qmech, griffiths_qm}:
 
 \begin{equation}
-  \braket{\hat H} = \braket{\hat H_\text{C}} + \braket{\hat
-  H_\text{SO}} + \braket{\hat H_\text{HS}} +   \braket{\hat H_\text{Z}}
+  \hat H = \hat H_\text{C} + \hat
+  H_\text{SO} + \hat H_\text{HS} +   \hat H_\text{Z}
   \label{eq:hamiltonian}
 \end{equation}
 
-In a weak magnetic field, electrons' intrinsic spin angular momentum
+In a weak magnetic field, the electron's intrinsic spin angular momentum
 $\mathbf{S}$ and the electron's
 orbital angular momentum $\mathbf{L}$ couple to form a total angular
 momentum $\mathbf{J}$,
 quantized independently of $\mathbf{S}$ and $\mathbf{L}$. When the
 effects of hyperfine structure are considered, $\mathbf{J}$ couples with
 the nuclear spin vector $\mathbf{I}$--producing a total atomic angular
-momentum $\mathbf{F}$.
+momentum $\mathbf{F}$ \cite{harris}.
 
 When considering spin-orbit
 split states subject to hyperfine splitting, electron
 states are expressed in a hyperfine-coupled basis, whose members
 are eigenstates of the operators $\mathbf{L}^2, \mathbf{S}^2,
 \mathbf{J}^2, \mathbf{I}^2, \mathbf{F}^2, F_z$, all simultaneously
-diagonalizable. These operators give rise
+diagonalizable \cite{qmech, harris}. These compatible operators give rise
 to the quantum numbers $l, s, j, i, f,$ and $m_f$, respectively, and allow the
 states to be labeled as $\ket{n\,\ell\,j\,f\,m_f}$ (omitting $s$ and
-$i$, which do not change during transitions).
+$i$, which do not change during transitions) \cite{qmech, harris}.
 
 The perturbative energy shifts added to to the Coulomb Hamiltonian
 can each be expressed as a function
-of these quantum numbers, and thus of the electrons' states:
+of these quantum numbers, and thus of the electrons' states
+\cite{qmech, harris}:
 
 \begin{equation}
   \braket{\hat H_\text{SO}}
@@ -121,7 +121,7 @@ of these quantum numbers, and thus of the electrons' states:
 where $A$ is the hyperfine constant, varying from system to system.
 Comparing orders of magnitudes, spin-orbit coupling produces the
 largest energy shifts---followed by hyperfine structure and the
-Zeeman effect.
+Zeeman effect \cite{harris}.
 
 % Configuration for Rb: [Kr]5s1
 
@@ -131,37 +131,16 @@ rubidium 85 and rubidium 87 isotopes\footnote{In $nlj$ spectroscopic
   angular momentum, and $j$ is the total electronic angular momentum
   from spin-orbit coupling. $5P_{1/2}$ and $5P_{3/2}$ refer to $n=5$,
   $l=1$ states split into $J=1/2$ and $J=3/2$ fine-structure levels,
-respectively.}. Figure \ref{fig:rb87_splitting} depicts the split energy
+respectively. \cite{harris}}. Figure \ref{fig:rb87_splitting} depicts
+the split energy
 levels of rubidium 87 due to spin-orbit, hyperfine, and Zeeman
 splitting. Transitions between the finest levels can occur for
 several reasons, but are always restricted by
 selection rules (Table
-\ref{tab:e1_selection_rules_corrected}) arising
+\ref{tab:e1_selection_rules_corrected})  arising
 from the electric-dipole interaction Hamiltonian describing the
-interaction of the atom with the electromagnetic field.
-
-\begin{figure}[t]
-  \centering
-  \resizebox{0.8\textwidth}{!}{\input{rb85_splitting.tikz}}
-  \caption{Successive splitting of a representative $^{85}$Rb D1
-    excited-state manifold, showing one spin-orbit split ($5P \to
-    5P_{1/2},5P_{3/2}$), one hyperfine split ($5P_{1/2}\to F'=2,3$),
-    and one Zeeman split ($F'=3\to m_F'$ sublevels).}
-  \label{fig:rb85_splitting}
-\end{figure}
-
-\begin{figure}[t]
-  \centering
-  \resizebox{0.8\textwidth}{!}{\input{rb87_splitting.tikz}}
-  \caption{Successive splitting of a representative $^{87}$Rb D1
-    excited-state manifold, showing one spin-orbit split ($5P \to
-    5P_{1/2},5P_{3/2}$), one hyperfine split ($5P_{1/2}\to F'=1,2$),
-    and one Zeeman split ($F'=2\to m_F'$ sublevels). Note that
-    splitting due to spin-orbit coupling is much larger than that due
-    to hyperfine structure, which is much larger than that due to
-  Zeeman splitting.}
-  \label{fig:rb87_splitting}
-\end{figure}
+interaction of the atom with the electromagnetic field \cite{qmech,
+harris,griffiths_qm}.
 
 \begin{table}[H]
   \centering
@@ -173,7 +152,7 @@ interaction of the atom with the electromagnetic field.
     & $\Delta s = 0$ \\
 
     2 & Orbital $l$
-    & $\Delta l = 0,\pm1$ \; ($l=0 \nleftrightarrow l'=0$) \\
+    & $\Delta l = \pm1$ \\
 
     3 & Total electronic $j$
     & $\Delta j = 0,\pm1$ \; ($j=0 \nleftrightarrow j'=0$) \\
@@ -189,10 +168,50 @@ interaction of the atom with the electromagnetic field.
     \hline
   \end{tabular}
   \caption{Electric-dipole (E1) selection rules relevant to the $^{87}$Rb D$_1$
-    ($5S_{1/2}\rightarrow5P_{1/2}$) optical-pumping transition, expressed in the
-  hyperfine-coupled basis.}
+    ($5S_{1/2}\rightarrow5P_{1/2}$) transition, expressed in the
+  hyperfine-coupled basis \cite{qmech, harris}.}
   \label{tab:e1_selection_rules_corrected}
 \end{table}
+
+The rubidium atoms in this experiment are exposed to a magnetic
+field $\mathbf{B}_0$ along an axis $\mathbf{z}$, causing the energy splitting
+described in Figure \ref{fig:rb87_splitting} and precession about
+$\mathbf{B}_0$ with a Larmor frequency $\omega_0$ \cite{harris}.
+The atoms are simultaneously exposed to radiofrequency (RF) pulses
+$\mathbf{B}_{RF} = B_1 \cos(\omega_1 t) \hat x$ applied transverse to
+$\mathbf{B}_0$. These RF pulses are indistinguishable from a pair of
+counter-rotating magnetic fields of equal strength and frequency
+$\omega_{RF}$, circularly polarized in the $x$-$y$ plane \cite{griff}:
+\begin{align}
+  \mathbf{B}_{1}(t) &= \frac{B_1}{2}\left[\hat x\cos(\omega_{RF} t)+\hat
+  y\sin(\omega_{RF} t)\right] \\
+  \mathbf{B}_{1}'(t) &= \frac{B_1}{2}\left[\hat x\cos(\omega_{RF} t)-\hat
+  y\sin(\omega_{RF} t)\right] \\
+  \mathbf{B}_{RF} &= \mathbf{B}_{1} + \mathbf{B}_{1}' = B_1
+  \cos(\omega_{RF} t) \hat x
+\end{align}
+
+\begin{figure}[H]
+  \centering
+  \resizebox{0.72\textwidth}{!}{\input{rb85_splitting.tikz}}
+
+  \vspace{0.4em}
+
+  \resizebox{0.72\textwidth}{!}{\input{rb87_splitting.tikz}}
+  \caption{Successive splitting of $^{85}$Rb and
+    $^{87}$Rb degenerate Coulomb states $5S$ and $5P$, showing spin-orbit,
+    hyperfine, and Zeeman splitting \cite{harris}. For $^{87}$Rb,
+    splitting due to
+    spin-orbit coupling is much larger than that due to hyperfine
+    structure, which is much larger than that due to Zeeman
+    splitting \cite{harris}. Note that rubidium 85 has more split states
+    available than rubidium 87; this is because the former has a
+    nuclear spin of $5/2$ while the latter has a nuclear spin of
+    $3/2$ \cite{harris}.
+  }
+  \label{fig:rb_splitting}
+  \label{fig:rb87_splitting}
+\end{figure}
 
 % The selection rules and states available produce a nontrivial
 % stochastic system; an initial distribution
@@ -226,58 +245,76 @@ interaction of the atom with the electromagnetic field.
 % population toward a stretched state where no further allowed
 % $\Delta m_F=+1$ absorption exists.
 
-The rubidium atoms in this experiment are exposed to a magnetic
-field $\vec B_0$ along an axis $\vec z$, causing the energy splitting
-described in Figure \ref{fig:rb87_splitting} and precession about
-$\vec B_0$ with a Larmor frequency $\omega_0$.
-The atoms are simultaneously exposed to radiofrequency (RF) pulses
-$\vec B_{RF} = B_1 \cos(\omega_1 t) \hat x$ applied transverse to
-$\vec B_0$. These RF pulses are indistinguishable from a pair of
-counter-rotating magnetic fields of equal strength and frequency
-$\omega_{RF}$, circularly polarized in the $x$-$y$ plane:
-\begin{align}
-  \vec B_{1}(t) &= \frac{B_1}{2}\left[\hat x\cos(\omega_{RF} t)+\hat
-  y\sin(\omega_{RF} t)\right] \\
-  \vec B_{1}'(t) &= \frac{B_1}{2}\left[\hat x\cos(\omega_{RF} t)-\hat
-  y\sin(\omega_{RF} t)\right] \\
-  \vec B_{RF} &= \vec B_{1} + \vec B_{1}' = B_1 \cos(\omega_{RF} t) \hat x
-\end{align}
-
 Figure \ref{fig:dipole_torque} depicts the geometry of the atom's
-total angular momentum $\vec F$ relative to applied fields $\vec B_0$
-and $\vec B_1$, including a precession angle $\alpha$ relative to
-$\vec B_0$, an azimuthal angular position $\beta$ of $\vec F$, and a
-magnetic dipole moment $\vec \mu$ precessing about $\vec F$.
+total angular momentum $\mathbf{F}$ relative to applied fields $\mathbf{B}_0$
+and $\mathbf{B}_1$, including a precession angle $\alpha$ relative to
+$\mathbf{B}_0$, an azimuthal angular position $\beta$ of $\mathbf{F}$, and a
+magnetic dipole moment $\mathbf{\mu}$ precessing about $\mathbf{F}$.
+
+\begin{figure}[H]
+  \centering
+  \input{dipole_torque.tikz}
+  \caption{Precession geometry showing $\mathbf{F}$ precessing about a
+    magnetic field $\mathbf{B}_0$ of constant direction. In the
+    spin-orbit-coupled picture, the magnetic dipole moment of the
+    atom $\mathbf{\mu}$
+    precesses about $\mathbf{F}$ \cite{harris}. Note the azimuthal
+    and polar positions
+    $\beta$ and $\alpha$ of
+    $\mathbf{F}$, associated with the Larmor frequencies $\omega_0$
+    and $\omega_1$
+    caused by $\mathbf{B}_0$ and $\mathbf{B}_1$, respectively
+    \cite{knight, young}.
+  }
+  \label{fig:dipole_torque}
+\end{figure}
 
 When
 $\omega_{RF} = \omega_0 = \dot \beta$,
-$\vec B_1$ appears
-stationary in the precession frame---while $\vec B_{1}'$ appears to
+$\mathbf{B}_1$ appears
+stationary in the precession frame---while $\mathbf{B}_{1}'$ appears to
 rotate in the opposite direction.
-Both $\vec B_1$ and $\vec B_{1}'$
+Both $\mathbf{B}_1$ and $\mathbf{B}_{1}'$
 cause additional torques
-on $\vec \mu$. In $\vec \mu$'s frame of reference, $\vec B_1$ appears
-stationary while $\vec B_{1}'$ appears to rotate in the opposite
-direction with frequency $2\omega_{RF} = 2\omega_0$. Thus, $\vec B_1$ causes
-a steady torque $\tau_1$ on $\mu$ while $\vec B_{1}'$ causes a time-dependent
+on $\mathbf{\mu}$ \cite{young, knight, harris}. In $\mathbf{\mu}$'s
+frame of reference,
+$\mathbf{B}_1$ appears
+stationary while $\mathbf{B}_{1}'$ appears to rotate in the opposite
+direction with frequency $2\omega_{RF} = 2\omega_0$. Thus, $\mathbf{B}_1$ causes
+a steady torque $\tau_1$ on $\mu$ while $\mathbf{B}_{1}'$ causes a
+time-dependent
 torque $\tau_{1}'$ whose effects net to zero across precession
-cycles. The aggregate effect is a steady precession about $\vec B_1$
-with a Larmor frequency $\dot \alpha = \omega_1$, causing $\vec F$ to change its
-precession angle. Thus, an RF pulse can cause a change in $\vec F_z$,
-suggesting that RF pulses can cause changes in the $m_F$ quantum number.
+cycles \cite{knight, young}. The aggregate effect is a steady
+precession about $\mathbf{B}_1$ with a Larmor frequency $\omega_1$,
+causing $\mathbf{F}$ to
+gradually change its precession angle $\alpha$ \cite{harris}. Thus, resonant
+RF pulses meeting the
+resonance condition $\omega_1 = \omega_0$ can cause
+changes in $\mathbf{F}_z$, suggesting that they cause transitions in
+the $m_F$ quantum number. Using theoretical results for the Larmor
+frequency of precession about $\mathbf{B}_0$ \cite{harris, griff,
+young}, the resonance condition
+can be expressed using the RF frequency $f_\text{rf}$ as:
 
-A quantum-mechanical interpretation produces the exact magnitudes of
-the RF-driven energy changes. When an RF pulse $\vec B_1(t) = B_1
+\begin{equation}
+  \frac{g_F \mu_B}{h} B_0 = f_\text{rf}
+  \label{eq:resonance_condition}
+\end{equation}
+
+A quantum-mechanical analysis produces the exact magnitudes of
+the RF-driven energy changes. When an RF pulse $\mathbf{B}_1(t) = B_1
 \cos(\omega_{RF} t) \hat x$ is
 applied, the atom's briefly gains a new Hamiltonian contribution due
-to the coupling between $\vec \mu$ and $\vec B_1$: $\hat H_{RF} =
--\vec \mu \cdot \left( B_1 \cos(\omega_{RF} t) \hat x \right)$.
+to the coupling between $\mathbf{\mu}$ and $\mathbf{B}_1$: $\hat H_{RF} =
+-\mathbf{\mu} \cdot \left( B_1 \cos(\omega_{RF} t) \hat x \right)$
+\cite{qmech}.
 
 As Figure \ref{fig:dipole_torque} illustrates, the atom's magnetic dipole
-moment $\vec \mu$ precesses about $\vec F$; in expectation, it is
-proportional to $\vec F$: $\braket{\mu} = -\frac{g_F \mu_B}{\hbar}
-\vec F$. Thus, one can make the approximation $\vec \mu \approx -\frac{g_F
-\mu_B}{\hbar} \vec F$ and $\hat H_{RF}$ becomes:
+moment $\mathbf{\mu}$ precesses about $\mathbf{F}$; in expectation, it is
+proportional to $\mathbf{F}$: $\braket{\mathbf{\mu}} = -\frac{g_F \mu_B}{\hbar}
+\mathbf{F}$ \cite{harris}. Thus, one can make the approximation $\mathbf{\mu}
+\approx -\frac{g_F
+\mu_B}{\hbar} \mathbf{F}$ and $\hat H_{RF}$ becomes:
 
 % H^rf​=−μ⋅Brf​=ℏgF​μB​​F⋅(B1​cos(ωt)x^).
 
@@ -293,7 +330,7 @@ proportional to $\vec F$: $\braket{\mu} = -\frac{g_F \mu_B}{\hbar}
 where $\hat F_x$ is the projection of the total angular momentum
 operator $\hat F$ onto the $x$-axis (equivalently, the axis of the RF
 pulse). Introduce the operators $\hat F_\pm$ that raise and lower the
-$m_F$ quantum number by 1, respectively. These are defined by:
+$m_F$ quantum number by 1, respectively \cite{qmech}. These are defined by:
 \begin{align}
   \hat F_\pm &= \hat F_x \pm i \hat F_y \quad \left (\text{providing
     } \hat F_x =
@@ -313,43 +350,25 @@ yields:
 \end{equation}
 
 indicating that the RF interaction connects states with relative
-$m_F$ values of $\pm 1$, consistent with the classical conclusion
-that an RF pulse can change $\vec F_z$ via magnetic torque effects.
-
-\begin{figure}[H]
-  \centering
-  \input{dipole_torque.tikz}
-  \caption{Precession geometry showing $\vec{F}$ precessing about a
-    magnetic field $\vec{B}_0$ of constant direction. In the
-    spin-orbit-coupled picture, the magnetic dipole moment of the
-    atom $\vec{\mu}$
-    precesses about $\vec{F}$. Note the azimuthal and polar positions
-    $\beta$ and $\alpha$ of
-    $\vec{F}$, associated with the Larmor frequencies $\omega_0$ and $\omega_1$
-    caused by $\vec{B}_0$ and $\vec{B}_1$, respectively.
-  }
-  \label{fig:dipole_torque}
-\end{figure}
+$m_F$ values of $\pm 1$ \cite{qmech}, consistent with the classical conclusion
+that an RF pulse causes changes in $\mathbf{F}_z$ via
+magnetic torque effects.
 
 Another avenue providing control over the rubidium atoms' energy levels is
-interaction with circularly polarized photons in an E1
-electric-dipole interaction. During these interactions, E1 selection
-rules apply: these include $\pi' = -\pi$, $\Delta \ell = \pm 1$,
-$\Delta j = 0, \pm 1$, and $\Delta m_f = q$ determined by the
-light's polarization component $q$. Note that $q$ is $+1$ for
-right-circularly polarized light and $-1$ for
-left-circularly polarized light.
-
-These photons can cause transitions
-consistent with the selection rules expressed in Table
-\ref{tab:e1_selection_rules_corrected}---namely,
-transitions with $\Delta l = \pm 1$, $\Delta j = 0, \pm 1$, and
-$\Delta m_f = 0, \pm 1$, allowing transitions between the
+interaction with circularly polarized photons. During these
+interactions, the E1 selection rules from Table
+\ref{tab:e1_selection_rules_corrected} apply: namely, $\pi' = -\pi$,
+$\Delta \ell = \pm 1$, $\Delta j = 0, \pm 1$, and $\Delta m_f = q$
+determined by the light's polarization component $q$ \cite{qmech, harris}.
+Note that $q$ is $+1$ for
+right-circularly polarized light and $-1$ for left-circularly polarized light
+\cite{qmech}. This allows transitions between the
 ground $5S_{1/2}$ manifold and the excited $5P_{1/2}$ and $5P_{3/2}$
 manifolds. Upon spontaneous emission, the atoms return to the ground
-$5S_{1/2}$ manifold, resulting in unchanged $l$ and $j$ quantum
-numbers. Abstractly, for an atom starting in the ground manifold,
-a single absorption-emission cycle can be viewed as a process that changes
+$5S_{1/2}$ manifold, resulting in the same $l$ and $j$ quantum
+numbers as before absorption. Abstractly, for an atom starting in the
+ground manifold,
+a complete absorption-emission cycle can be viewed as a process that changes
 $f$, $m_f$, or both.
 
 \[
@@ -370,85 +389,308 @@ Note that other short-lived intermediate states in the excited
 manifold can be attained between absorption and emission, not
 depicted above for clarity. Also of note is that atoms' stints in the
 excited manifold are orders of magnitude more short-lived than atoms
-in the ground manifold, suggesting that these intermediate states are
+in the ground manifold \cite{harris}, suggesting that these
+intermediate states are
 negligible.
 
 Spontaneous emissions have no bias toward a particular $\Delta
-m_f$ value. Thus, if the light triggering an absorption-emission cycle is
-right-circularly polarized, possible values of $\Delta m_f$ across an
-complete absorption-emission cycle are $m_f = \Delta m_f^\text{absorption} +
+m_f$ value \cite{qmech, harris}. Thus, if the light triggering an
+absorption-emission cycle is
+right-circularly polarized, possible values of $\Delta m_f$ across a
+complete absorption-emission cycle are $\Delta m_f = \Delta
+m_f^\text{absorption} +
 \Delta m_f^\text{emission} \in \set{-1 + 1, 0 + 1, 1 + 1} = \set{0,
 +1, +2}$, creating a bias toward higher $m_f$ values. Consider states
-with $F = 2$ and $m_F = 2$. Figure \ref{fig:rb87_splitting} suggests that
+with $F = 2$ and $m_F = 2$ for $^{87}$Rb and $F = 3$ and $m_F = 3$
+for $^{85}$Rb. Figure \ref{fig:rb87_splitting} suggests that
 a transition with $\Delta m_f = +1$ is forbidden; no states in the
-excited manifold have $m_F = 3$. Thus, the stochastic process governing
-the redistribution of atomic states through the ground manifold during
-repeated absorption-emission cycles ($\mathcal P$) provides no
-outward flow from the
-state $\ket{\eta} \equiv \ket{n = 5, l = 0, j = 1/2, f = 2, m_f =
-2}$\footnote{Allow states to be uniquely indexed as $\ket{i}$ for
-  brevity, with $i = \eta$ identifying the unique zero-outflow
+excited manifold have a $m_F$ value of $4$ in $^{85}$Rb's energy level diagram
+and no states in the excited manifold have a $m_F$ value of $3$ in
+$^{87}$Rb's energy level diagram \cite{harris}. Thus, the stochastic
+process $\mathcal P$ governing the redistribution of atomic states through the
+ground manifold during repeated absorption-emission cycles provides no
+outward flow from this zero-outflow state $\ket{\eta}$\footnote{Allow
+  states to be uniquely indexed as $\ket{i}$ for
+  brevity, with $i = \eta$ identifying the zero-outflow
 state.}---while providing
 healthy inward flow. No other states have this property, and $\ket{\eta}$
 is reachable from any other state in the ground manifold. Thus,
 $\ket{\eta}$ becomes an attractor for the system, with an
-attraction basin that is the entire $5S_{1/2}$ ground manifold.
+attraction basin that is the entire $5S_{1/2}$ ground manifold \cite{strog}.
 
 Thus, from a uniform distribution $\pi_0$ of states in the ground manifold,
 the distribution $\pi_n$ of states after $n$ absorption-emission
-cycles converges to a delta distribution centered on $\ket{\eta}$:
-
-$$
-\lim_{n \to \infty} \pi_n = \lim_{n \to \infty} (\mathcal P^n[\pi_0]) =
-\delta_{\eta}
-$$
+cycles converges to a delta distribution centered on $\ket{\eta}$ as
+$n$ approaches infinity:
+\begin{equation}
+  \lim_{n \to \infty} \pi_n = \lim_{n \to \infty} (\mathcal P^n[\pi_0]) =
+  \delta_{\eta}
+\end{equation}
 
 The distribution $\delta_\eta$ is characterized by zero photon
-absorption probability, causing the rubidium isotope to transmit
-light of the wavelength of the $5P_{1/2} \rightarrow 5S_{1/2}$
-transition.
+absorption probability, causing the rubidium isotope to entirely transmit
+light of the wavelength of the $5S_{1/2} \rightarrow 5P_{1/2}$
+transition when in this "pumped" state \cite{harris}.
 
-$\mathcal P$ can be changed by switching on an RF field $\vec B_1$.
-Established above, the RF field produces spontaneous $\Delta m_f = \pm
-1$ transitions through coupling with $\vec \mu$, removing the bias toward higher
+$\mathcal P$ can be changed by switching on an RF field $\mathbf{B}_1$.
+Established above, the RF field drives $\Delta m_f = \pm
+1$ transitions through coupling with $\mathbf{\mu}$, removing the
+bias toward higher
 $m_f$ values and providing outward flow from $\ket{\eta}$. This
 produces a new steady-state distribution $\pi_\text{depumped}$,
-characterized by a nonzero absorption probability for the $5P_{1/2} \rightarrow
-5S_{1/2}$ transition photons and a smaller transmission intensity.
+characterized by a nonzero absorption probability for the $5S_{1/2} \rightarrow
+5P_{1/2}$ transition photons and a smaller transmission intensity.
+
+This experiment uses Helmholtz coils to produce magnetic fields. For
+a Helmholtz coil pair, the magnetic field at the midpoint is
+\begin{equation}
+  B = \left(\frac{4}{5}\right)^{3/2}\frac{\mu_0 N I}{R},
+  \label{eq:helmholtz_field}
+\end{equation}
+where $\mu_0$ is the vacuum permeability, $N$ is the turns per coil,
+$I$ is the coil current, and $R$ is the coil radius \cite{helm}.
+
+\section{Goal}
+
+This experiment aims to measure the hyperfine Land\'{e}
+$g$-factors $g_F$ of the $5S_{1/2}$ ground states of $^{85}$Rb and
+$^{87}$Rb. By optically pumping rubidium atoms into a single
+Zeeman sublevel and observing RF-induced depumping as a function of
+applied magnetic field strength, the resonance condition
+\eqref{eq:resonance_condition} is used to extract $g_F$ for each
+isotope. Additionally, the characteristic optical pumping time
+$\tau$ is measured from the transmission signal recovery, and the
+cancellation-coil settings are used to recover the local
+components of Earth's magnetic field as a consistency check.
 
 \section{Procedure}
 
-The experimental setup for optical pumping is shown in Figure
-\ref{fig:optical_pumping_setup}. Light from an RF discharge lamp
+The optical rail configuration for optical pumping is shown in Figure
+\ref{fig:optical_pumping_setup}, while Figure
+\ref{fig:helmholtz_coils} focuses on a Helmholtz coil configuration
+used to cancel magnetic fields
+in a rubidium absorption cell positioned on the optical rail.
+Light from a rubidium discharge lamp
 passes through an interference filter to select the appropriate
-wavelength for the rubidium D$_1$ transition ($5S_{1/2} \rightarrow
-5P_{1/2}$, $\lambda = 794.8$ nm). The light then passes through a
+wavelength for the rubidium $5P_{1/2} \rightarrow
+5S_{1/2}$ transition. The light then passes through a
 linear polarizer and a quarter-wave plate to produce circularly
 polarized light, which is directed through the rubidium absorption
-cell. The rubidium cell is placed in a static magnetic field oriented
-horizontally and an RF magnetic field oriented vertically. The
-transmitted light intensity is measured by an optical detector.
+cell. Convergent lenses preseve the intensity of light rays passing
+through the apparatus, focusing them onto the rubidium cell and onto
+the optical detector. The rubidium cell is placed in a set of three orthogonal
+Helmholtz coils, providing a horizontal magnetic field
+$\mathbf{B}_0$ along the $z$-axis, a transverse RF magnetic field
+$\mathbf{B}_1$
+along the $x$-axis, and a vertical field used to cancel Earth's
+vertical magnetic field. The optical axis points North to South,
+causing Earth's magnetic field and the experimental setup to be coplanar.
+Note that in this apparatus orientation, the three coils are capable of
+exactly cancelling Earth's magnetic field at the
+rubidium absorption cell, allowing for fine control over the magnetic
+field used to induce the split states necessary for pumping. The
+transmitted light intensity is measured
+by an optical detector, providing a measure of how close the system's
+atomic state distribution is to $\delta_\eta$.
 
 \begin{figure}[H]
   \centering
   \resizebox{\textwidth}{!}{\input{optical_pumping_setup.tikz}}
   \caption{Schematic diagram of the optical pumping apparatus. Light
     from the RF discharge lamp is filtered, polarized, and directed
-    through the rubidium absorption cell, which is subjected to both
-    static and RF magnetic fields. The transmitted light intensity is
-  monitored by the optical detector.}
+    through the rubidium absorption cell, which is subjected to
+    horizontal, vertical, and transverse RF magnetic fields. The
+    transmitted light intensity is
+    monitored by the optical detector. Not shown: an arrangement of three coils
+    around the rubidium absorption cell. See Figure
+  \ref{fig:helmholtz_coils} for a description of this structure.}
   \label{fig:optical_pumping_setup}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \resizebox{0.5\textwidth}{!}{\input{helmholtz_coils.tikz}}
-  \caption{Magnetic field configuration for the rubidium absorption
-    cell. The large annulus represents the Helmholtz coils providing
-    the primary static magnetic field. Two pairs of smaller rectangular
-    coils (top/bottom and left/right) provide additional field
-    control and RF magnetic fields.}
+  \resizebox{0.7\textwidth}{!}{\input{helmholtz_coils.tikz}}
+  \caption{Coil configuration around the rubidium absorption
+    cell. The large annulus represents the Helmholtz coils, which provide
+    the primary horizontal magnetic field $\mathbf{B}_0$. Two pairs of
+    smaller coils (top/bottom and left/right) provide additional control of
+    the vertical field component and the RF magnetic field $\mathbf{B}_1$
+    used to induce depumping. Note that this diagram is a side view of the
+    cell depicted in Figure \ref{fig:optical_pumping_setup}, oriented along the
+  $z$-axis.}
   \label{fig:helmholtz_coils}
 \end{figure}
+
+The horizontal $\mathbf{B}_0$ coils are configured to sweep through a range of
+$\mathbf{B}_0$ strengths and thus through Larmor frequencies
+$\omega_0$ of the rubidium atoms' angular momenta $\mathbf{F}$. The
+RF field frequency $f = \omega_1 / 2\pi$ is
+varied to achieve the resonance condition $\omega_1 = \omega_0$
+necessary to cause $\Delta m_f = \pm 1$ transitions. This results in
+a photodetector signal, proportional to the transmitted light intensity,
+that is globally constant with the exception of narrow peaks at which
+the light intensity decreases---which indicate satisfaction of the
+resonance condition and the loss of the bias toward
+$\ket {\eta}$. An example of such a signal is shown in Figure
+\ref{fig:resonance_dips}.
+
+The sweep-field strength associated with resonance varies with the predetermined
+frequency $\omega_1$ of the RF field. Data points investigating this
+relationship are collected, comprising an array of RF frequencies and
+an associated array of sweep-field strengths at which resonance is achieved,
+organized in Table \ref{tab:gfactor_data} for both $^{85}$Rb and
+$^{87}$Rb. Fitting the $f$ vs. resonant $B_0$ relationship expressed
+in \eqref{eq:resonance_condition} to these
+data points produces
+the plots in Figure \ref{fig:gfactor_fits} for both $^{85}$Rb and
+$^{87}$Rb and a $g_F$ value derived from the slopes of the fits. Comparisons
+between experimental and theoretical $g_F$ values are made in Table
+\ref{tab:gfactor_comparison}.
+
+An analysis of the characteristic recovery time of the photodetector
+transmission signal is also conducted by fitting an exponential recovery curve
+to the data points. The characteristic recovery time is extracted
+from the fitted parameters of an exponential recovery curve
+and reported in Table \ref{tab:pumping_times} for either isotope.
+
+\section{Results}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{/Users/spandan/.cursor/projects/Users-spandan-Projects-homework/assets/image-9c7dc6de-cf32-4a9e-ad97-824a7031ba41.png}
+  \caption{Oscilloscope trace showing resonance dips observed during
+    optical pumping measurements for $^{85}$Rb and $^{87}$Rb. Note the
+    three dips in transmission signal intensity. The first dip
+    corresponds to a sweep-coil strength that cancels Earth's
+    horizontal magnetic field exactly at the location of the rubidium
+    absorption cell. Recall that the vertical coil voltage is also tuned
+    to cancel Earth's vertical magnetic field. In this state, no Zeeman
+    splitting occurs due to a lack of magnetic field, causing disappearance
+    of the unique pumped state $\ket
+    \eta$ and allowing photon absorption. The second and third dips
+    correspond to the resonance condition in rubidium 87 and 85,
+  respectively, as the RF interaction allows transitions out of $\ket \eta$.}
+  \label{fig:resonance_dips}
+\end{figure}
+
+\begin{table}[H]
+  \centering
+  \input{../output/gfactor_data_table.tex}
+  \caption{Frequency vs. resonant sweep-field strength data for both
+    $^{85}$Rb and $^{87}$Rb. The voltages to the $\mathbf{B}_0$
+    coils at which resonance occurs are derived from
+    the coordinates of transmission dips in the photodetector
+    signal, translated to a value of $|\mathbf{B}_0|$ using
+  \eqref{eq:helmholtz_field}.}
+  \label{tab:gfactor_data}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{../output/gfactor_fits.pdf}
+  \caption{Frequency vs. resonant sweep-field strength data for both
+    $^{85}$Rb and $^{87}$Rb. The slopes of the fits are used to derive
+  the $g_F$ values for each rubidium isotope.}
+  \label{fig:gfactor_fits}
+\end{figure}
+
+\begin{table}[H]
+  \centering
+  \input{../output/gfactor_comparison_table.tex}
+  \caption{Comparisons between experimental and theoretical $g_F$ values for
+    both $^{85}$Rb and $^{87}$Rb. The deviations $\Delta g_F =
+    |g_F^\text{experimental} - g_F^\text{theoretical}|$ are presented as a
+    proportion of the uncertainty $\sigma$ in the experimental $g_F$ value.
+    Theoretical values are obtained from Steck's alkali D-line data compilations
+  \cite{SteckRb85,SteckRb87}.}
+  \label{tab:gfactor_comparison}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{../output/recovery_fits.pdf}
+  \caption{Exponential recovery fits for $^{85}$Rb and $^{87}$Rb. Reported
+    characteristic times are the fitted $\tau$ values from
+  $V(t)=c + a e^{-(t-t_0)/\tau}$.}
+  \label{fig:recovery_fits}
+\end{figure}
+
+\begin{table}[H]
+  \centering
+  \input{../output/pumping_time_table.tex}
+  \caption{Characteristic optical pumping times $\tau$ extracted from
+    exponential fits to the transmission signal recovery interval for
+  both rubidium isotopes.}
+  \label{tab:pumping_times}
+\end{table}
+
+The vertical coil voltage is used to cancel Earth's vertical magnetic
+field $\vec B_V$ exactly. At the location of the first dip in Figure
+\ref{fig:resonance_dips}, the horizontal coil voltage is tuned to
+cancel Earth's horizontal magnetic field $\vec B_H$ exactly. As a
+consistency check, the field strengths of these coils can be used to
+recover Earth's magnetic field and its angle with the horizontal
+lab plane exactly. Table \ref{tab:earth_field_recovery} organizes the results
+of this check.
+
+\begin{table}[H]
+  \centering
+  \input{../output/earth_field_recovery_table.tex}
+  \caption{Recovered components of Earth's magnetic field at the
+    location of the experimental apparatus.
+    $B_H$ is the horizontal field strength and $B_V$ is the vertical
+    field strength. Deviations from accepted values \cite{noaa} are
+    reported as a
+  proportion of experimental uncertainty.}
+  \label{tab:earth_field_recovery}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \input{../output/earth_field_magnitude_table.tex}
+  \caption{Recovered total magnitude $|\mathbf{B}|$ and dip angle
+    $\theta = \arctan(B_V / B_H)$ of Earth's magnetic field, derived
+  from the component values in Table \ref{tab:earth_field_recovery}.}
+  \label{tab:earth_field_magnitude}
+\end{table}
+
+\section{Discussion}
+
+Pumping of atomic states into the attractor state $\ket \eta$ for both
+rubidium isotopes and depumping via an RF field interaction is
+successful, causing visible resonance dips in the transmission
+intensity of the photons used to bias state transitions when the
+sweep field $\mathbf{B}_0$ approaches a value near the resonance
+condition. As the applied RF frequency is increased, the resonance
+condition is satisfied at a higher
+different sweep field strength, as predicted by
+\eqref{eq:resonance_condition}. The resonance
+dip for rubidium 87 occurs at a lower field strength than that for rubidium 85,
+in agreement with \eqref{eq:resonance_condition}:
+rubidium 87, with the larger
+$g$-factor associated with the relevant hyperfine-split state, requires a
+lower field strength to achieve the resonance condition at a fixed RF
+frequency. An additional initial dip in transmission intensity is also observed,
+confirming that the experimental setup is able to cancel Earth's magnetic field.
+
+Experimental values of $g_F$ for both rubidium isotopes are recovered
+to approximately $1\sigma$ as compared with accepted values. The
+characteristic time of transmission signal recovery after depumping,
+associated with the time required for atomic states to
+converge to $\ket{\eta}$, is found to be $11.4 \pm 0.1$ ms for $^{87}$Rb and
+$15.4 \pm 0.1$ ms for $^{85}$Rb, agreeing with the expected range of
+10--20 ms. Values for Earth's magnetic field are recovered to moderate agreement
+with accepted values, with deviations around $1\sigma$.
+
+Likely causes for deviations from accepted values include the
+imperfect cancellation of Earth's magnetic field due to misalignment
+of the optical rail, inconsistencies in the construction of the
+Helmholtz coils, and imperfections in the location of the rubidium
+absorption cell within the coils that make the formula
+\eqref{eq:helmholtz_field} for the magnetic field at the sample location
+slightly invalid.
+
+\bibliographystyle{unsrt}
+\bibliography{references}
 
 \end{document}

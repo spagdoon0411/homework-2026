@@ -117,5 +117,6 @@
 % --- Energy axis ---
 \draw[->, thick] (-0.7, -1.5) -- (-0.7, 8.5);
 \node[rotate=90] at (-1.0, 3.5) {Energy};
+\node[rotate=90, font=\small\bfseries] at (-1.55, 3.5) {Weak-Field Energy Levels of $^{87}$Rb};
 
 \end{tikzpicture}

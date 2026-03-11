@@ -20,7 +20,7 @@
 \def\yFpTwo{4.35}
 \def\yFgThree{0.95}
 \def\yFgTwo{-0.95}
-\def\dz{0.18}
+\def\dz{0.24}
 
 % --- Column headers ---
 \node[font=\small, anchor=south] at ({(\xA+\xAend)/2}, 8.6) {Coulomb};
@@ -117,5 +117,6 @@
 % --- Energy axis ---
 \draw[->, thick] (-0.7, -1.8) -- (-0.7, 8.5);
 \node[rotate=90] at (-1.0, 3.2) {Energy};
+\node[rotate=90, font=\small\bfseries] at (-1.55, 3.2) {Weak-Field Energy Levels of $^{85}$Rb};
 
 \end{tikzpicture}

@@ -18,15 +18,15 @@
   % Labels with arrows
   % Outer coil label
   \draw[-{Stealth[length=2mm,width=1.5mm]}] (3.0,3.0) -- (2.1,2.1);
-  \node[above right] at (3.0,3.0) {$\vec{B}_0$ coils};
+  \node[above right] at (3.0,3.0) {$\mathbf{B}_0$ coils};
 
   % Vertical coils label
   \draw[-{Stealth[length=2mm,width=1.5mm]}] (2.8,1.3) -- (1.5,1.3);
-  \node[right] at (2.8,1.3) {Vertical coils};
+  \node[right] at (2.8,1.3) {Vertical field control coils};
 
   % RF coils label
   \draw[-{Stealth[length=2mm,width=1.5mm]}] (-3.2,0) -- (-1.4,0);
-  \node[left] at (-3.2,0) {$\vec{B}_\text{rf}$ coils};
+  \node[left] at (-3.2,0) {$\mathbf{B}_\text{rf}$ coils};
 
   % Coordinate system indicator (right of diagram)
   \begin{scope}[shift={(4.0,-2.0)}]
