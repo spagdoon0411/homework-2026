@@ -202,12 +202,13 @@ for substance, config in trace_config.items():
 
             # Plot
             fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 8))
+            fig.suptitle(f"$T_2^*$ Analysis for {substance}", fontsize=14, fontweight='bold')
 
             ax1.plot(time_filtered * 1e3, voltage_processed, linewidth=0.8, alpha=0.7,
                     label="Oscilloscope trace", color="blue")
             ax1.set_xlabel("Time (ms)")
             ax1.set_ylabel("Voltage (V)")
-            ax1.set_title(f"{substance}: {selected_file}")
+            ax1.set_title("Oscilloscope Data")
             ax1.grid(True, alpha=0.3)
             ax1.legend()
             ax1.axhline(y=0, color="k", linewidth=0.5, alpha=0.3)
@@ -215,11 +216,10 @@ for substance, config in trace_config.items():
             voltage_fit = exponential_decay(time_normalized, A, T2star, offset)
             ax2.plot(time_filtered * 1e3, voltage_processed, "o", markersize=2, alpha=0.4,
                     label="Oscilloscope trace")
-            ax2.plot(time_filtered * 1e3, voltage_fit, "r-", linewidth=2,
-                    label=f"$V(t) = ({A:.3f}\\,\\mathrm{{V}})e^{{-t/({T2star*1e3:.3f}\\,\\mathrm{{ms}})}} + {offset:.3f}\\,\\mathrm{{V}}$")
+            ax2.plot(time_filtered * 1e3, voltage_fit, "r-", linewidth=2, label="Exponential fit")
             ax2.set_xlabel("Time (ms)")
             ax2.set_ylabel("Voltage (V)")
-            ax2.set_title(f"$T_2^* = ({T2star * 1e3:.3f} \\pm {sigma_T2star * 1e3:.3f})$ ms")
+            ax2.set_title(f"Exponential Decay Fit: $T_2^*$ = ({T2star * 1e3:.3f} $\\pm$ {sigma_T2star * 1e3:.3f}) ms")
             ax2.grid(True, alpha=0.3)
             ax2.legend()
 
@@ -257,25 +257,28 @@ for substance, config in trace_config.items():
 
             # Plot
             fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 8))
+            fig.suptitle(f"$T_2^*$ Analysis for {substance}", fontsize=14, fontweight='bold')
 
             ax1.plot(time_filtered * 1e3, voltage_processed, linewidth=0.8, alpha=0.7,
                     label="Oscilloscope trace", color="blue")
             ax1.set_xlabel("Time (ms)")
             ax1.set_ylabel("Voltage (V)")
-            ax1.set_title(f"{substance}: {selected_file}")
+            ax1.set_title("Oscilloscope Data")
             ax1.grid(True, alpha=0.3)
             ax1.legend()
             ax1.axhline(y=0, color="k", linewidth=0.5, alpha=0.3)
 
+            # Plot processed oscillation data (absolute value) as context
+            ax2.plot(time_filtered * 1e3, np.abs(voltage_processed), "-", linewidth=0.8,
+                    color="gray", alpha=0.5, label="Processed oscillation data")
             ax2.plot(envelope_time * 1e3, envelope_voltage, "o", markersize=5, alpha=0.6,
                     label="Envelope peaks")
             time_fit = np.linspace(envelope_time.min(), envelope_time.max(), 1000)
             voltage_fit = exponential_decay(time_fit, A, T2star, offset)
-            ax2.plot(time_fit * 1e3, voltage_fit, "r-", linewidth=2,
-                    label=f"$V(t) = ({A:.3f}\\,\\mathrm{{V}})e^{{-t/({T2star*1e3:.3f}\\,\\mathrm{{ms}})}} + {offset:.3f}\\,\\mathrm{{V}}$")
+            ax2.plot(time_fit * 1e3, voltage_fit, "r-", linewidth=2, label="Exponential fit")
             ax2.set_xlabel("Time (ms)")
             ax2.set_ylabel("|Voltage| (V)")
-            ax2.set_title(f"$T_2^* = ({T2star * 1e3:.3f} \\pm {sigma_T2star * 1e3:.3f})$ ms")
+            ax2.set_title(f"Exponential Decay Fit: $T_2^*$ = ({T2star * 1e3:.3f} $\\pm$ {sigma_T2star * 1e3:.3f}) ms")
             ax2.grid(True, alpha=0.3)
             ax2.legend()
 

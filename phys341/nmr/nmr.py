@@ -119,7 +119,7 @@ for name, res in results.items():
 
     plt.xlabel("$\\mu_N B_0$ (J)")
     plt.ylabel("$h\\nu_{\\mathrm{rf}}$ (J)")
-    plt.title(f"{name}")
+    plt.title(f"$g$-factor Linear Fit for {name}")
     plt.legend()
     plt.grid(True, alpha=0.3)
     plt.tight_layout()
@@ -165,6 +165,8 @@ for name, res in results.items():
     with open(filename, "w") as f:
         f.write("\\begin{tabular}{cc}\n")
         f.write("\\hline\n")
+        f.write("\\multicolumn{2}{c}{" + name + "} \\\\\n")
+        f.write("\\hline\n")
         f.write(
             f"$B_0$ (G, $\\pm$ {sigma_B}) & $\\nu_{{\\mathrm{{rf}}}}$ (MHz, $\\pm$ {sigma_f}) \\\\\n"
         )
@@ -202,13 +204,33 @@ plt.fill_between(
     label=f"SDOM: $\\sigma_{{\\mathrm{{SDOM}}}} = {g_sdom:.4f}$",
 )
 
+# Plot individual measurements with uncertainties
+for i, name in enumerate(proton_samples):
+    plt.errorbar(
+        i,
+        results[name]["g"],
+        yerr=results[name]["sigma_g"],
+        fmt='o',
+        color='black',
+        capsize=5,
+        markersize=6
+    )
+
+# Calculate appropriate y-limits to show all error bars
+all_g_values = [results[name]["g"] for name in proton_samples]
+all_errors = [results[name]["sigma_g"] for name in proton_samples]
+y_min = min([g - err for g, err in zip(all_g_values, all_errors)])
+y_max = max([g + err for g, err in zip(all_g_values, all_errors)])
+y_range = y_max - y_min
+y_margin = 0.1 * y_range
+
 plt.xlim(-0.5, len(proton_samples) - 0.5)
-plt.ylim(g_H1_theoretical - 0.5, g_H1_theoretical + 0.5)
+plt.ylim(y_min - y_margin, y_max + y_margin)
 plt.ylabel("Proton $g$-factor")
 plt.title("SDOM Analysis of Proton $g$-factors")
+plt.xticks(x_range, proton_samples, rotation=45, ha='right')
 plt.legend()
 plt.grid(True, alpha=0.3, axis='y')
-plt.xticks([])
 plt.tight_layout()
 plt.savefig("phys341/nmr/out/proton_g_sdom.pdf")
 plt.close()
