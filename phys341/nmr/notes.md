@@ -43,6 +43,10 @@ phys341/nmr/trace_processing/t2star_traces/PTFE_Responses_Spandan
 
 ---
 
+Export the trace from phys341/nmr/trace_processing/t2star_traces/3895G_FFTs/FFT 1 2026-02-23 14-34-27.csv. This is a Fourier transform for a frequency pulse. Fit a Gaussian, report the equation in the legend,
+
+---
+
 # To Dos
 
 - [x] g-factors for each one
@@ -51,8 +55,18 @@ phys341/nmr/trace_processing/t2star_traces/PTFE_Responses_Spandan
 - [x] label data tables
 - [x] mass import envelope data
 - [x] do inversion of all negative envelope data and display results
-- [ ] process ptfe separately
-- [ ] report T2\* plots and values in table
-- [ ]
+- [x] process ptfe separately
+- [ ] sdom analysis for g-factor results
+- [x] report T2\* plots and values in table
+- [ ] explain cuso4 and ptfe differences
+- [ ] assess rf uncertainty by fitting Gaussian
+- [ ] (needs more context): systematic error investigation (red star)
+- [ ] does t2\* depend on the resonance frequency? measure and find out
+- [ ] answer experimental context quesitons
+  - [ ] discuss what you saw inside the hole and how a marginal oscillator works
+  - [ ] discuss how chemical structures, polarity, and "the physics that a t2\* signal indicates" results in differences in those signals. "be sure to discuss what physics each constant tells you about the physics of nmr"
+  - [ ] why is it important to measure resonant frequency when spikes are equally spaced?
+  - [ ] direct analogy with Dynamic #3 lab (cite any sources)
+  - [ ] compare all T2\* values
 
 \mu(^{19}\mathrm{F}) = 2.628\,321\,353(17)\ \mu_N
