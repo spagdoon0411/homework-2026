@@ -67,20 +67,20 @@ Export the trace from phys341/nmr/trace_processing/t2star_traces/3895G_FFTs/FFT 
 - [x] sdom analysis for g-factor results
 - [x] report T2\* plots and values in table
 - [x] assess rf uncertainty by fitting Gaussian
-- [ ] (needs more context): systematic error investigation (red star)
+- [ ] systematic error investigation
 - [ ] does t2\* depend on the resonance frequency? measure and find out
-- [ ] answer experimental context quesitons
-  - [ ] discuss what you saw inside the hole and how a marginal oscillator works
-  - [ ] discuss how chemical structures, polarity, and "the physics that a t2\* signal indicates" results in differences in those signals. "be sure to discuss what physics each constant tells you about the physics of nmr"
-  - [ ] why is it important to measure resonant frequency when spikes are equally spaced?
-  - [ ] direct analogy with Dynamic #3 lab (cite any sources)
-  - [ ] compare all T2\* values
+- [x] answer experimental context quesitons
+  - [x] discuss what you saw inside the hole and how a marginal oscillator works
+  - [x] discuss how chemical structures, polarity, and "the physics that a t2\* signal indicates" results in differences in those signals. "be sure to discuss what physics each constant tells you about the physics of nmr"
+  - [x] why is it important to measure resonant frequency when spikes are equally spaced?
+  - [x] direct analogy with Dynamic #3 lab (cite any sources)
+  - [x] compare all T2\* values with each other
 - [x] move around titles
 - [ ] discuss g-factor plot results
 - [ ] discuss sdom plot results
 - [ ] discuss T2\* plot reuslts
 - [ ] discuss Gaussian fit
-- [ ] use updated rf unc and regenerate plots
+- [ ] use updated rf unc and regenerate results
 - [ ] add captions
 - [ ] add citations
 
@@ -89,9 +89,3 @@ Export the trace from phys341/nmr/trace_processing/t2star_traces/3895G_FFTs/FFT 
 # Discussions
 
 ## Marginal Oscillator
-
-The sample holder contains a marginal oscillator, which is a standard inductor-capacitor (LC) circuit. LC circuits have a resonant frequency that is a function of their inductance $L$ and their capacitance $C$:
-
-$$
-\omega_\text{res} = \frac{1}{\sqrt{LC}}
-$$

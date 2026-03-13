@@ -168,7 +168,163 @@ samples \cite{dummy2024}.
   \includegraphics[width=0.8\textwidth]{../out/fft_gaussian_fit.pdf}
 \end{figure}
 
+\section*{Analysis}
+
+\section*{Technical Discussion}
+
+\subsection*{Marginal Oscillator}
+
+The sample holder contains a marginal oscillator, which is a standard
+inductor-capacitor (LC) circuit; The coil of the marginal oscillator
+was visible when peering inside of the sample holder hole.
+LC circuits have a resonant angular frequency that is a function of their
+inductance $L$ and their capacitance $C$:
+
+$$
+\omega_\text{LC} = \frac{1}{\sqrt{LC}}
+$$
+
+where $\omega_\text{LC}$ is the resonant angular frequency of the LC circuit.
+
+The RF frequency knob of the RF signal programmer sets the value of
+$C$ such that $\omega_{LC}$ matches the angular frequency of the RF
+signal.
+
+\subsection*{Comparing CuSO$_4$-H$_2$O and PTFE}
+
+Unlike the
+rest of the samples, whose resonant nucleus is a ${}^1H$ nucleus,
+PTFE's (or polytetrafluoroethylene's) resonant nucleus is a
+${}^{19}F$ nucleus. This results in
+resonant nucleus is a ${}^1H$ nucleus, PTFE's resonant nucleus is a
+${}^{19}F$ nucleus. This results in different $g$-factors for the two
+samples, $g_H$ (or $g_p$) and $g_F$.
+
+The nuclear $g$-factor can be related to the nuclear spin quantum
+number $I$, the magnetic moment $\mu$ of a nucleus in question, and
+the nuclear magneton $\mu_N$ by the following equation:
+
+$$
+g = \frac{\mu}{\mu_N I}
+$$
+
+For ${}^1H$, $I = \frac{1}{2}$ and $\mu_H = 2.782 ... \mu_N$. For
+${}^{19}F$, $I = \frac{1}{2}$ and $\mu_F = 2.627... \mu_N$. Both the
+${}^1H$ and ${}^{19}F$ nuclei have the same nuclear spin quantum number
+$I = \frac{1}{2}$. Additionally, $\mu_H$ and $\mu_F$ are similar,
+resulting in a similar (but not identical) $g$-factor for the nuclei.
+
+Although related, the shape of the resonance structure for either
+compound does not directly determine the $g$-factor of the
+nucleus---which is a function of $\mu$ and $I$.
+
+PTFE, or polytetrafluoroethylene, is a solid and a polymer, whereas
+CuSO$_4$-H$_2$O is an ionic compound dissolved in water. PTFE's
+nuclei experience deeper potential wells due to
+the bonds its atoms participate in. This is expected from a polymer,
+especially in comparison to a liquid solution in which the nuclei are
+not as constrained.
+
+Immediately after an on-resonance period, this results
+in larger dissipation of energy from the PTFE nuclei as compared to
+the liquid solutions---and thus an overdamped (decaying exponential)
+response instead of an underdamped (oscillatory) response. This
+difference is visible between the oscilloscope traces for PTFE and
+CuSO$_4$-H$_2$O.
+
+\subsection*{Equal Spacing of Resonance Windows}
+
+The magnetic field causing nuclear precession is sinusoidally
+modulated: $\vec B(t) = \vec B_0 + \vec \tilde B
+\cos(\omega_\text{s} t)$. A fixed RF frequency $\omega_\text{rf}$
+defines a single resonant magnetic field strength $B_\text{resonant}$
+at which the resonance
+condition $\omega_\text{rf} = \omega_0$ is met, where $\omega_0$ is
+the Larmor frequency of precession about $\vec B(t)$.
+$B_\text{resonant}$ a constant; the resonance condition must be met
+at level sets of $B(t)$ corresponding to $B(t) = B_\text{resonant}$.
+
+Level sets of sinusoids are equally spaced at the equilbrium level,
+corresponding to nodes of the sinusoid.
+
+At these nodes, the
+approximation $\tilde B \cos(\omega_\text{s} t) \approx \tilde B
+\omega_\text{s} t$ is valid and the relationship between $B$ and $t$
+is affine and the equilibrium magnetic field level equals the
+resonant magnetic field level.
+
+$$
+B(t) = B_\text{resonant} + \tilde B \omega_\text{s} t
+$$
+
+When the resonance condition is met, the relationship between $B$ and
+$\omega_\text{rf}$ is also affine.
+
+$$
+\quad \quad
+\hbar \omega_\text{rf} = g \mu_N B
+$$
+
+Thus, when both conditions are met, the relationship between
+$\omega_\text{rf}$ and $t$ is affine. Frequency differences
+are proportional to time differences in this regime around sinudoid
+nodes and on resonance.
+
+$$
+\frac{\hbar \omega_\text{rf}}{g \mu_N} = B_\text{resonant}+ \tilde B
+\omega_\text{s} t \Rightarrow d\omega_\text{rf} =
+\frac{\omega_\text{s} g \mu_N \tilde B}{\hbar} dt
+$$
+
+This allows us to convert the width of a resonance window as measured
+on the time axis of the oscilloscope trace of a resonance signal into a
+frequency uncertainty using a single factor of proportionality.
+
+\subsection*{Analogies with PHYS 340's Magnetic Torque Lab}
+
+The mangetic torque lab performed in PHYS 340 involved a macroscopic
+magnetic dipole precessing about a vertical magnetic field with a
+Larmor frequency $\omega_0$. This is analogous to the ensemble-average net
+magnetization vector $\vec M$ precessing about a constant-direction
+magnetic field $\vec B(t)$ with a Larmor frequency $\omega_0$ in this
+NMR experiment.
+
+In the PHYS 340 lab, a pair of magnets was rotated within the dipole's
+precession frame, causing a torque on the dipole and inducing a
+secondary orthogonal precession about the field $\vec B_1$ caused by
+the magnets. This is exactly analogous to an RF pulse lifting nuclear
+magnetic dipoles to higher-energy states (by causing $\Delta m_I$ =
+$-1$ transitions) through the creation of a circularly polarized
+magnetic field $\vec B_1$. Also note that the macroscopic dipole did
+not experience the secondary
+precession unless the magnets were kept exactly fixed relative to the
+dipole; this is analogous to the resonance condition $\omega_1 =
+\omega_0$ in this experiment.
+
+\subsection*{Comparison of T2* Values}
+
+All experimental characteristic relaxation times fall within the
+range of 0.2 to 1.0 ms. Note that a determination of $T_2^*$ is subject to
+variability across different trials of this experiment due to the influence of
+the magnetic field inhomogeneity present in the sample holder,
+which is highly dependent on our particular apparatus. For reference,
+$T_2^*$ is related to the
+effective field inhomogeneity $\Delta B$ by:
+$$
+T_2^* = \frac{1}{\gamma \Delta B} + \gamma \Delta B
+$$
+
+where $\gamma$ is the gyromagnetic ratio and $T_2$ is a time constant
+associated with spin-spin interaction effects in isolation from field
+inhomogeneity effects.
+
+Also note that despite the indistinguisabiliy of the resonant nuclei
+across all of the ${}^1H$-nuclei samples (all compounds save for
+PTFE), $T_2^*$ values differ significantly due to neighboring atoms
+and impurities in the samples.
+
 \bibliographystyle{plain}
 \bibliography{references}
 
 \end{document}
+

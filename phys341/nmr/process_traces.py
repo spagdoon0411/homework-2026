@@ -7,6 +7,7 @@ from scipy.optimize import curve_fit
 
 plt.rcParams["font.size"] = 12
 
+
 def load_trace(filepath):
     """Load oscilloscope trace data from CSV file."""
     with open(filepath, "r", encoding="utf-8-sig") as f:
@@ -32,9 +33,10 @@ def load_trace(filepath):
     df = pd.DataFrame(data, columns=["time", "voltage"])
     return df
 
+
 def lowpass_filter(time, voltage, cutoff_freq, order=4):
     """Apply Butterworth low-pass filter to the signal."""
-    dt = np.mean(np.diff(time))
+    dt = np.mean(np.diff(time)) * 1e-3
     fs = 1.0 / dt
     nyquist = fs / 2.0
     normalized_cutoff = cutoff_freq / nyquist
@@ -46,9 +48,11 @@ def lowpass_filter(time, voltage, cutoff_freq, order=4):
     filtered_voltage = filtfilt(b, a, voltage)
     return filtered_voltage
 
+
 def exponential_decay(t, A, T2star, offset):
     """Exponential decay function."""
     return A * np.exp(-t / T2star) + offset
+
 
 def extract_envelope(time, voltage, min_peak_height=None):
     """Extract envelope by finding local maxima."""
@@ -70,6 +74,7 @@ def extract_envelope(time, voltage, min_peak_height=None):
             raise ValueError("No peaks found in signal")
 
     return time[peaks], abs_voltage[peaks]
+
 
 # Load all traces
 trace_dirs = {
@@ -96,7 +101,7 @@ for substance, dir_path in trace_dirs.items():
 
 traces_df = pd.concat(all_traces, ignore_index=True)
 
-# Configuration
+# Configuration (time_range in ms)
 trace_config = {
     "CuSO4": {
         "trace_index": 1,
@@ -106,21 +111,22 @@ trace_config = {
     },
     "CuSO4-H2O": {
         "trace_index": 0,
-        "time_range": (-1.4, -0.25),
+        "time_range": (-1.3, -0.25),
         "vertical_shift": -0.012,
         "lowpass_freq": None,
     },
     "H2O": {
         "trace_index": 2,
-        "time_range": (-1, 0.4),
+        "time_range": (-0.85, 0.4),
         "vertical_shift": -0.019,
         "lowpass_freq": None,
     },
     "Polystyrene": {
         "trace_index": 3,
-        "time_range": (-3.45, -2.75),
+        "time_range": (-3.45, -2.8),
         "vertical_shift": -0.01,
-        "lowpass_freq": 24000,
+        # "lowpass_freq": 120000,
+        "lowpass_freq": 80000,
     },
     "Glycerin": {
         "trace_index": 1,
@@ -153,11 +159,11 @@ for substance, config in trace_config.items():
     selected_file = files[config["trace_index"]]
     file_data = substance_data[substance_data["filename"] == selected_file]
 
-    time = file_data["time"].values
+    time = file_data["time"].values * 1e3
     voltage = file_data["voltage"].values
 
-    time_range_s = (config["time_range"][0] * 1e-3, config["time_range"][1] * 1e-3)
-    time_mask = (time >= time_range_s[0]) & (time <= time_range_s[1])
+    time_range_ms = config["time_range"]
+    time_mask = (time >= time_range_ms[0]) & (time <= time_range_ms[1])
     time_filtered = time[time_mask]
     voltage_filtered = voltage[time_mask]
 
@@ -167,7 +173,9 @@ for substance, config in trace_config.items():
     voltage_shifted = voltage_filtered + config["vertical_shift"]
 
     if config["lowpass_freq"] is not None:
-        voltage_processed = lowpass_filter(time_filtered, voltage_shifted, config["lowpass_freq"])
+        voltage_processed = lowpass_filter(
+            time_filtered, voltage_shifted, config["lowpass_freq"]
+        )
     else:
         voltage_processed = voltage_shifted
 
@@ -177,7 +185,7 @@ for substance, config in trace_config.items():
             time_normalized = time_filtered - time_filtered[0]
 
             A0 = np.max(voltage_processed) - np.min(voltage_processed)
-            T2star0 = 0.0005
+            T2star0 = 0.5
             offset0 = np.min(voltage_processed)
 
             popt, pcov = curve_fit(
@@ -192,20 +200,30 @@ for substance, config in trace_config.items():
             A, T2star, offset = popt
             sigma_T2star = np.sqrt(pcov[1, 1])
 
-            print(f"  T2* = {T2star * 1e3:.3f} ± {sigma_T2star * 1e3:.3f} ms")
+            print(f"  T2* = {T2star:.3f} ± {sigma_T2star:.3f} ms")
 
-            t2star_results.append({
-                "substance": substance,
-                "T2star_ms": T2star * 1e3,
-                "sigma_T2star_ms": sigma_T2star * 1e3,
-            })
+            t2star_results.append(
+                {
+                    "substance": substance,
+                    "T2star_ms": T2star,
+                    "sigma_T2star_ms": sigma_T2star,
+                }
+            )
 
             # Plot
             fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 8))
-            fig.suptitle(f"$T_2^*$ Analysis for {substance}", fontsize=14, fontweight='bold')
+            fig.suptitle(
+                f"$T_2^*$ Analysis for {substance}", fontsize=14, fontweight="bold"
+            )
 
-            ax1.plot(time_filtered * 1e3, voltage_processed, linewidth=0.8, alpha=0.7,
-                    label="Oscilloscope trace", color="blue")
+            ax1.plot(
+                time_filtered,
+                voltage_processed,
+                linewidth=0.8,
+                alpha=0.7,
+                label="Oscilloscope trace",
+                color="blue",
+            )
             ax1.set_xlabel("Time (ms)")
             ax1.set_ylabel("Voltage (V)")
             ax1.set_title("Oscilloscope Data")
@@ -214,12 +232,26 @@ for substance, config in trace_config.items():
             ax1.axhline(y=0, color="k", linewidth=0.5, alpha=0.3)
 
             voltage_fit = exponential_decay(time_normalized, A, T2star, offset)
-            ax2.plot(time_filtered * 1e3, voltage_processed, "o", markersize=2, alpha=0.4,
-                    label="Oscilloscope trace")
-            ax2.plot(time_filtered * 1e3, voltage_fit, "r-", linewidth=2, label="Exponential fit")
+            ax2.plot(
+                time_filtered,
+                voltage_processed,
+                "o",
+                markersize=2,
+                alpha=0.4,
+                label="Oscilloscope trace",
+            )
+            ax2.plot(
+                time_filtered,
+                voltage_fit,
+                "r-",
+                linewidth=2,
+                label="Exponential fit",
+            )
             ax2.set_xlabel("Time (ms)")
             ax2.set_ylabel("Voltage (V)")
-            ax2.set_title(f"Exponential Decay Fit: $T_2^*$ = ({T2star * 1e3:.3f} $\\pm$ {sigma_T2star * 1e3:.3f}) ms")
+            ax2.set_title(
+                f"Exponential Decay Fit: $T_2^*$ = ({T2star:.3f} $\\pm$ {sigma_T2star:.3f}) ms"
+            )
             ax2.grid(True, alpha=0.3)
             ax2.legend()
 
@@ -228,11 +260,13 @@ for substance, config in trace_config.items():
             plt.close()
 
         else:
-            envelope_time, envelope_voltage = extract_envelope(time_filtered, voltage_processed)
+            envelope_time, envelope_voltage = extract_envelope(
+                time_filtered, voltage_processed
+            )
             print(f"  Found {len(envelope_time)} envelope peaks")
 
             A0 = np.max(envelope_voltage)
-            T2star0 = 0.001
+            T2star0 = 1.0
             offset0 = np.min(envelope_voltage)
 
             popt, pcov = curve_fit(
@@ -247,20 +281,30 @@ for substance, config in trace_config.items():
             A, T2star, offset = popt
             sigma_T2star = np.sqrt(pcov[1, 1])
 
-            print(f"  T2* = {T2star * 1e3:.3f} ± {sigma_T2star * 1e3:.3f} ms")
+            print(f"  T2* = {T2star:.3f} ± {sigma_T2star:.3f} ms")
 
-            t2star_results.append({
-                "substance": substance,
-                "T2star_ms": T2star * 1e3,
-                "sigma_T2star_ms": sigma_T2star * 1e3,
-            })
+            t2star_results.append(
+                {
+                    "substance": substance,
+                    "T2star_ms": T2star,
+                    "sigma_T2star_ms": sigma_T2star,
+                }
+            )
 
             # Plot
             fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 8))
-            fig.suptitle(f"$T_2^*$ Analysis for {substance}", fontsize=14, fontweight='bold')
+            fig.suptitle(
+                f"$T_2^*$ Analysis for {substance}", fontsize=14, fontweight="bold"
+            )
 
-            ax1.plot(time_filtered * 1e3, voltage_processed, linewidth=0.8, alpha=0.7,
-                    label="Oscilloscope trace", color="blue")
+            ax1.plot(
+                time_filtered,
+                voltage_processed,
+                linewidth=0.8,
+                alpha=0.7,
+                label="Oscilloscope trace",
+                color="blue",
+            )
             ax1.set_xlabel("Time (ms)")
             ax1.set_ylabel("Voltage (V)")
             ax1.set_title("Oscilloscope Data")
@@ -269,16 +313,31 @@ for substance, config in trace_config.items():
             ax1.axhline(y=0, color="k", linewidth=0.5, alpha=0.3)
 
             # Plot processed oscillation data (absolute value) as context
-            ax2.plot(time_filtered * 1e3, np.abs(voltage_processed), "-", linewidth=0.8,
-                    color="gray", alpha=0.5, label="Processed oscillation data")
-            ax2.plot(envelope_time * 1e3, envelope_voltage, "o", markersize=5, alpha=0.6,
-                    label="Envelope peaks")
+            ax2.plot(
+                time_filtered,
+                np.abs(voltage_processed),
+                "-",
+                linewidth=0.8,
+                color="gray",
+                alpha=0.5,
+                label="Processed oscillation data",
+            )
+            ax2.plot(
+                envelope_time,
+                envelope_voltage,
+                "o",
+                markersize=5,
+                alpha=0.6,
+                label="Envelope peaks",
+            )
             time_fit = np.linspace(envelope_time.min(), envelope_time.max(), 1000)
             voltage_fit = exponential_decay(time_fit, A, T2star, offset)
-            ax2.plot(time_fit * 1e3, voltage_fit, "r-", linewidth=2, label="Exponential fit")
+            ax2.plot(time_fit, voltage_fit, "r-", linewidth=2, label="Exponential fit")
             ax2.set_xlabel("Time (ms)")
             ax2.set_ylabel("|Voltage| (V)")
-            ax2.set_title(f"Exponential Decay Fit: $T_2^*$ = ({T2star * 1e3:.3f} $\\pm$ {sigma_T2star * 1e3:.3f}) ms")
+            ax2.set_title(
+                f"Exponential Decay Fit: $T_2^*$ = ({T2star:.3f} $\\pm$ {sigma_T2star:.3f}) ms"
+            )
             ax2.grid(True, alpha=0.3)
             ax2.legend()
 
