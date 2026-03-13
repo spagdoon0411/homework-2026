@@ -1,0 +1,152 @@
+% !TEX program = lualatex
+\documentclass[11pt]{article}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{circuitikz}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{cite}
+\usetikzlibrary{graphs,graphdrawing}  % REQUIRED
+\usegdlibrary{layered}
+\usetikzlibrary{arrows.meta,graphs,graphdrawing}
+\usegdlibrary{layered}
+\usepackage{url}
+\usetikzlibrary{chains}
+\usetikzlibrary{decorations.pathmorphing,calc,positioning,arrows.meta}
+\usetikzlibrary{positioning,shapes,arrows.meta}
+\usetikzlibrary{circuits.ee.IEC}
+\usetikzlibrary{graphs,graphdrawing,quotes}
+\usegdlibrary{force}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{braket}
+
+\title{Nuclear Magnetic Resonance}
+\author{Spandan Suthar and Antoni Gonzalez}
+\date{March 11, 2026}
+
+\geometry{margin=1in}
+
+\begin{document}
+
+\maketitle
+
+\section*{Results}
+
+We measured the nuclear magnetic resonance frequencies for various
+samples \cite{dummy2024}.
+
+\subsection*{Summary of g-factors}
+
+\begin{table}[H]
+  \centering
+  \input{table_summary.tex}
+  \caption{}
+  \label{table:g_factor_summary}
+\end{table}
+
+\subsection*{Measured Data}
+
+\begin{table}[H]
+  \centering
+  \begin{minipage}[t]{0.45\textwidth}
+    \centering
+    \input{table_cuso4_data.tex}
+    \caption{$B_0$ vs. $\nu_{\mathrm{rf}}$ Points, CuSO$_4$}
+    \label{table:cuso4_data}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.45\textwidth}
+    \centering
+    \input{table_cuso4_h2o_data.tex}
+    \caption{$B_0$ vs. $\nu_{\mathrm{rf}}$ Points, CuSO$_4$-H$_2$O}
+    \label{table:cuso4_h2o_data}
+  \end{minipage}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{minipage}[t]{0.45\textwidth}
+    \centering
+    \input{table_h2o_data.tex}
+    \caption{$B_0$ vs. $\nu_{\mathrm{rf}}$ Points, H$_2$O}
+    \label{table:h2o_data}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.45\textwidth}
+    \centering
+    \input{table_polystyrene_data.tex}
+    \caption{$B_0$ vs. $\nu_{\mathrm{rf}}$ Points, Polystyrene}
+    \label{table:polystyrene_data}
+  \end{minipage}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{minipage}[t]{0.45\textwidth}
+    \centering
+    \input{table_ptfe_data.tex}
+    \caption{$B_0$ vs. $\nu_{\mathrm{rf}}$ Points, PTFE}
+    \label{table:ptfe_data}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.45\textwidth}
+    \centering
+    \input{table_glycerin_data.tex}
+    \caption{$B_0$ vs. $\nu_{\mathrm{rf}}$ Points, Glycerin}
+    \label{table:glycerin_data}
+  \end{minipage}
+\end{table}
+
+\subsection*{Linear Fits}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../out/cuso4_fit.pdf}
+  \caption{}
+  \label{fig:cuso4_fit}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../out/cuso4_h2o_fit.pdf}
+  \caption{}
+  \label{fig:cuso4_h2o_fit}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../out/h2o_fit.pdf}
+  \caption{}
+  \label{fig:h2o_fit}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../out/polystyrene_fit.pdf}
+  \caption{}
+  \label{fig:polystyrene_fit}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../out/ptfe_fit.pdf}
+  \caption{}
+  \label{fig:ptfe_fit}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../out/glycerin_fit.pdf}
+  \caption{}
+  \label{fig:glycerin_fit}
+\end{figure}
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}
