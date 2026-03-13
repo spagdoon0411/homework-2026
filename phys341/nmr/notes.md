@@ -43,7 +43,7 @@ phys341/nmr/trace_processing/t2star_traces/PTFE_Responses_Spandan
 
 ---
 
-Export the trace from phys341/nmr/trace_processing/t2star_traces/3895G_FFTs/FFT 1 2026-02-23 14-34-27.csv. This is a Fourier transform for a frequency pulse. Fit a Gaussian, report the equation in the legend,
+Export the trace from phys341/nmr/trace_processing/t2star_traces/3895G_FFTs/FFT 1 2026-02-23 14-34-27.csv. This is a Fourier transform for a frequency pulse. Fit a Gaussian, report the equation in the legend, and obtain FWHM values (reported in the title).
 
 ---
 
@@ -56,7 +56,7 @@ Export the trace from phys341/nmr/trace_processing/t2star_traces/3895G_FFTs/FFT 
 - [x] mass import envelope data
 - [x] do inversion of all negative envelope data and display results
 - [x] process ptfe separately
-- [ ] sdom analysis for g-factor results
+- [x] sdom analysis for g-factor results
 - [x] report T2\* plots and values in table
 - [ ] explain cuso4 and ptfe differences
 - [ ] assess rf uncertainty by fitting Gaussian

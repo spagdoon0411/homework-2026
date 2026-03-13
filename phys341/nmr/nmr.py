@@ -127,10 +127,19 @@ for name, res in results.items():
     plt.close()
 
 
+import pandas as pd
+import os
+
+t2star_data = {}
+if os.path.exists("phys341/nmr/out/t2star_results.csv"):
+    t2star_df = pd.read_csv("phys341/nmr/out/t2star_results.csv")
+    for _, row in t2star_df.iterrows():
+        t2star_data[row["substance"]] = (row["T2star_ms"], row["sigma_T2star_ms"])
+
 with open("phys341/nmr/report/table_summary.tex", "w") as f:
-    f.write("\\begin{tabular}{lcc}\n")
+    f.write("\\begin{tabular}{lccc}\n")
     f.write("\\hline\n")
-    f.write("Sample & $g$-factor & Deviation from Theory \\\\\n")
+    f.write("Sample & $g$-factor & Deviation from Theory & $T_2^*$ (ms) \\\\\n")
     f.write("\\hline\n")
     for name, res in results.items():
         if name == "PTFE":
@@ -138,8 +147,14 @@ with open("phys341/nmr/report/table_summary.tex", "w") as f:
         else:
             g_theoretical = g_H1_theoretical
         deviation_sigma = (res["g"] - g_theoretical) / res["sigma_g"]
+
+        t2star_str = ""
+        if name in t2star_data:
+            t2_val, t2_unc = t2star_data[name]
+            t2star_str = f"${fmt_pm(t2_val, t2_unc)}$"
+
         f.write(
-            f"{name} & ${fmt_pm(res['g'], res['sigma_g'])}$ & ${deviation_sigma:.1f}\\sigma$ \\\\\n"
+            f"{name} & ${fmt_pm(res['g'], res['sigma_g'])}$ & ${deviation_sigma:.1f}\\sigma$ & {t2star_str} \\\\\n"
         )
     f.write("\\hline\n")
     f.write("\\end{tabular}\n")
@@ -158,3 +173,48 @@ for name, res in results.items():
             f.write(f"{b:.0f} & {freq:.2f} \\\\\n")
         f.write("\\hline\n")
         f.write("\\end{tabular}\n")
+
+
+# SDOM analysis for proton g-factors
+proton_samples = [name for name in results.keys() if name != "PTFE"]
+g_values = np.array([results[name]["g"] for name in proton_samples])
+
+g_mean = np.mean(g_values)
+g_std = np.std(g_values, ddof=1)
+g_sdom = g_std / np.sqrt(len(g_values))
+
+plt.figure(figsize=(10, 6))
+
+x_range = np.arange(len(proton_samples))
+
+plt.axhline(
+    g_H1_theoretical, color="blue", linewidth=2, label=f"Accepted value: $g = {g_H1_theoretical:.6f}$"
+)
+
+plt.axhline(g_mean, color="red", linewidth=2, label=f"Experimental mean: $g = {g_mean:.4f}$")
+
+plt.fill_between(
+    [-0.5, len(proton_samples) - 0.5],
+    g_mean - g_sdom,
+    g_mean + g_sdom,
+    color="red",
+    alpha=0.2,
+    label=f"SDOM: $\\sigma_{{\\mathrm{{SDOM}}}} = {g_sdom:.4f}$",
+)
+
+plt.xlim(-0.5, len(proton_samples) - 0.5)
+plt.ylim(g_H1_theoretical - 0.5, g_H1_theoretical + 0.5)
+plt.ylabel("Proton $g$-factor")
+plt.title("SDOM Analysis of Proton $g$-factors")
+plt.legend()
+plt.grid(True, alpha=0.3, axis='y')
+plt.xticks([])
+plt.tight_layout()
+plt.savefig("phys341/nmr/out/proton_g_sdom.pdf")
+plt.close()
+
+print(f"\nSDOM Analysis:")
+print(f"Proton g-factor mean: {g_mean:.6f}")
+print(f"Standard deviation: {g_std:.6f}")
+print(f"SDOM: {g_sdom:.6f}")
+print(f"Accepted value: {g_H1_theoretical:.6f}")
